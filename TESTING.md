@@ -1,0 +1,23 @@
+# **TESTING**
+
+## **Table of Contents**
+* [**User Story Testing**]()
+* [**Code Validation**]()
+    + [**HTML**]()
+    + [**CSS**]()
+    + [**JavaScript**]()
+    + [**Python**]()
+* [**Responsiveness**]()
+* [**Browser Testing**]()
+* [**Device Testing**]()
+* [**Lighthouse**]()
+* [**Manual Testing**]()
+    + [**Navigation**]()
+    + [**Home Page**]()
+    + [**About Page**]()
+    + [**Gallery**]()
+    + [**Book a Tour**]()
+    + [**Contact Us Page**]()
+    + [**Sign Up Page**]()
+    + [**Login Page**]()
+    + [**Logout Page**]()
