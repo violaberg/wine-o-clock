@@ -75,7 +75,7 @@ Total |94|94
 
 ## **Scope plane**
 
-Due to a incredible amount of new knowledge and deadline for this project as for anything in life and to avoid scope creep, I used MoSCoW method to keep project on track and concentrate on delivering fully functional site. Unfortunately, since beginning of the project I knew I won't have time to implement everything I would like to.
+Due to a incredible amount of new knowledge and deadline for this project as for anything in life and to avoid scope creep, I used MoSCoW method to keep project on track and concentrate on delivering fully functional site. Unfortunately, since beginning of the project I knew I won't have time to implement everything I would like to leaving some features for future development.
 
 * Must Have:
     + Age verification
@@ -87,7 +87,6 @@ Due to a incredible amount of new knowledge and deadline for this project as for
     + Admin login via front end
     + Password recovery
     + User ability to book a tour online
-    + User ability to edit/cancel booking online
     + Booking confirmation on page
     + Booking confirmation by email
     + About page
@@ -96,6 +95,7 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 
 * Should Have:
     + Reservation management system for admin
+    + User ability to edit/cancel booking online
     + Booking reminder by email
 
 * Could Have:
@@ -116,7 +116,7 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 |SET UP & DEPLOYMENT        |  ||
 |                           |  | As a developer, I can create a new Github repository to store my project files online|
 |                           |  | As a developer, I can create a new workspace on Gitpod, install Django and add required libraries to have access to cloudbased images and postgress database|
-|                           |  | As a developer, I can create a Heroku app|
+|                           |  | As a developer, I can create a Heroku app and deploy project early to confirm funcionality|
 |                           |  ||
 
 <br>
