@@ -26,6 +26,7 @@ Deployed project can be found here: [Wine O'Clock]()
         - [**Typography**](#typography)
 * [**Agile Development**](#agile-development)
 * [**Features & Future Development**](#features--future-development)
+* [**Technologies used**](#technologies-used)
 * [**Testing**](#testing)
 * [**Deployment**](#deployment)
 * [**Acknowledgement & Credits**](#acknowledgement--credits)
@@ -229,6 +230,21 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 I have included details of agile development in a separate file [AGILE.md](AGILE.md).
 
 # **Features & Future Development**
+
+# **Technologies used**
+
+* HTML
+* CSS
+* Javascript
+* Python
+* Django
+* Django allAuth
+* [Heroku](https://www.heroku.com/)
+* Heroku PostreSQL & [ElephantSQL](https://www.elephantsql.com/)
+* Jinja
+* [Tailwind CSS](https://tailwindcss.com/)
+* [Font Awesome](https://fontawesome.com/)
+* [Cloudinary](https://cloudinary.com/)
 
 # **Testing**
 
