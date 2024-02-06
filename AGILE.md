@@ -35,3 +35,5 @@ Kanban board is one way how to provide a visual for project management, optimize
 <details><summary>Github Kanban</summary>
 <img src="">
 </details>
+
+[Back to Readme](README.md)
