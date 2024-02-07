@@ -171,55 +171,31 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 #### **Desktop wireframes:**
 
-#### ***Home Page***
+<details><summary>Home Page</summary><img src="docs/wireframes/home-page-desktop.png"></details>
 
-![Home Page wireframe](docs/wireframes/home-page-desktop.png)
+<details><summary>About Page</summary><img src="docs/wireframes/about-page-desktop.png"></details>
 
-#### ***About Page***
+<details><summary>Gallery Page</summary><img src="docs/wireframes/gallery-page-desktop.png"></details>
 
-![About Page wireframe](docs/wireframes/about-page-desktop.png)
+<details><summary>Book a Tour Page</summary><img src="docs/wireframes/book-a-tour-page-desktop.png"></details>
 
-#### ***Gallery Page***
+<details><summary>Contact Page</summary><img src="docs/wireframes/contact-page-desktop.png"></details>
 
-![Gallery Page wireframe](docs/wireframes/gallery-page-desktop.png)
-
-#### ***Book a Tour***
-
-![Book a Tour wireframe](docs/wireframes/book-a-tour-page-desktop.png)
-
-#### ***Contact Page***
-
-![Contact Page wireframe](docs/wireframes/contact-page-desktop.png)
-
-#### ***Login Page***
-
-![Login Page wireframe](docs/wireframes/login-page-desktop.png)
+<details><summary>Login Page</summary><img src="docs/wireframes/login-page-desktop.png"></details>
 
 #### **Mobile wireframes:**
 
-#### ***Home Page***
+<details><summary>Home Page</summary><img src="docs/wireframes/home-page-mobile.png"></details>
 
-![Home Page wireframe](docs/wireframes/home-page-mobile.png)
+<details><summary>About Page</summary><img src="docs/wireframes/about-page-mobile.png"></details>
 
-#### ***About Page***
+<details><summary>Gallery Page</summary><img src="docs/wireframes/gallery-page-mobile.png"></details>
 
-![About Page wireframe](docs/wireframes/about-page-mobile.png)
+<details><summary>Book a Tour Page</summary><img src="docs/wireframes/book-a-tour-page-mobile.png"></details>
 
-#### ***Gallery Page***
+<details><summary>Contact Page</summary><img src="docs/wireframes/contact-page-mobile.png"></details>
 
-![Gallery Page wireframe](docs/wireframes/gallery-page-mobile.png)
-
-#### ***Book a Tour***
-
-![Book a Tour wireframe](docs/wireframes/book-a-tour-page-mobile.png)
-
-#### ***Contact Page***
-
-![Contact Page wireframe](docs/wireframes/contact-page-mobile.png)
-
-#### ***Login Page***
-
-![Login Page wireframe](docs/wireframes/login-page-mobile.png)
+<details><summary>Login Page</summary><img src="docs/wireframes/login-page-mobile.png"></details>
 
 ### **Database schema**
 
