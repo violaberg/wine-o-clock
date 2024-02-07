@@ -205,6 +205,10 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 ### **Color Scheme**
 
+The color palette chosen for Wine O'Clock app reflects a thoughtful blend of elegance and richness inspired by the world of wines. The soft and inviting Seasalt shade (#fafafa) serves as the symbol of the purity and clarity found in the process of winemaking. The use of Muted gold shade (#cc9933) represents the allure of gold, mirroring the excellence and sophistication associated with wines bringing a sense of warmth to project. This golden hue speaks to the refined taste and quality that defines the Wine O'Clock experience. Accentuating the palette are deep tones of Black bean (#360000), evoking the essence of rich red wines, and a Classic black (#000000), representing the depth and complexity found in a perfectly aged bottle. Each color is carefully selected to embody the journey from vine to cellar, culminating in a visual harmony that encapsulates the luxurious world of Bordeaux wines at Wine O'Clock.
+
+![Color palette](docs/color/color-palette.png)
+
 ### **Typography**
 
 # **Agile Development**
