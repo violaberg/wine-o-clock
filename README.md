@@ -18,7 +18,7 @@ Deployed project can be found here: [Wine O'Clock]()
     + [**Scope plane**](#scope-plane)
     + [**Structure plane**](#structure-plane)
         - [**Developer Tasks & User Stories**](#developer-tasks--user-stories)
-        - [**Lucidchart**](#lucidchart)
+        - [**Flowchart**](#flowchart)
     + [**Skeleton plane**](#skeleton-plane)
         - [**Wireframes**](#wireframes)
     + [**Surface plane**](#surface-plane)
@@ -157,9 +157,9 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 |                           |  | As a developer, I can choose color scheme and style of the website|
 |                           |  ||
 
-### **Lucidchart**
+### **Flowchart**
 
-To help with a flow of app, I created flowchart using [Lucidchart](https://www.lucidchart.com/)
+To help with a flow of site, I created a flowchart using [Draw.io](https://www.drawio.com/)
 
 ## **Skeleton plane**
 
