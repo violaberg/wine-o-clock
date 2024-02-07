@@ -159,13 +159,15 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 
 ### **Flowchart**
 
-To help with a flow of site, I created a flowchart using [Draw.io](https://www.drawio.com/)
+To help with a flow of the website, I created a flowchart using [Draw.io](https://www.drawio.com/)
+
+![Flowchart](docs/flowchart.drawio.png)
 
 ## **Skeleton plane**
 
 ### **Wireframes**
 
-Wireframes for both desktop and mobile were created with [Balsamiq](https://balsamiq.com/) and can be below:
+Wireframes for both desktop and mobile were created with [Balsamiq](https://balsamiq.com/) and can be seen below:
 
 #### **Desktop wireframes:**
 
@@ -218,6 +220,10 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 #### ***Login Page***
 
 ![Login Page wireframe](docs/wireframes/login-page-mobile.png)
+
+### **Database schema**
+
+![Database schema](docs/database-schema.drawio.png)
 
 ## **Surface plane**
 
