@@ -125,36 +125,38 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 |   EPIC                    |ID|    User Story  |
 |:--------------------------|--|:---------------|
 |NAVIGATION AND CONTENT     |  ||
-|                           |  | As a user, I want to navigate through site easily|
-|                           |  | As a user, I want to clearly understand the purpose of the site|
-|                           |  | As a user, I want to be able to read relative content|
+|                           |  | As a user, I can navigate through website easily|
+|                           |  | As a user, I can clearly understand the purpose of the site|
+|                           |  | As a user, I can read relative content|
 |USER REGISTRATION & LOGIN  |  ||
 |                           |  | As a user, I want to be able to register on the site|
-|                           |  | As a user, I want to be able to login using email and password|
-|                           |  | As a user, I want to be able to logout|
+|                           |  | As a user, I can login using email and password|
+|                           |  | As a user, I can logout|
 |BOOKING                    |  ||
-|                           |  | As a logged-in user, I want to be able to book a tour|
-|                           |  | As a logged-in user, I want to see my booking|
-|                           |  | As a logged-in user, I want to be able to edit my booking|
-|                           |  | As a logged-in user, I want to be able to cancel my booking|
+|                           |  | As a user, I can book a tour|
+|                           |  | As a logged-in user, I can see my booking|
+|                           |  | As a logged-in user, I can edit my booking|
+|                           |  | As a logged-in user, I can cancel my booking|
 |REVIEWS                    |  ||
-|                           |  | As a user, I want to read reviews from other visitors|
-|                           |  | As a logged-in user, I want to be able to leave a review|
-|                           |  | As a logged-in user, I want to be able to edit my review|
-|                           |  | As a logged-in user, I want to be able to delete my review|
+|                           |  | As a user, I can read reviews from other visitors|
+|                           |  | As a logged-in user, I can leave a review|
+|                           |  | As a logged-in user, I can edit my review|
+|                           |  | As a logged-in user, I can delete my review|
 |GALLERY                    |  ||
-|                           |  | As a logged-in user, I want to be able to add my photo taken at wine cellar|
+|                           |  | As a logged-in user, I can add my photo taken at wine cellar|
 |CONTACT                    |  ||
-|                           |  | As a user, I want to be able to see wine cellar's opening hours|
-|                           |  | As a user, I want to be able to find wine cellar's location|
-|                           |  | As a user, I want to be able to contact someone at wine cellar|
+|                           |  | As a user, I can find wine cellar's opening hours|
+|                           |  | As a user, I can find wine cellar's location|
+|                           |  | As a user, I can contact someone at wine cellar|
 |ADMIN                      |  ||
 |                           |  | As an admin, I can login via front end|
 |                           |  | As an admin, I can add/edit content|
 |                           |  | As an admin, I can delete inappropriate reviews/photos|
 |DEVELOPER                  |  ||
-|                           |  | As a developer, I can create a fully responsive site|
-|                           |  | As a developer, I can choose color scheme and style of the website|
+|                           |  | As a developer, I can create wireframes so that I can clearly see website layout|
+|                           |  | As a developer, I can create a fully responsive site so that it is accessible on all devices|
+|                           |  | As a developer, I can choose color scheme and style of the website it is pleasant to use|
+|                           |  | As a developer, I can choose fonts so they match website style|
 |                           |  ||
 
 ### **Flowchart**
@@ -205,7 +207,7 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 ### **Color Scheme**
 
-The color palette chosen for Wine O'Clock app reflects a thoughtful blend of elegance and richness inspired by the world of wines. The soft and inviting Seasalt shade (#fafafa) serves as the symbol of the purity and clarity found in the process of winemaking. The use of Muted gold shade (#cc9933) represents the allure of gold, mirroring the excellence and sophistication associated with wines bringing a sense of warmth to project. This golden hue speaks to the refined taste and quality that defines the Wine O'Clock experience. Accentuating the palette are deep tones of Black bean (#360000), evoking the essence of rich red wines, and a Classic black (#000000), representing the depth and complexity found in a perfectly aged bottle. Each color is carefully selected to embody the journey from vine to cellar, culminating in a visual harmony that encapsulates the luxurious world of Bordeaux wines at Wine O'Clock.
+The color palette chosen for Wine O'Clock app reflects a thoughtful blend of elegance and richness inspired by the world of wines. The soft and inviting Seasalt shade `#fafafa` serves as the symbol of the purity and clarity found in the process of winemaking. The use of Muted gold shade `#cc9933` represents the allure of gold, mirroring the excellence and sophistication associated with wines bringing a sense of warmth to project. This golden hue speaks to the refined taste and quality that defines the Wine O'Clock experience. Accentuating the palette are deep tones of Black bean `#360000`, evoking the essence of rich red wines, and a Classic black `#000000`, representing the depth and complexity found in a perfectly aged bottle. Each color is carefully selected to embody the journey from vine to cellar, culminating in a visual harmony that encapsulates the luxurious world of Bordeaux wines at Wine O'Clock.
 
 ![Color palette](docs/color/color-palette.png)
 
