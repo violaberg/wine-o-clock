@@ -61,10 +61,11 @@ Admin login via front end | 5 | 5
 Password recovery | 5 | 5
 Reservation management system for admin | 5 | 3
 User ability to book a tour online | 5 | 5
-User ability to edit/cancel booking online | 3 | 5
+User ability to edit/cancel booking online | 3 | 3
 Booking confirmation on site | 5 | 5
 Booking confirmation by email | 5 | 5
 Booking reminder by email | 3 | 3
+Visible booking for logged-in user | 3 | 2
 Option to pay for booking online | 3 | 1
 About page | 5 | 5
 Contact form | 5 | 5
@@ -72,7 +73,7 @@ Social media links | 3 | 5
 Terms & conditions | 3 | 2
 Wine blog | 3 | 2
 ---|---|---
-Total |94|94
+Total |97|94
 
 ## **Scope plane**
 
@@ -96,11 +97,12 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 
 * Should Have:
     + Reservation management system for admin
-    + User ability to edit/cancel booking online
+    + Newsletter list
     + Booking reminder by email
 
 * Could Have:
-    + Newsletter list
+    + Visible booking for logged-in user
+    + User ability to edit/cancel booking online
     + Terms & conditions
     + Wine blog
 
@@ -127,9 +129,9 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 |NAVIGATION AND CONTENT     |  ||
 |                           |  | As a user, I can navigate through website easily|
 |                           |  | As a user, I can clearly understand the purpose of the site|
-|                           |  | As a user, I can read relative content|
+|                           |  | As a user, I can read relevant content|
 |USER REGISTRATION & LOGIN  |  ||
-|                           |  | As a user, I want to be able to register on the site|
+|                           |  | As a user, I can register on the site|
 |                           |  | As a user, I can login using email and password|
 |                           |  | As a user, I can logout|
 |BOOKING                    |  ||
