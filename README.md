@@ -53,7 +53,8 @@ Age verification | 5 | 5
 Newsletter list | 3 | 5
 User register/login | 5 | 5
 User profile | 3 | 1
-User ability to add photos to gallery | 5 | 5
+User ability to add photos to gallery | 2 | 3
+User ability to delete previously added photos | 2 | 3
 User reviews | 5 | 5
 Full CRUD funcionality for user | 5 | 5
 Full CRUD funcionality for admin | 5 | 5
@@ -70,10 +71,10 @@ Option to pay for booking online | 3 | 1
 About page | 5 | 5
 Contact form | 5 | 5
 Social media links | 3 | 5
-Terms & conditions | 3 | 2
-Wine blog | 3 | 2
+Terms & conditions | 3 | 3
+Wine blog | 2 | 2
 ---|---|---
-Total |97|94
+Total |95|96
 
 ## **Scope plane**
 
@@ -82,7 +83,6 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 * Must Have:
     + Age verification
     + User register/login
-    + User ability to add photos to gallery
     + User reviews
     + Full CRUD funcionality for user
     + Full CRUD funcionality for admin
@@ -99,11 +99,13 @@ Due to a incredible amount of new knowledge and deadline for this project as for
     + Reservation management system for admin
     + Newsletter list
     + Booking reminder by email
+    + Terms & conditions
 
 * Could Have:
     + Visible booking for logged-in user
     + User ability to edit/cancel booking online
-    + Terms & conditions
+    + User ability to add photos to gallery
+    + User ability to delete previously added photos
     + Wine blog
 
 * Won't Have:
@@ -146,6 +148,7 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 |                           |  | As a logged-in user, I can delete my review|
 |GALLERY                    |  ||
 |                           |  | As a logged-in user, I can add my photo taken at wine cellar|
+|                           |  | As a logged-in user, I can delete my previously added photo|
 |CONTACT                    |  ||
 |                           |  | As a user, I can find wine cellar's opening hours|
 |                           |  | As a user, I can find wine cellar's location|
