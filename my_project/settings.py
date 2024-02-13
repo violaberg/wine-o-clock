@@ -28,10 +28,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-violaberg-wineoclock-9qkn024jr4y.ws-eu108.gitpod.io',
+    '8000-violaberg-wineoclock-3rc52bvzr9m.ws-eu108.gitpod.io',
     '.herokuapp.com',
 ]
 
