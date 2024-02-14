@@ -190,8 +190,11 @@ The website was tested on various devices using Chrome DevTools and real-life de
 
 ## **Responsiveness**
 
-Responsiveness was tested with Chrome DevTools making sure all pages adjust to screens starting from 280px wide.
+Responsiveness was achieved using TailwindCSS and custom CSS and tested with Chrome DevTools making sure all pages adjust to screens starting from 280px wide.
 
 ## **Bugs & Fixes**
+
+| Bug                                          | Fix                        | Status |
+| -------------------------------------------- | -------------------------- | ------ |
 
 [Back to Readme](README.md)
