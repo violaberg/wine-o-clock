@@ -11,39 +11,39 @@ In Agile tasks/user stories can be broken down into EPICS or Milestones. It's a 
 I edited due dates few times as I learned in proccess how long time certain tasks take or for example, realized I had my fonts chosen but needed few more days to see how it actually looks, as sometimes when all is added together, changes are needed.
 
 <details><summary>EPIC 1</summary>
-<img src="docs/agile/epic1.png">
+<img src="static/docs/agile/epic1.png">
 </details>
 
 <details><summary>EPIC 2</summary>
-<img src="docs/agile/epic2.png">
+<img src="static/docs/agile/epic2.png">
 </details>
 
 <details><summary>EPIC 3</summary>
-<img src="docs/agile/epic3.png">
+<img src="static/docs/agile/epic3.png">
 </details>
 
 <details><summary>EPIC 4</summary>
-<img src="docs/agile/epic4.png">
+<img src="static/docs/agile/epic4.png">
 </details>
 
 <details><summary>EPIC 5</summary>
-<img src="docs/agile/epic5.png">
+<img src="static/docs/agile/epic5.png">
 </details>
 
 <details><summary>EPIC 6</summary>
-<img src="docs/agile/epic6.png">
+<img src="static/docs/agile/epic6.png">
 </details>
 
 <details><summary>EPIC 7</summary>
-<img src="docs/agile/epic7.png">
+<img src="static/docs/agile/epic7.png">
 </details>
 
 <details><summary>EPIC 8</summary>
-<img src="docs/agile/epic8.png">
+<img src="static/docs/agile/epic8.png">
 </details>
 
 <details><summary>EPIC 9</summary>
-<img src="docs/agile/epic9.png">
+<img src="static/docs/agile/epic9.png">
 </details>
 
 ### **USER STORIES**
@@ -57,7 +57,7 @@ A user story serves as an explanation how a certain feature will provide a value
 A MoSCoW Method is a popular prioritization technique used in many projects, not only software development. It uses a 4-step approach of "must-have", "should-have", "could-have" and "won't-have".
 
 <details><summary>MoSCoW</summary>
-<img src="docs/agile/labels.png">
+<img src="static/docs/agile/labels.png">
 </details>
 
 ### **GITHUB KANBAN BOARD**
@@ -65,7 +65,7 @@ A MoSCoW Method is a popular prioritization technique used in many projects, not
 Kanban board is one way how to provide a visual for project management, optimize workflow and increase efficiency. As it is my first time fully implementing Kanban board, ups and downs and some inaccuracy was expected.
 
 <details><summary>Github Kanban</summary>
-<img src="docs/agile/kanban-board.png">
+<img src="static/docs/agile/kanban-board.png">
 </details>
 
 ## **Conclusion**

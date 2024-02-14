@@ -168,7 +168,7 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 
 To help with a flow of the website, I created a flowchart using [Draw.io](https://www.drawio.com/)
 
-![Flowchart](docs/flowchart.drawio.png)
+![Flowchart](static/docs/flowchart.drawio.png)
 
 ## **Skeleton plane**
 
@@ -178,35 +178,35 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 #### **Desktop wireframes:**
 
-<details><summary>Home Page</summary><img src="docs/wireframes/home-page-desktop.png"></details>
+<details><summary>Home Page</summary><img src="static/docs/wireframes/home-page-desktop.png"></details>
 
-<details><summary>About Page</summary><img src="docs/wireframes/about-page-desktop.png"></details>
+<details><summary>About Page</summary><img src="static/docs/wireframes/about-page-desktop.png"></details>
 
-<details><summary>Gallery Page</summary><img src="docs/wireframes/gallery-page-desktop.png"></details>
+<details><summary>Gallery Page</summary><img src="static/docs/wireframes/gallery-page-desktop.png"></details>
 
-<details><summary>Book a Tour Page</summary><img src="docs/wireframes/book-a-tour-page-desktop.png"></details>
+<details><summary>Book a Tour Page</summary><img src="static/docs/wireframes/book-a-tour-page-desktop.png"></details>
 
-<details><summary>Contact Page</summary><img src="docs/wireframes/contact-page-desktop.png"></details>
+<details><summary>Contact Page</summary><img src="static/docs/wireframes/contact-page-desktop.png"></details>
 
-<details><summary>Login Page</summary><img src="docs/wireframes/login-page-desktop.png"></details>
+<details><summary>Login Page</summary><img src="static/docs/wireframes/login-page-desktop.png"></details>
 
 #### **Mobile wireframes:**
 
-<details><summary>Home Page</summary><img src="docs/wireframes/home-page-mobile.png"></details>
+<details><summary>Home Page</summary><img src="static/docs/wireframes/home-page-mobile.png"></details>
 
-<details><summary>About Page</summary><img src="docs/wireframes/about-page-mobile.png"></details>
+<details><summary>About Page</summary><img src="static/docs/wireframes/about-page-mobile.png"></details>
 
-<details><summary>Gallery Page</summary><img src="docs/wireframes/gallery-page-mobile.png"></details>
+<details><summary>Gallery Page</summary><img src="static/docs/wireframes/gallery-page-mobile.png"></details>
 
-<details><summary>Book a Tour Page</summary><img src="docs/wireframes/book-a-tour-page-mobile.png"></details>
+<details><summary>Book a Tour Page</summary><img src="static/docs/wireframes/book-a-tour-page-mobile.png"></details>
 
-<details><summary>Contact Page</summary><img src="docs/wireframes/contact-page-mobile.png"></details>
+<details><summary>Contact Page</summary><img src="static/docs/wireframes/contact-page-mobile.png"></details>
 
-<details><summary>Login Page</summary><img src="docs/wireframes/login-page-mobile.png"></details>
+<details><summary>Login Page</summary><img src="static/docs/wireframes/login-page-mobile.png"></details>
 
 ### **Database schema**
 
-![Database schema](docs/database-schema.drawio.png)
+![Database schema](static/docs/database-schema.drawio.png)
 
 ## **Surface plane**
 
@@ -214,7 +214,7 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 The color palette chosen for Wine O'Clock app reflects a thoughtful blend of elegance and richness inspired by the world of wines. The soft and inviting Seasalt shade `#fafafa` serves as the symbol of the purity and clarity found in the process of winemaking. The use of Muted gold shade `#cc9933` represents the allure of gold, mirroring the excellence and sophistication associated with wines bringing a sense of warmth to project. This golden hue speaks to the refined taste and quality that defines the Wine O'Clock experience. Accentuating the palette are deep tones of Black bean `#360000`, evoking the essence of rich red wines, and a Classic black `#000000`, representing the depth and complexity found in a perfectly aged bottle. Each color is carefully selected to embody the journey from vine to cellar, culminating in a visual harmony that encapsulates the luxurious world of Bordeaux wines at Wine O'Clock.
 
-![Color palette](docs/color/color-palette.png)
+![Color palette](static/docs/color/color-palette.png)
 
 ### **Typography**
 
@@ -236,6 +236,7 @@ I have included details of agile development in a separate file [AGILE.md](AGILE
 * Heroku PostreSQL & [ElephantSQL](https://www.elephantsql.com/)
 * Jinja
 * [Tailwind CSS](https://tailwindcss.com/)
+* [Flowbite](https://flowbite.com/)
 * [Font Awesome](https://fontawesome.com/)
 * [Cloudinary](https://cloudinary.com/)
 
