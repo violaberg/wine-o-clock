@@ -197,5 +197,6 @@ Responsiveness was achieved using TailwindCSS and custom CSS and tested with Chr
 | Bug                                          | Cause                        | Solution                                                                              |
 | -------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------- |
 | TemplateDoesNotExist at /base.html           | Incorrect base.html location | Delete unneccessary folder where base.html is located and move it to correct location |
+| Images not displaying                        | Forgot to run collectstatic  | Running <code>python manage.py collectstatic</code> in terminal resolved the issue    |
 
 [Back to Readme](README.md)

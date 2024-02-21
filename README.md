@@ -218,6 +218,8 @@ The color palette chosen for Wine O'Clock app reflects a thoughtful blend of ele
 
 ### **Typography**
 
+In planning the visual identity of my website, I meticulously selected two fonts, Parisienne and Montserrat, to convey a harmonious blend of elegance and readability. Parisienne, with its delicate and flowing script, exudes a touch of sophistication, making it ideal for captivating headings that leave a lasting impression. Complementing this, Montserrat provides a clean and modern sans-serif typeface for content, ensuring optimal legibility and a seamless reading experience. Together, these fonts not only reflect the timeless allure of France and wine industry but also contribute to an aesthetically pleasing and engaging design, inviting visitors to explore our content with both style and clarity.
+
 # **Agile Development**
 
 I have included details of agile development in a separate file [AGILE.md](AGILE.md).
