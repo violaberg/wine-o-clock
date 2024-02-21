@@ -194,7 +194,8 @@ Responsiveness was achieved using TailwindCSS and custom CSS and tested with Chr
 
 ## **Bugs & Fixes**
 
-| Bug                                          | Fix                        | Status |
-| -------------------------------------------- | -------------------------- | ------ |
+| Bug                                          | Cause                        | Solution                                                                              |
+| -------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------- |
+| TemplateDoesNotExist at /base.html           | Incorrect base.html location | Delete unneccessary folder where base.html is located and move it to correct location |
 
 [Back to Readme](README.md)
