@@ -11,6 +11,12 @@ module.exports = {
         'montserrat': ['Montserrat', 'sans-serif'],
       }
     },
+    colors: {
+      black: '#000000',
+      gold: '#cc9933',
+      maroon: '#360000',
+      white: '#fafafa',
+    },
   },
   plugins: [
     require('flowbite/plugin')
