@@ -239,7 +239,6 @@ I have included details of agile development in a separate file [AGILE.md](AGILE
 * Jinja
 * [Tailwind CSS](https://tailwindcss.com/)
 * [Flowbite](https://flowbite.com/)
-* [Font Awesome](https://fontawesome.com/)
 * [Cloudinary](https://cloudinary.com/)
 
 # **Testing**
@@ -251,6 +250,13 @@ I have included details of testing in a separate file [TESTING.md](TESTING.md).
 I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT.md).
 
 # **Acknowledgement & Credits**
+
+* [Pattern Monster](https://pattern.monster/) - background pattern
+* [Google Fonts](https://fonts.google.com/) - fonts
+* [Font Awesome](https://fontawesome.com/) - icons
+* [Adobe Firefly](https://firefly.adobe.com/) - Contact page image
+* [Vecteezy](https://www.vecteezy.com/) - Home page image by Chinnachart Martmoh, available at this [link](https://www.vecteezy.com/photo/6660921-red-wine-and-white-wine-in-a-glass-of-wine-wooden-tabletop-there-is-a-wine-cellar-on-the-table-and-red-and-green-grapes-the-background-is-an-underground-wine-cellar-3d-rendering)
+* [Freepik](https://www.freepik.com/) - About page image by wirestock, available at this [link](https://www.freepik.com/free-photo/beautiful-shot-large-agricultural-field-countryside-with-hills-amazing-cloudy-sky_15695562.htm#page=2&query=wine%20cellar&position=24&from_view=search&track=ais&uuid=f149cfd0-a789-4804-9520-8783151b7d53)
 
 * The biggest thank you as always to my family during this busy time of juggling the biggest project so far, hackathon and life in general.
 * Thank you as well to my mentor [David Bowers](https://github.com/dnlbowers) who supported me from the very beginning always giving the best advice and ideas for solutions and more importantly never losing hope in me, even when I did.
