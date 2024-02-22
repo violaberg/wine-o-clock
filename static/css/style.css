@@ -67,14 +67,8 @@ footer {
     padding: 1rem;
 }
 
-.bg-maroon {
-    background-color: #360000;
-}
-
-.border-ridge {
+.button {
+    border-color: #cc9933;
     border-style: ridge;
-  }
-  
-.border-8 {
-    border-width: 8px;
+    border-width: 5px;
   }
