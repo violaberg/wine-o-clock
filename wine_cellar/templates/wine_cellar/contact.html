@@ -2,9 +2,9 @@
 {% load static %}
     {% block content %}
     <div class="flex">
-        <div class="w-1/2">
+        <div class="w-1/2" id="map">
             <!--Map goes here/left side-->
-            <iframe src="map_url" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://maps.googleapis.com/maps/api/js?key='API_KEY'&callback=console.debug&libraries=maps,marker&v=beta" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="w-1/2 p-4">
             <!--Form goes here/rigth-->

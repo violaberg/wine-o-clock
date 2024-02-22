@@ -72,3 +72,7 @@ footer {
     border-style: ridge;
     border-width: 5px;
   }
+
+#map {
+    height: 400px;
+}
