@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUda6Xayr8u8yEjdCSdobCQLn09isyWm0&libraries=loader&callback=console.debug&libraries=maps,marker&v=beta"></script>
     <title>Wine O'Clock</title>
-    <script async src="https://maps.googleapis.com/maps/api/js?key='API_KEY'&callback=console.debug&libraries=maps,marker&v=beta">
-    </script>
+
 </head>
 <body>
     <header>
@@ -40,7 +40,7 @@
                 <a href="{% url 'about' %}" class="block py-2 px-3 rounded hover:bg-transparent md:hover:bg-transparent md:hover:text-gold md:p-0 md:dark:hover:text-gold dark:text-white dark:hover:bg-transparent dark:hover:text-gold md:dark:hover:bg-transparent">About</a>
               </li>
               <li>
-                <a href="#" class="block py-2 px-3 rounded hover:bg-transparent md:hover:bg-transparent md:hover:text-gold md:p-0 md:dark:hover:text-gold dark:text-white dark:hover:bg-transparent dark:hover:text-gold md:dark:hover:bg-transparent">Gallery</a>
+                <a href="{% url 'gallery' %}" class="block py-2 px-3 rounded hover:bg-transparent md:hover:bg-transparent md:hover:text-gold md:p-0 md:dark:hover:text-gold dark:text-white dark:hover:bg-transparent dark:hover:text-gold md:dark:hover:bg-transparent">Gallery</a>
               </li>
               <li>
                 <a href="#" class="block py-2 px-3 rounded hover:bg-transparent md:hover:bg-transparent md:hover:text-gold md:p-0 md:dark:hover:text-gold dark:text-white dark:hover:bg-transparent dark:hover:text-gold md:dark:hover:bg-transparent">Book a Tour</a>
@@ -66,7 +66,7 @@
         <span class="font-montserrat text-xl text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="{% url 'home' %}" class="font-parisienne">Wine O'Clock</a> All Rights Reserved.
         </span>
     <div class="flex mt-4 sm:justify-center sm:mt-0">
-      <span class="font-montserrat text-white justify-between text-xl text-gray-500 sm:text-center dark:text-gray-400 mb-2 sm:mb-0">
+      <span class="font-montserrat text-white justify-between text-xl sm:text-center mb-2 sm:mb-0">
         Opening Hours:
         <br>
         Monday - Friday: 9 AM - 9 PM
@@ -90,5 +90,6 @@
   </div>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

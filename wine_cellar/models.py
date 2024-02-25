@@ -9,3 +9,11 @@ class Contact(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+
+
+class GalleryImage(models.Model):
+    image = models.ImageField(upload_to='gallery/')
+    description = models.TextField()
+
+    def __str__(self):
+        return f"Image {self.id}"

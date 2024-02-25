@@ -1,17 +1,34 @@
 {% extends "base.html" %}
 {% load static %}
     {% block content %}
-    <div class="flex">
+    <div class="contact-container flex items-center">
         <div class="w-1/2" id="map">
             <!--Map goes here/left side-->
-            <iframe src="https://maps.googleapis.com/maps/api/js?key='API_KEY'&callback=console.debug&libraries=maps,marker&v=beta" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <gmp-map center="45.061724,-0.887769" zoom="14" map-id="DEMO_MAP_ID">
+                <gmp-advanced-marker position="45.061724,-0.887769" title="My location"></gmp-advanced-marker>
+            </gmp-map>
         </div>
         <div class="w-1/2 p-4">
-            <!--Form goes here/rigth-->
-            <form method="post">
+            <!--Form goes here/right side-->
+            <form class="form" method="post">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button type="button" class="button font-montserrat text-white hover:bg-maroon focus:ring-4 focus:outline-none font-medium rounded-lg text-2xl px-4 py-2 text-center">Send</button>
+                <div class="mb-4">
+                    {{ form.first_name.label_tag }}
+                    {{ form.first_name }}
+                </div>
+                <div class="mb-4">
+                    {{ form.last_name.label_tag }}
+                    {{ form.last_name }}
+                </div>
+                <div class="mb-4">
+                    {{ form.email.label_tag }}
+                    {{ form.email }}
+                </div>
+                <div class="mb-4">
+                    {{ form.message.label_tag }}
+                    {{ form.message }}
+                </div>
+                <button type="button" class="button form-button font-montserrat text-white hover:bg-maroon focus:ring-4 focus:outline-none font-medium rounded-lg text-2xl px-4 py-2 text-center">Send</button>
             </form>
         </div>
     </div>

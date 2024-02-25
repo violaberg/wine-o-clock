@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import ContactForm
+from .models import GalleryImage
 
 
 # Create your views here.
@@ -31,3 +32,8 @@ def contact(request):
         form = ContactForm()
 
     return render(request, 'wine_cellar/contact.html', {'form': form})
+
+
+def gallery(request):
+    gallery_images = GalleryImage.objects.all()
+    return render(request, 'wine_cellar/gallery.html', {'gallery_images': gallery_images})

@@ -198,5 +198,7 @@ Responsiveness was achieved using TailwindCSS and custom CSS and tested with Chr
 | -------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------- |
 | TemplateDoesNotExist at /base.html           | Incorrect base.html location | Delete unneccessary folder where base.html is located and move it to correct location |
 | Images not displaying                        | Forgot to run collectstatic  | Running <code>python manage.py collectstatic</code> in terminal resolved the issue    |
+| NotLoadingAPIFromGoogleMapsError             | Didn't install loader, just Google maps | Running <code>npm install @googlemaps/js-api-loader</code> resolved the error |
+| TemplateDoesNotExist at /gallery.html        | Incorrect gallery.html path in views.py | Adding 'wine_cellar' resolved the error <code>return render(request, 'wine_cellar/gallery.html', {'gallery_images': gallery_images})</code> |
 
 [Back to Readme](README.md)
