@@ -144,11 +144,12 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 |REVIEWS                    |  ||
 |                           |  | As a user, I can read reviews from other visitors|
 |                           |  | As a logged-in user, I can leave a review|
+|                           |  | As a logged-in user, I can add my photo taken at wine cellar when leaving a review|
+|                           |  | As a logged-in user, I can delete my previously added photo to review|
 |                           |  | As a logged-in user, I can edit my review|
 |                           |  | As a logged-in user, I can delete my review|
 |GALLERY                    |  ||
-|                           |  | As a logged-in user, I can add my photo taken at wine cellar|
-|                           |  | As a logged-in user, I can delete my previously added photo|
+|                           |  | As and admin, I can upload/ delete images from gallery |
 |CONTACT                    |  ||
 |                           |  | As a user, I can find wine cellar's opening hours|
 |                           |  | As a user, I can find wine cellar's location|
