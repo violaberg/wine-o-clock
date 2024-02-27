@@ -12,6 +12,17 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+# Set Cloudinary configuration
+cloudinary.config( 
+  	cloud_name = os.environ.get('CLOUDINARY_CLOUD_NAME'),
+  	api_key = os.environ.get('CLOUDINARY_API_KEY'),
+  	api_secret = os.environ.get('CLOUDINARY_API_SECRET')
+)
+
 import dj_database_url
 import sys
 if os.path.isfile('env.py'):
@@ -36,6 +47,7 @@ ALLOWED_HOSTS = [
     '.herokuapp.com',
 ]
 
+CSRF_TRUSTED_ORIGINS=['https://8000-violaberg-wineoclock-3rc52bvzr9m.ws-eu108.gitpod.io']
 
 # Application definition
 
@@ -50,6 +62,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'wine_cellar',
+    'cloudinary',
 ]
 
 SITE_ID = 1
@@ -125,7 +138,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-API_KEY = os.environ.get('API_KEY')
+GOOGLE_MAPS_API_KEY = os.environ.get('GOOGLE_MAPS_API_KEY')
 
 LANGUAGE_CODE = 'en-us'
 

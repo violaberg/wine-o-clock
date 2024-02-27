@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Contact(models.Model):
@@ -12,7 +13,7 @@ class Contact(models.Model):
 
 
 class GalleryImage(models.Model):
-    image = models.ImageField(upload_to='gallery/')
+    image = CloudinaryField()
     description = models.TextField()
 
     def __str__(self):
