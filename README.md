@@ -235,11 +235,10 @@ I have included details of agile development in a separate file [AGILE.md](AGILE
 * Python
 * Django
 * Django allAuth
+* Bootstrap
 * [Heroku](https://www.heroku.com/)
 * Heroku PostreSQL & [ElephantSQL](https://www.elephantsql.com/)
 * Jinja
-* [Tailwind CSS](https://tailwindcss.com/)
-* [Flowbite](https://flowbite.com/)
 * [Cloudinary](https://cloudinary.com/)
 
 # **Testing**
