@@ -39,8 +39,16 @@ main {
     position: relative;
 }
 
-p {
+.p-parisienne {
+    color: #fafafa;
+    font-family: 'Parisienne', cursive;
     font-size: 2rem;
+}
+
+.p-montserrat {
+    color: #fafafa;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
 }
 
 .navbar-expand-lg .navbar-collapse {

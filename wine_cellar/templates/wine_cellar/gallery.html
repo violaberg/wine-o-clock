@@ -1,19 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="flex items-center justify-center h-full">
-    <p>Feel free to look through our gallery with images uploaded by staff member to get a better feel of this fabulous place!</p>
+<div class="container mt-5">
+    <p class="p-montserrat text-center">Feel free to look through our gallery with images uploaded by staff member to get a better feel of this fabulous place!</p>
 </div>
-<div class="gallery">
+<div class="container">
+  <div class="row">
     {% for image in gallery_images %}
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
       <div class="gallery-image">
-        <img src="{{ image.image.url }}" alt="{{ image.description }}">
-        <p>{{ image.description }}</p>
+        <img src="{{ image.image.url }}" class="img-fluid" alt="{{ image.description }}">
+        <p class="p-montserrat text-center">{{ image.description }}</p>
       </div>
-
-      {% if forloop.counter|divisibleby:3 and not forloop.last %}
-        </div><div class="gallery">
-      {% endif %}
+    </div>
     {% endfor %}
   </div>
+</div>
 {% endblock content %}
