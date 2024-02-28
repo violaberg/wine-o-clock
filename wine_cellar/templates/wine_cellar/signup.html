@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h2 class="mb-4">Sign Up</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <!--Sign Up Form-->
+            <form method="post" action="{% url 'signup' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="button">Sign Up</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <!--Sign Up Success Modal-->
+            <div class="modal fade" id="signupSuccessModal" tabindex="-1" role="dialog" aria-labelledby="signupSuccessModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!--Modal content goes here-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
