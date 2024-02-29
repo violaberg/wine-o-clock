@@ -2,22 +2,28 @@
 {% load static %}
 {% block content %}
 <div class="container">
-    <h2 class="mb-4">Login</h2>
     <div class="row">
         <div class="col-md-6">
-            <!--Login Form-->
+            <!-- Image on the left side -->
+            <img src="../../../static/images/login.jpg" alt="A bottle and a glass of red wine placed on wine barrel" class="img-fluid">
+        </div>
+        <div class="col-md-6 text-center">
+            <h2 class="font-montserrat custom-white mb-4">Login</h2>
+            <!-- Login Form -->
             <form method="post" action="{% url 'login' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button type="submit" class="button">Login</button>
+                <button type="submit" class="button btn custom-white">Login</button>
+                <p class="p-montserrat">Not registered?<a class="font-montserrat custom-gold" href="{% url 'signup' %}">Please Sign up!</a>
+                </p>
             </form>
         </div>
         <div class="col-md-6">
-            <!--Login Success Modal-->
+            <!-- Login Success Modal -->
             <div class="modal fade" id="loginSuccessModal" tabindex="-1" role="dialog" aria-labelledby="loginSuccessModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <!--Modal content goes here-->
+                        <!-- Modal content goes here -->
                     </div>
                 </div>
             </div>
