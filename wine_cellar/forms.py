@@ -3,6 +3,7 @@ from .models import Contact
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm
+from .models import Review
 
 
 class ContactForm(forms.ModelForm):
@@ -42,3 +43,12 @@ class LoginForm(AuthenticationForm):
 
 class CustomPasswordResetForm(PasswordResetForm):
     email = forms.EmailField(max_length=254, help_text='Please enter email address you used to register')
+
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['user', 'text', 'image']
+        widgets = {
+            'user': forms.HiddenInput(),
+        }

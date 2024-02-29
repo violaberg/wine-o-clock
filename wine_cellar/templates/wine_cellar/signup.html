@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <!-- Image on the left side -->
+            <!--Image on the left side-->
             <img src="../../../static/images/signup.jpg" alt="A bottle and a glass of red wine placed on wine barrel" class="img-fluid">
         </div>
         <div class="col-md-6 text-center">
@@ -12,10 +12,39 @@
             <!-- Sign Up Form -->
             <form method="post" action="{% url 'signup' %}">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="button btn custom-white">Login</button>
-                <p class="p-montserrat">Already registered?<a class="font-montserrat custom-gold" href="{% url 'login' %}">Please Login!</a>
-                </p>
+        
+                <!-- First Name -->
+                <div class="form-group">
+                    <label class="label-fixed-width" for="id_first_name">First Name:</label>
+                    <input type="text" name="first_name" id="id_first_name" class="mb-3" required>
+                </div>
+        
+                <!-- Last Name -->
+                <div class="form-group">
+                    <label class="label-fixed-width" for="id_last_name">Last Name:</label>
+                    <input type="text" name="last_name" id="id_last_name" class="mb-3" required>
+                </div>
+        
+                <!-- Email -->
+                <div class="form-group">
+                    <label class="label-fixed-width" for="id_email">Email:</label>
+                    <input type="email" name="email" id="id_email" class="mb-3" required>
+                </div>
+        
+                <!-- Password -->
+                <div class="form-group">
+                    <label class="label-fixed-width" for="id_password1">Password:</label>
+                    <input type="password" name="password1" id="id_password1" class="mb-3" required>
+                </div>
+        
+                <!-- Repeat Password -->
+                <div class="form-group">
+                    <label class="label-fixed-width" for="id_password2">Repeat Password:</label>
+                    <input type="password" name="password2" id="id_password2" class="mb-3" required>
+                </div>
+        
+                <button type="submit" class="button btn custom-white">Sign Up</button>
+                <p class="p-montserrat mt-3">Already registered? <a class="font-montserrat custom-gold" href="{% url 'login' %}">Please Login!</a></p>
             </form>
         </div>
         <div class="col-md-6">

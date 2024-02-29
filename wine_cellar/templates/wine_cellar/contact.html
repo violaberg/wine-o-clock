@@ -1,35 +1,43 @@
 {% extends "base.html" %}
 {% load static %}
     {% block content %}
-    <div class="contact-container flex items-center">
-        <div class="w-1/2" id="map">
-            <!--Map goes here/left side-->
-            <gmp-map center="45.061724,-0.887769" zoom="14" map-id="DEMO_MAP_ID">
-                <gmp-advanced-marker position="45.061724,-0.887769" title="My location"></gmp-advanced-marker>
-            </gmp-map>
-        </div>
-        <div class="w-1/2 p-4">
-            <!--Form goes here/right side-->
-            <form class="form" method="post">
-                {% csrf_token %}
-                <div class="mb-4">
-                    {{ form.first_name.label_tag }}
-                    {{ form.first_name }}
-                </div>
-                <div class="mb-4">
-                    {{ form.last_name.label_tag }}
-                    {{ form.last_name }}
-                </div>
-                <div class="mb-4">
-                    {{ form.email.label_tag }}
-                    {{ form.email }}
-                </div>
-                <div class="mb-4">
-                    {{ form.message.label_tag }}
-                    {{ form.message }}
-                </div>
-                <button type="button" class="button form-button btn custom-white">Send</button>
-            </form>
+    <div class="container mt-5">
+        <div class="row">
+            <!--Map on the left-->
+            <div class="col-md-6">
+                <gmp-map center="45.061724,-0.887769" zoom="14" map-id="DEMO_MAP_ID">
+                    <gmp-advanced-marker position="45.061724,-0.887769" title="My location"></gmp-advanced-marker>
+                </gmp-map>
+            </div>
+            <!--Contact Form on the right-->
+            <div class="col-md-6">
+                <h2 class="font-montserrat custom-white mb-4">Contact Us</h2>
+                <form method="post" action="{% url 'contact' %}" class="form">
+                    {% csrf_token %}
+                    <!--First Name-->
+                    <div class="form-group">
+                        <label class="label-fixed-width" for="first_name">First Name:</label>
+                        <input type="text" id="first_name" name="first_name" class="mb-3" required>
+                    </div>
+                    <!--Last Name-->
+                    <div class="form-group">
+                        <label class="label-fixed-width" for="last_name">Last Name:</label>
+                        <input type="text" id="last_name" name="last_name" class="mb-3" required>
+                    </div>
+                    <!--Email-->
+                    <div class="form-group">
+                        <label class="label-fixed-width" for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="mb-3" required>
+                    </div>
+                    <!--Message-->
+                    <div class="form-group">
+                        <label class="label-fixed-width" for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" class="mb-3" required></textarea>
+                    </div>
+                    <!--Submit button-->
+                    <button type="button" class="button form-button btn custom-white">Send</button>
+                </form>
+            </div>
         </div>
     </div>
     {% endblock content %}
