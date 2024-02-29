@@ -51,7 +51,7 @@ def signup(request):
             return redirect('home')
     else:
         form = SignupForm()
-    return render(request, 'signup.html', {'form': form})
+    return render(request, 'wine_cellar/signup.html', {'form': form})
 
 
 def login(request):
@@ -62,4 +62,4 @@ def login(request):
             return redirect('home')
     else:
         form = AuthenticationForm(request)
-    return render(request, 'login.html', {'form': form})
+    return render(request, 'wine_cellar/login.html', {'form': form})
