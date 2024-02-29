@@ -9,7 +9,7 @@
     {% for image in gallery_images %}
     <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
       <div class="gallery-image">
-        <img src="{{ image.image.url }}" class="img-fluid" alt="{{ image.description }}">
+        <img src="https://res.cloudinary.com/dydbwgh9v/image/upload/{{ image.image.url }}" class="img-fluid" alt="{{ image.description }}">
         <p class="p-montserrat text-center">{{ image.description }}</p>
       </div>
     </div>
