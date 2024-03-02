@@ -239,7 +239,7 @@ I have included details of agile development in a separate file [AGILE.md](AGILE
 * [Heroku](https://www.heroku.com/)
 * Heroku PostreSQL & [ElephantSQL](https://www.elephantsql.com/)
 * Jinja
-* [Cloudinary](https://cloudinary.com/)
+* Whitenoise
 
 # **Testing**
 
