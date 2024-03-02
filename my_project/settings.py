@@ -12,17 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
-
-# Set Cloudinary configuration
-cloudinary.config( 
-  	cloud_name = os.environ.get('CLOUDINARY_CLOUD_NAME'),
-  	api_key = os.environ.get('CLOUDINARY_API_KEY'),
-  	api_secret = os.environ.get('CLOUDINARY_API_SECRET')
-)
-
 import dj_database_url
 import sys
 if os.path.isfile('env.py'):
@@ -62,7 +51,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'wine_cellar',
-    'cloudinary',
 ]
 
 SITE_ID = 1
@@ -71,10 +59,10 @@ LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -154,7 +142,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'wine_cellar/static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 

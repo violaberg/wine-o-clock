@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from cloudinary.models import CloudinaryField
 
 
 # Create your models here.
@@ -33,7 +32,7 @@ class GalleryImage(models.Model):
         image (CloudinaryField): The Cloudinary field for storing the image.
         description (TextField): The description of the gallery image.
     """
-    image = CloudinaryField()
+    image = models.ImageField(upload_to="gallery/")
     description = models.TextField()
 
     def __str__(self):
