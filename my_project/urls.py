@@ -24,3 +24,6 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path("", include("wine_cellar.urls")),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

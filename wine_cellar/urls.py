@@ -3,7 +3,7 @@ from .views import home
 from .views import about
 from .views import contact
 from .views import gallery
-from .views import signup, login
+from .views import signup, user_login
 from .views import book_a_tour
 from django.contrib.auth.views import LogoutView
 
@@ -13,7 +13,7 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('gallery/', gallery, name='gallery'),
     path('signup/', signup, name='signup'),
-    path('login/', login, name='login'),
+    path('login/', user_login, name='login'),
     path('book_a_tour/', book_a_tour, name='book_a_tour'),
     path('logout/', LogoutView.as_view(), name='logout'),
 ]

@@ -32,7 +32,7 @@ class GalleryImage(models.Model):
         image (CloudinaryField): The Cloudinary field for storing the image.
         description (TextField): The description of the gallery image.
     """
-    image = models.ImageField(upload_to="media/gallery")
+    image = models.ImageField(upload_to="gallery/")
     description = models.TextField()
 
     def __str__(self):

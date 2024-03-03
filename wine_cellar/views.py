@@ -2,7 +2,7 @@ from datetime import datetime
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login as auth_login, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from .forms import ContactForm
 from .forms import SignupForm
@@ -53,18 +53,18 @@ def signup(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)
+            auth_login(request, user)
             return redirect('home')
     else:
         form = SignupForm()
     return render(request, 'wine_cellar/signup.html', {'form': form})
 
 
-def login(request):
+def user_login(request):
     if request.method == 'POST':
         form = AuthenticationForm(request, request.POST)
         if form.is_valid():
-            login(request, form.get_user())
+            auth_login(request, form.get_user())
             return redirect('home')
     else:
         form = AuthenticationForm(request)
