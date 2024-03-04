@@ -1,43 +1,59 @@
 {% extends "base.html" %}
 {% load static %}
-    {% block content %}
-    <div class="container mt-5">
-        <div class="row">
-            <!--Map on the left-->
-            <div class="col-md-6">
-                <gmp-map center="45.061724,-0.887769" zoom="14" map-id="DEMO_MAP_ID">
-                    <gmp-advanced-marker position="45.061724,-0.887769" title="My location"></gmp-advanced-marker>
-                </gmp-map>
-            </div>
-            <!--Contact Form on the right-->
-            <div class="col-md-6">
-                <h2 class="font-montserrat custom-white mb-4">Contact Us</h2>
-                <form method="post" action="{% url 'contact' %}" class="form">
-                    {% csrf_token %}
-                    <!--First Name-->
-                    <div class="form-group">
-                        <label class="label-fixed-width" for="first_name">First Name:</label>
-                        <input type="text" id="first_name" name="first_name" class="mb-3" required>
-                    </div>
-                    <!--Last Name-->
-                    <div class="form-group">
-                        <label class="label-fixed-width" for="last_name">Last Name:</label>
-                        <input type="text" id="last_name" name="last_name" class="mb-3" required>
-                    </div>
-                    <!--Email-->
-                    <div class="form-group">
-                        <label class="label-fixed-width" for="email">Email:</label>
-                        <input type="email" id="email" name="email" class="mb-3" required>
-                    </div>
-                    <!--Message-->
-                    <div class="form-group">
-                        <label class="label-fixed-width" for="message">Message:</label>
-                        <textarea id="message" name="message" rows="4" class="mb-3" required></textarea>
-                    </div>
-                    <!--Submit button-->
-                    <button type="button" class="button form-button btn custom-white">Send</button>
-                </form>
-            </div>
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center position-relative">
+            <img src="{% static 'images/contact-us.jpg' %}" class="img-fluid" alt="Wine pouring in glass sitting on wooden table in sunshine">
         </div>
     </div>
-    {% endblock content %}
+</div>
+<div class="container">
+    <header class="text-center mt-5">
+        <h1 class="font-parisienne custom-white custom-header">Contact Us</h1>
+    </header>
+    <div class="row mt-2">
+        <div class="col-md-12 text-center">
+            <p class="p-montserrat">
+                Feel free to reach out to us with any inquiries or if you wish to secure a booking for an early morning or late evening, perfect for those cherished and intimate moments. Our dedicated team is here to enhance your wine journey, ensuring it's a delightful and memorable experience. Your satisfaction is our priority, and we look forward to assisting you in every way possible. Cheers to the joy of wine!
+            </p>
+        </div>
+    </div>
+    <!--Contact Form-->
+        <form method="post" action="{% url 'contact' %}" class="form text-center">
+            {% csrf_token %}
+            <!--First Name-->
+            <div class="form-group">
+                <label class="label-fixed-width" for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" class="mb-3" required>
+            </div>
+            <!--Last Name-->
+            <div class="form-group">
+                <label class="label-fixed-width" for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" class="mb-3" required>
+            </div>
+            <!--Email-->
+            <div class="form-group">
+                <label class="label-fixed-width" for="email">Email:</label>
+                <input type="email" id="email" name="email" class="mb-3" required>
+            </div>
+            <!--Message-->
+            <div class="form-group">
+                <label class="message-label label-fixed-width" for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" class="mb-3" required></textarea>
+            </div>
+            <!--Submit button-->
+            <button type="button" class="button form-button btn custom-white">Send</button>
+        </form>
+</div>
+<div class="col-md-12 text-center position-relative">
+    <div class="row">
+        <!--Map goes here-->
+        <div>
+            <gmp-map center="45.061724,-0.887769" zoom="14" map-id="DEMO_MAP_ID">
+                <gmp-advanced-marker position="45.061724,-0.887769" title="My location"></gmp-advanced-marker>
+            </gmp-map>
+        </div>
+    </div>
+</div>
+{% endblock content %}

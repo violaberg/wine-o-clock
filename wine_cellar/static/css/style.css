@@ -125,6 +125,10 @@ footer {
     color: #daa520;
 }
 
+button.navbar-toggler {
+    color: #daa520;
+}
+
 .booking-btn {
     background-color: #4c0013;
     opacity: 0.8;
@@ -155,8 +159,19 @@ label {
     width: 7rem;
 }
 
+.message-label {
+    bottom: 6rem;
+    position: relative;
+    right: 1rem;
+}
+
 a {
     text-decoration: none;
+}
+
+textarea {
+    position: relative;
+    right: 0.8rem;
 }
 
 /* Gallery page */

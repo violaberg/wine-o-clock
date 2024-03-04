@@ -3,40 +3,41 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <!-- Image on the left side -->
-        <div class="col-md-6">
-            <img src="{% static 'images/login.jpg' %}" alt="A bottle and a glass of red wine placed on a wine barrel" class="img-fluid">
+        <div class="col-md-12 text-center position-relative">
+            <img src="{% static 'images/login.jpg' %}" class="img-fluid" alt="A bottle and a glass of red wine placed on a wine barrel">
         </div>
-        <!-- Login Form on the right side -->
-        <div class="col-md-6 text-center">
-            <h2 class="font-montserrat custom-white mb-4">Login</h2>
-            <!-- Login Form -->
-            <form method="post" action="{% url 'login' %}">
-                {% csrf_token %}
-                <!-- Email -->
-                <div class="form-group">
-                    <label class="label-fixed-width" for="email">Email:</label>
-                    <input type="email" id="email" name="email" class="mb-3" required>
-                </div>
-                <!-- Password -->
-                <div class="form-group">
-                    <label class="label-fixed-width" for="password">Password:</label>
-                    <input type="password" id="password" name="password" class="mb-3" required>
-                </div>
-                <!-- Login button -->
-                <button type="submit" class="button btn custom-white">Login</button>
-                <!-- Not registered? Link to Signup -->
-                <p class="p-montserrat reg-link">Not registered?<a class="font-montserrat custom-gold" href="{% url 'signup' %}"> Please Sign up!</a></p>
-            </form>
+    </div>
+</div>
+
+<!--Login Form-->
+<div class="container">
+    <header class="text-center mt-5">
+        <h1 class="font-parisienne custom-white custom-header">Login</h1>
+    </header>
+    <form method="post" action="{% url 'login' %}" class="text-center">
+        {% csrf_token %}
+        <!--Email-->
+        <div class="form-group">
+            <label class="label-fixed-width" for="email">Email:</label>
+            <input type="email" id="email" name="email" class="mb-3" required>
         </div>
-        <!-- Login Success Modal -->
-        <div class="col-md-6">
-            <div class="modal fade" id="loginSuccessModal" tabindex="-1" role="dialog" aria-labelledby="loginSuccessModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <!-- Modal content goes here -->
-                    </div>
-                </div>
+        <!--Password-->
+        <div class="form-group">
+            <label class="label-fixed-width" for="password">Password:</label>
+            <input type="password" id="password" name="password" class="mb-3" required>
+        </div>
+        <!--Login button-->
+        <button type="submit" class="button btn custom-white">Login</button>
+        <!--Not registered? Link to Signup-->
+        <p class="p-montserrat reg-link">Not registered?<a class="font-montserrat custom-gold" href="{% url 'signup' %}"> Please Sign up!</a></p>
+    </form>
+</div>
+<!--Login Success Modal-->
+<div class="col-md-6">
+    <div class="modal fade" id="loginSuccessModal" tabindex="-1" role="dialog" aria-labelledby="loginSuccessModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!--Modal content goes here-->
             </div>
         </div>
     </div>
