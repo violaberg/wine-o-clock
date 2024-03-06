@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm
 from .models import Review
+from .models import TourBooking
 
 
 class ContactForm(forms.ModelForm):
@@ -25,20 +26,38 @@ class ContactForm(forms.ModelForm):
 
 
 class SignupForm(UserCreationForm):
-    first_name = forms.CharField(max_length=30, required=True, help_text='Required')
-    last_name = forms.CharField(max_length=30, required=True, help_text='Required')
-    email = forms.EmailField(max_length=254, help_text='Required. Please enter a valid email address')
-    password1 = forms.CharField(widget=forms.PasswordInput, help_text='Required. Enter a strong password')
-    password2 = forms.CharField(widget=forms.PasswordInput, help_text='Required. Please repeat your password')
+    first_name = forms.CharField(
+        max_length=30,
+        required=True,
+        help_text='Required',
+        widget=forms.CharField(attrs={'id': 'first_name', 'autocomplete': 'first_name'})
+    )
+    last_name = forms.CharField(
+        max_length=30,
+        required=True,
+        help_text='Required',
+        widget=forms.TextInput(attrs={'id': 'last_name', 'autocomplete': 'last_name'})
+    )
+    email = forms.EmailField(
+        max_length=254,
+        help_text='Required. Please enter a valid email address')
+    new_password = forms.CharField(widget=forms.PasswordInput, help_text='Required. Enter a strong password')
+    repeat_password = forms.TextInput(widget=forms.PasswordInput, help_text='Required. Please repeat your password')
 
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'email', 'password1', 'password2')
+        fields = ('first_name', 'last_name', 'email', 'new_password', 'repeat_password')
 
 
 class LoginForm(AuthenticationForm):
-    email = forms.EmailField(max_length=254, help_text='Please enter a valid email address')
-    password = forms.CharField(widget=forms.PasswordInput)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['username'].label = 'Email'
+        self.fields['username'].widget = forms.TextInput(attrs={'autocomplete': 'email'})
+
+    class Meta:
+        model = AuthenticationForm
+        fields = ['username', 'password']
     
 
 class CustomPasswordResetForm(PasswordResetForm):
@@ -51,4 +70,13 @@ class ReviewForm(forms.ModelForm):
         fields = ['user', 'text', 'image']
         widgets = {
             'user': forms.HiddenInput(),
+        }
+
+
+class TourBookingForm(forms.ModelForm):
+    class Meta:
+        model = TourBooking
+        fields = ['tour_date', 'num_guests', 'name', 'email', 'phone']
+        widgets = {
+            'tour_date': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
         }

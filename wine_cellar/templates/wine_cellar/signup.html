@@ -18,33 +18,38 @@
     {% csrf_token %}
 
     <!-- First Name -->
-    <div class="form-group">
-        <label class="label-fixed-width" for="id_first_name">First Name:</label>
-        <input type="text" name="first_name" id="id_first_name" class="mb-3" required>
+    <div class="form-group" style="padding: 0.5rem;">
+        <label class="label-fixed-width" for="{{ form.first_name.id_for_label }}">First Name:</label>
+        {{ form.first_name }}
+        {{ form.first_name.errors }}
     </div>
 
     <!-- Last Name -->
-    <div class="form-group">
-        <label class="label-fixed-width" for="id_last_name">Last Name:</label>
-        <input type="text" name="last_name" id="id_last_name" class="mb-3" required>
+    <div class="form-group" style="padding: 0.5rem;">
+        <label class="label-fixed-width" for="{{ form.last_name.id_for_label }}">Last Name:</label>
+        {{ form.last_name }}
+        {{ form.last_name.errors }}
     </div>
 
     <!-- Email -->
-    <div class="form-group">
-        <label class="label-fixed-width" for="id_email">Email:</label>
-        <input type="email" name="email" id="id_email" class="mb-3" required>
+    <div class="form-group" style="padding: 0.5rem;">
+        <label class="label-fixed-width" for="{{ form.email.id_for_label }}">Email:</label>
+        {{ form.email }}
+        {{ form.email.errors }}
     </div>
 
     <!-- Password -->
-    <div class="form-group">
-        <label class="label-fixed-width" for="id_password1">Password:</label>
-        <input type="password" name="password1" id="id_password1" class="mb-3" required>
+    <div class="form-group" style="padding: 0.5rem;">
+        <label class="label-fixed-width" for="{{ form.new_password.id_for_label }}">Password:</label>
+        {{ form.new_password }}
+        {{ form.new_password.errors }}
     </div>
 
     <!-- Repeat Password -->
-    <div class="form-group">
-        <label class="label-fixed-width" for="id_password2">Repeat Password:</label>
-        <input type="password" name="password2" id="id_password2" class="mb-3" required>
+    <div class="form-group" style="padding: 0.5rem;">
+        <label class="label-fixed-width" for="{{ form.repeat_password.id_for_label }}">Repeat Password:</label>
+        {{ form.repeat_password }}
+        {{ form.repeat_password.errors }}
     </div>
 
     <button type="submit" class="button btn custom-white">Sign Up</button>

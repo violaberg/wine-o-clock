@@ -1,16 +1,22 @@
 from datetime import datetime
+from django.conf import settings
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from django.core.exceptions import ValidationError
+from django.utils import timezone
 from django.contrib.auth import login as auth_login, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from .forms import ContactForm
 from .forms import SignupForm
 from .models import GalleryImage
 from .models import TourBooking
+from .forms import TourBookingForm
+from .forms import LoginForm
 from .models import Review
 from .forms import ReviewForm
 from django.contrib import messages
+from django.core.mail import send_mail
 
 
 # Create your views here.
@@ -62,35 +68,48 @@ def signup(request):
 
 def user_login(request):
     if request.method == 'POST':
-        form = AuthenticationForm(request, request.POST)
+        form = LoginForm(request, request.POST)
         if form.is_valid():
             auth_login(request, form.get_user())
             return redirect('home')
     else:
-        form = AuthenticationForm(request)
+        form = LoginForm(request)
     return render(request, 'wine_cellar/login.html', {'form': form})
 
 
 def book_a_tour(request):
     if request.method == 'POST':
-        tour_date = request.POST.get('tour_date')
-        num_guests = request.POST.get('num_guests')
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        phone = request.POST.get('phone')
+        form = TourBookingForm(request.POST)
+        if form.is_valid():
+            # Save the booking to the database
+            tour_booking = form.save()
 
-        # Save the booking to the database
-        TourBooking.objects.create(
-            tour_date=tour_date,
-            num_guests=num_guests,
-            name=name,
-            email=email,
-            phone=phone
-        )
+            # Send confirmation email
+            send_confirmation_email(tour_booking.name, tour_booking.email, tour_booking.tour_date)
 
-        return redirect('book_a_tour_success')
+            return redirect('book_a_tour_success')
+        else:
+            # Form is not valid, handle accordingly
+            return render(request, 'wine_cellar/book_a_tour.html', {'form': form})
 
-    return render(request, 'wine_cellar/book_a_tour.html')
+    else:
+        # GET request, render the form
+        form = TourBookingForm()
+
+    return render(request, 'wine_cellar/book_a_tour.html', {'form': form})
+
+
+def book_a_tour_success(request):
+    return render(request, 'wine_cellar/book_a_tour_success.html')
+
+
+def send_confirmation_email(name, email, tour_date):
+    subject = 'Wine Cellar Tour Booking Confirmation'
+    message = f'Thank you, {name}, for booking a wine tour with us on {tour_date}. We look forward to welcoming you!'
+    from_email = settings.DEFAULT_FROM_EMAIL
+    recipient_list = [email]
+
+    send_mail(subject, message, from_email, recipient_list)
 
 
 @login_required

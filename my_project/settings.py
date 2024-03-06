@@ -29,8 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = False
 ALLOWED_HOSTS = [
     '8000-violaberg-wineoclock-3rc52bvzr9m.ws-eu108.gitpod.io',
     '.herokuapp.com',
@@ -155,3 +154,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email configuration
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = os.environ.get('SENDGRID_USERNAME')
+# EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD')
+# DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')

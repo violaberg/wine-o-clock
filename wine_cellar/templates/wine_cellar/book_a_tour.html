@@ -23,36 +23,41 @@
     <form method="post" action="{% url 'book_a_tour' %}" class="text-center">
         {% csrf_token %}
         <!--Date & Time-->
-        <div class="form-group">
-            <label class="label-fixed-width" for="tour_date">Date & Time:</label>
-            <input type="datetime-local" id="tour_date" name="tour_date" class="mb-3" required>
+        <div class="form-group" style="padding: 0.5rem;">
+            <label class="label-fixed-width" for="{{ form.tour_date.id_for_label }}">Date & Time:</label>
+            {{ form.tour_date }}
+            {{ form.tour_date.errors }}
         </div>
 
-        <!-- Number of Guests -->
-        <div class="form-group">
-            <label class="label-fixed-width" for="num_guests">Nr of Guests:</label>
-            <input type="number" id="num_guests" name="num_guests" class="mb-3" required>
+        <!--Number of Guests-->
+        <div class="form-group" style="padding: 0.5rem;">
+            <label class="label-fixed-width" for="{{ form.num_guests.id_for_label }}">Nr of Guests:</label>
+            {{ form.num_guests }}
+            {{ form.num_guests.errors }}
         </div>
 
-        <!-- Name -->
-        <div class="form-group">
-            <label class="label-fixed-width" for="name">Name:</label>
-            <input type="text" id="name" name="name" class="mb-3" required>
+        <!--Name-->
+        <div class="form-group" style="padding: 0.5rem;">
+            <label class="label-fixed-width" for="{{ form.name.id_for_label }}">Name:</label>
+            {{ form.name }}
+            {{ form.name.errors }}
         </div>
 
-        <!-- Email -->
-        <div class="form-group">
-            <label class="label-fixed-width" for="email">Email:</label>
-            <input type="email" id="email" name="email" class="mb-3" required>
+        <!--Email-->
+        <div class="form-group" style="padding: 0.5rem;">
+            <label class="label-fixed-width" for="{{ form.email.id_for_label }}">Email:</label>
+            {{ form.email }}
+            {{ form.email.errors }}
         </div>
 
-        <!-- Phone Number -->
-        <div class="form-group">
-            <label class="label-fixed-width" for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
+        <!--Phone Number-->
+        <div class="form-group" style="padding: 0.5rem;">
+            <label class="label-fixed-width" for="{{ form.phone.id_for_label }}">Phone:</label>
+            {{ form.phone }}
+            {{ form.phone.errors }}
         </div>
 
-        <!-- Book a Tour button -->
+        <!--Book a Tour button-->
         <button type="submit" class="button book-a-tour-btn btn custom-white">Book a Tour</button>
     </form>
 </div>
@@ -70,7 +75,6 @@
                 {% endif %}
             </div>
         {% endfor %}
-    
         <!--Review Form-->
         <form method="post" action="{% url 'book_a_tour' %}" enctype="multipart/form-data">
             {% csrf_token %}
