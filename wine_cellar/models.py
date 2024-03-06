@@ -77,5 +77,8 @@ class Review(models.Model):
     image = models.ImageField(upload_to='media/review_images/', null=True, blank=True)
     timestamp = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ["timestamp"]
+
     def __str__(self):
         return f"Review by {self.user.username}"
