@@ -30,7 +30,7 @@ class SignupForm(UserCreationForm):
         max_length=30,
         required=True,
         help_text='Required',
-        widget=forms.CharField(attrs={'id': 'first_name', 'autocomplete': 'first_name'})
+        widget=forms.TextInput(attrs={'id': 'first_name', 'autocomplete': 'first_name'})
     )
     last_name = forms.CharField(
         max_length=30,
@@ -42,7 +42,10 @@ class SignupForm(UserCreationForm):
         max_length=254,
         help_text='Required. Please enter a valid email address')
     new_password = forms.CharField(widget=forms.PasswordInput, help_text='Required. Enter a strong password')
-    repeat_password = forms.TextInput(widget=forms.PasswordInput, help_text='Required. Please repeat your password')
+    repeat_password = forms.CharField(
+    widget=forms.PasswordInput(attrs={'placeholder': 'Repeat your password'}),
+    help_text='Required. Please repeat your password'
+    )
 
     class Meta:
         model = User
