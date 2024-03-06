@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
-from .models import GalleryImage
+from .models import GalleryImage, Review
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 
@@ -32,3 +32,4 @@ class GalleryImageAdmin(admin.ModelAdmin):
         return super().change_view(request, object_id, form_url, extra_context)
 
 admin.site.register(GalleryImage, GalleryImageAdmin)
+admin.site.register(Review)
