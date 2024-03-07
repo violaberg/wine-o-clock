@@ -26,9 +26,6 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = ['user', 'text', 'image']
-        widgets = {
-            'user': forms.HiddenInput(),
-        }
 
 
 class TourBookingForm(forms.ModelForm):

@@ -179,6 +179,16 @@ a {
     text-decoration: none;
 }
 
+li {
+    color: #daa520;
+    font-family: "Montserrat", sans-serif;
+    opacity: 0.8;
+    padding-left: 4rem;
+}
+
+.errorlist {
+    list-style-type: none;
+}
 textarea {
     position: relative;
     right: 0.8rem;

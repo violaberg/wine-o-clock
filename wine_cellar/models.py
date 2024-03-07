@@ -29,7 +29,7 @@ class GalleryImage(models.Model):
     Represents an image in the gallery.
 
     Attributes:
-        image (CloudinaryField): The Cloudinary field for storing the image.
+        image (ImageField): The image field for storing the image.
         description (TextField): The description of the gallery image.
     """
     image = models.ImageField(upload_to="gallery/")

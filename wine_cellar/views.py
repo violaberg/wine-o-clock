@@ -1,11 +1,9 @@
 from datetime import datetime
 from django.conf import settings
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.core.exceptions import ValidationError
 from django.utils import timezone
-from django.contrib.auth.forms import AuthenticationForm
 from .forms import ContactForm
 from .models import GalleryImage
 from .models import TourBooking
@@ -13,7 +11,6 @@ from .forms import TourBookingForm
 from .models import Review
 from .forms import ReviewForm
 from django.contrib import messages
-from django.core.mail import send_mail
 
 
 # Create your views here.
@@ -31,15 +28,8 @@ def contact(request):
         if form.is_valid():
             form.save()
 
-            # Send confirmation email
-            subject = 'Thank you for contacting us!'
-            message = 'We have received your message and will get back to you soon.'
-            from_email = 'viola.bergere@gmail.com'
-            recipient_list = [form.cleaned_data['email']]
-            send_mail(subject, message, from_email, recipient_list)
-
             # Confirmation of form submitted successfully
-            return JsonResponse({'success': True, 'message': 'Form submitted successfully!'})
+            return JsonResponse({'success': True, 'message': 'Thank you for contacting us! We have received your message and will get back to you soon.'})
     else:
         form = ContactForm()
 
@@ -58,9 +48,6 @@ def book_a_tour(request):
             # Save the booking to the database
             tour_booking = form.save()
 
-            # Send confirmation email
-            send_confirmation_email(tour_booking.name, tour_booking.email, tour_booking.tour_date)
-
             return redirect('book_a_tour_success')
         else:
             # Form is not valid, handle accordingly
@@ -77,16 +64,11 @@ def book_a_tour_success(request):
     return render(request, 'wine_cellar/book_a_tour_success.html')
 
 
-def send_confirmation_email(name, email, tour_date):
-    subject = 'Wine Cellar Tour Booking Confirmation'
-    message = f'Thank you, {name}, for booking a wine tour with us on {tour_date}. We look forward to welcoming you!'
-    from_email = settings.DEFAULT_FROM_EMAIL
-    recipient_list = [email]
-
-    send_mail(subject, message, from_email, recipient_list)
+def display_review(request):
+    reviews = Review.objects.all()
+    return render(request, 'wine_cellar/book_a_tour.html', {'reviews': reviews})
 
 
-@login_required
 def write_review(request):
     if request.method == 'POST':
         review_form = ReviewForm(request.POST, request.FILES)
@@ -101,11 +83,11 @@ def write_review(request):
         review_form = ReviewForm()
 
     reviews = Review.objects.filter(user=request.user)
+    print(reviews)
 
     return render(request, 'wine_cellar/book_a_tour.html', {'review_form': review_form, 'reviews': reviews})
 
 
-@login_required
 def edit_review(request, review_id):
     review = get_object_or_404(Review, id=review_id, user=request.user)
 
@@ -122,7 +104,6 @@ def edit_review(request, review_id):
     return render(request, 'wine_cellar/edit_review.html', {'review_form': review_form})
 
 
-@login_required
 def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id, user=request.user)
 

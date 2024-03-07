@@ -59,11 +59,16 @@
           </div>
         </div>
       </nav>
+      {% if user.is_authenticated %}
+      <p class="font-montserrat custom-gold text-end m-3">You are logged in as {{ user }}</p>
+      {% else %}
+      <p class="font-montserrat custom-gold text-end m-3">You are not logged in</p>
+      {% endif %}
     </header>
     <main class="container mx-auto my-8">
-        {% block content %}
-        <!--Content goes here-->
-        {% endblock content %}
+      {% block content %}
+      <!--Content goes here-->
+      {% endblock content %}
     </main>
     <footer class="py-6">
       <div class="container-lg">
