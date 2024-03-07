@@ -122,6 +122,7 @@ footer {
 
 /* Buttons */
 .button {
+    background: none;
     border-color: #daa520;
     border-style: ridge;
     border-width: 5px;

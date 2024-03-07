@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center position-relative">
+            <img src="{% static 'images/login.jpg' %}" class="img-fluid" alt="A bottle and a glass of red wine placed on a wine barrel">
+        </div>
+    </div>
+</div>
+{% trans "Login" %}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h2 class="font-parisienne custom-white">{% trans "Login" %}</h2>
+
+            <p class="p-montserrat custom-white">{% blocktrans %}Welcome back to the Wine O'Clock. To leave a review, please log in. If
+                you
+                have not created an account yet, then <a class="font-montserrat custom-gold link" href="{{ signup_url }}">Sign up</a>
+                first.{% endblocktrans %}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <form class="login" method="POST" action="{% url 'account_login' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                <button class="button custom-white right" type="submit">{% trans "Login" %}</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

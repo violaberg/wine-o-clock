@@ -5,14 +5,11 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.core.exceptions import ValidationError
 from django.utils import timezone
-from django.contrib.auth import login as auth_login, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from .forms import ContactForm
-from .forms import SignupForm
 from .models import GalleryImage
 from .models import TourBooking
 from .forms import TourBookingForm
-from .forms import LoginForm
 from .models import Review
 from .forms import ReviewForm
 from django.contrib import messages
@@ -52,29 +49,6 @@ def contact(request):
 def gallery(request):
     gallery_images = GalleryImage.objects.all()
     return render(request, 'wine_cellar/gallery.html', {'gallery_images': gallery_images})
-
-
-def signup(request):
-    if request.method == 'POST':
-        form = SignupForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            auth_login(request, user)
-            return redirect('home')
-    else:
-        form = SignupForm()
-    return render(request, 'wine_cellar/signup.html', {'form': form})
-
-
-def user_login(request):
-    if request.method == 'POST':
-        form = LoginForm(request, request.POST)
-        if form.is_valid():
-            auth_login(request, form.get_user())
-            return redirect('home')
-    else:
-        form = LoginForm(request)
-    return render(request, 'wine_cellar/login.html', {'form': form})
 
 
 def book_a_tour(request):
