@@ -72,7 +72,7 @@ class Review(models.Model):
         - image (ImageField): An optional image attached to the review.
         - timestamp (DateTimeField): The date and time when the review was created.
     """
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reviewer")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reviewer", max_length=20, default="user")
     body = models.TextField()
     image = models.ImageField(upload_to='review_images/', null=True, blank=True)
     timestamp = models.DateTimeField(auto_now_add=True)
