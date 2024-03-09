@@ -9,7 +9,7 @@
     </div>
 </div>
 <div class="container">
-    <header class="text-center mt-5">
+    <header class="text-center mt-4">
         <h1 class="font-parisienne custom-white custom-header">Book a Tour</h1>
     </header>
     <div class="row mt-2">
@@ -87,7 +87,7 @@
             </div>
         {% endfor %}
         <!--Form for new reviews-->
-        <h2 class="p-montserrat">Leave a review</h2>
+        <h2 class="p-parisienne">Leave a review</h2>
         <p class="p-montserrat">Writing as: <span class="font-parisienne custom-gold">{{ user.username }}</span></p>
         <div class="col-md-4 card">
             <div class="card-body">
@@ -95,13 +95,13 @@
                 <form action="{% url 'book_a_tour' %}" method="post">
                     {{ review_form }}
                     {% csrf_token %}
-                    <button type="submit" class="button btn custom-white">Submit Review</button>
                 </form>
                 {% else %}
-                <p class="p-montserrat">Log in to leave a review</p>
+                <p class="font-montserrat custom-gold">Please log in to leave a review</p>
                 {% endif %}
             </div>
         </div>
+        <button type="submit" class="review-btn button btn custom-white">Submit Review</button>
     </div>
 </div>
 

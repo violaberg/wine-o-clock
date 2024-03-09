@@ -74,7 +74,7 @@ def write_review(request):
         review_form = ReviewForm(request.POST, request.FILES)
         if review_form.is_valid():
             new_review = review_form.save(commit=False)
-            new_review.user = request.user
+            new_review.author = request.user
             new_review.save()
             messages.success(request, 'Review submitted successfully!')
             return redirect('book_a_tour')
