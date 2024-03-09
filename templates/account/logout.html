@@ -7,7 +7,7 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-md-8 mt-4 offset-md-2">
+        <div class="text-center mt-4 offset-md-2">
             <h2 class="font-parisienne custom-white">{% trans "Logout" %}</h2>
 
             <p class="font-montserrat custom-white">{% trans 'Are you sure you want to log out?' %}</p>
@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
 
-            <form method="post" action="{% url 'account_logout' %}">
+            <form class="text-center" method="post" action="{% url 'account_logout' %}">
                 {% csrf_token %}
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />

@@ -67,18 +67,18 @@ class Review(models.Model):
     Represents a review written by a user for a wine cellar tour.
 
     Fields:
-        - user (ForeignKey to User): The user who wrote the review.
-        - text (TextField): The textual content of the review.
+        - author (ForeignKey to User): The user who wrote the review.
+        - body (TextField): The textual content of the review.
         - image (ImageField): An optional image attached to the review.
         - timestamp (DateTimeField): The date and time when the review was created.
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reviewer")
-    text = models.TextField()
-    image = models.ImageField(upload_to='media/review_images/', null=True, blank=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reviewer")
+    body = models.TextField()
+    image = models.ImageField(upload_to='review_images/', null=True, blank=True)
     timestamp = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ["timestamp"]
 
     def __str__(self):
-        return f"Review by {self.user.username}"
+        return f"Review {self.body} {self.image.url if self.image else ''} by {self.author}"

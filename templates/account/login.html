@@ -18,17 +18,17 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <h2 class="font-parisienne custom-white">{% trans "Login" %}</h2>
+        <div class="text-center col-md-8 mt-3 offset-md-2">
+            <h2 class="font-parisienne text-center custom-white">{% trans "Login" %}</h2>
 
-            <p class="p-montserrat custom-white">{% blocktrans %}Welcome back to the Wine O'Clock. To leave a review, please log in. If
+            <p class="p-montserrat text-center custom-white">{% blocktrans %}Welcome back to the Wine O'Clock. To leave a review, please log in. If
                 you
                 have not created an account yet, then <a class="font-montserrat custom-gold link" href="{{ signup_url }}">Sign up</a>
                 first.{% endblocktrans %}</p>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+        <div class="text-center mt-3 offset-md-2">
             <form class="login" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
