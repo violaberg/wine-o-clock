@@ -25,7 +25,7 @@ class ContactForm(forms.ModelForm):
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
-        fields = ('text', 'image')
+        fields = ('body', 'image')
 
 
 class TourBookingForm(forms.ModelForm):

@@ -27,9 +27,10 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.add_message(
+                request,
+                'Thank you for contacting us! We have received your message and will get back to you soon.')
 
-            # Confirmation of form submitted successfully
-            return JsonResponse({'success': True, 'message': 'Thank you for contacting us! We have received your message and will get back to you soon.'})
     else:
         form = ContactForm()
 
@@ -69,7 +70,7 @@ def display_review(request):
     return render(request, 'wine_cellar/book_a_tour.html', {'reviews': reviews})
 
 
-def write_review(request):
+def write_review(request, slug):
     if request.method == 'POST':
         review_form = ReviewForm(request.POST, request.FILES)
         if review_form.is_valid():
@@ -82,14 +83,19 @@ def write_review(request):
     else:
         review_form = ReviewForm()
 
-    reviews = Review.objects.filter(user=request.user)
+    reviews = Review.objects.filter(author=request.user)
     print(reviews)
 
-    return render(request, 'wine_cellar/book_a_tour.html', {'review_form': review_form, 'reviews': reviews})
+    return render(
+        request,
+        'wine_cellar/book_a_tour.html',
+        {'reviews': reviews,
+         'review_form': review_form}
+    )
 
 
-def edit_review(request, review_id):
-    review = get_object_or_404(Review, id=review_id, user=request.user)
+def edit_review(request, slug, review_id):
+    review = get_object_or_404(Review, slug=slug, id=review_id, author=request.user)
 
     if request.method == 'POST':
         review_form = ReviewForm(request.POST, request.FILES, instance=review)
@@ -99,17 +105,22 @@ def edit_review(request, review_id):
             return redirect('book_a_tour')
 
     else:
-        review_form = ReviewForm(instance=review)
+        review_form = ReviewForm(data=request.POST,instance=review)
 
     return render(request, 'wine_cellar/edit_review.html', {'review_form': review_form})
 
 
 def delete_review(request, review_id):
-    review = get_object_or_404(Review, id=review_id, user=request.user)
+    review = get_object_or_404(Review, id=review_id, author=request.user)
 
     if request.method == 'POST':
         review.delete()
         messages.success(request, 'Review deleted successfully!')
         return redirect('book_a_tour')
+
+    else:
+        messages.add_message(
+            request,
+            messages.ERROR, 'You can only delete your own reviews!')
 
     return render(request, 'wine_cellar/delete_review.html', {'review': review})
