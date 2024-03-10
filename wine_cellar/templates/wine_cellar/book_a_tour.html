@@ -70,7 +70,7 @@
         <!--Display Existing Reviews-->
         {% for review in reviews %}
             <div class="review">
-                <p class="p-montserrat">{{ review.author }}</p>
+                <p class="p-montserrat custom-white">{{ review.author }}</p>
                 {% if review.image %}
                     <img src="{{ review.image.url }}" alt="Review Image">
                 {% endif %}
@@ -97,7 +97,7 @@
                     {% csrf_token %}
                 </form>
                 {% else %}
-                <p class="font-montserrat custom-gold">Please log in to leave a review</p>
+                <p class="font-montserrat custom-gold">Please <a class="custom-gold fw-bold" href="{% url 'account_login' %}">log in</a> to leave a review</p>
                 {% endif %}
             </div>
         </div>

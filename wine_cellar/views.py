@@ -111,7 +111,7 @@ def edit_review(request, slug, review_id):
 
 
 def delete_review(request, review_id):
-    review = get_object_or_404(Review, id=review_id, author=request.user)
+    review = get_object_or_404(UserReview, id=review_id, author=request.user)
 
     if request.method == 'POST':
         review.delete()
