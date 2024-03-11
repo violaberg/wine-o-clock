@@ -1,18 +1,10 @@
 {% extends "base.html" %}
-{% load static %}
 
 {% load i18n %}
+
 {% load account socialaccount %}
 
-{% block head_title %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center position-relative">
-            <img src="{% static 'images/login.jpg' %}" class="img-fluid" alt="A bottle and a glass of red wine placed on a wine barrel">
-        </div>
-    </div>
-</div>
-{% trans "Login" %}{% endblock %}
+{% block head_title %}{% trans "Login" %}{% endblock %}
 
 {% block content %}
 

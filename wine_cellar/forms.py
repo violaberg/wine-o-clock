@@ -1,7 +1,6 @@
 from django import forms
 from .models import Contact
 from .models import Review
-from .models import TourBooking
 
 
 class ContactForm(forms.ModelForm):
@@ -25,13 +24,4 @@ class ContactForm(forms.ModelForm):
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
-        fields = ('body', 'image')
-
-
-class TourBookingForm(forms.ModelForm):
-    class Meta:
-        model = TourBooking
-        fields = ['tour_date', 'num_guests', 'name', 'email', 'phone']
-        widgets = {
-            'tour_date': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
-        }
+        fields = ['body', 'image']

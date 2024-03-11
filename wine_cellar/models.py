@@ -39,28 +39,6 @@ class GalleryImage(models.Model):
         return f"Image {self.id}"
 
 
-# Booking model
-class TourBooking(models.Model):
-    """
-    Represents a booking for a wine cellar tour.
-
-    Attributes:
-        tour_date (DateTimeField): The date and time of the tour.
-        num_guests (IntegerField): The number of guests for the tour.
-        name (CharField): The name of the person booking the tour.
-        email (EmailField): The email address of the person booking the tour.
-        phone (IntegerField): The phone number of the person booking the tour.
-    """
-    tour_date = models.DateTimeField()
-    num_guests = models.IntegerField()
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
-    phone = models.IntegerField()
-
-    def __str__(self):
-        return f"Booking for {self.name} on {self.tour_date}"
-
-
 # Review model
 class Review(models.Model):
     """

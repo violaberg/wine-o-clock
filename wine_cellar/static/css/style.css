@@ -170,8 +170,8 @@ a {
 li {
     color: #daa520;
     font-family: "Montserrat", sans-serif;
+    margin-left: -2rem;
     opacity: 0.8;
-    padding-left: 4rem;
 }
 
 .errorlist {
