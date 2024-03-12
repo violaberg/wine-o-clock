@@ -20,8 +20,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path("accounts/", include("allauth.urls")),
+    path('admin/', admin.site.urls),
+    path('summernote/', include('django_summernote.urls')),
     path("", include("wine_cellar.urls"), name="wine_cellar-urls"),
     path("", include("blog.urls"), name="blog-urls"),
 ]

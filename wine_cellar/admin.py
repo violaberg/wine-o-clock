@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django_summernote.admin import SummernoteModelAdmin
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 from .models import GalleryImage, Review
