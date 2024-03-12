@@ -29,11 +29,11 @@
         <!--Display Existing Reviews-->
         {% for review in reviews %}
             <div class="review">
-                <p class="p-montserrat custom-white">{{ review.author }}</p>
+                <p class="font-montserrat custom-gold">by {{ review.author }}</p>
                 {% if review.image %}
-                    <img src="{{ review.image.url }}" alt="Review Image">
+                    <img class="scale" src="{{ review.image.url }}" alt="Review Image">
                 {% endif %}
-                <span class="font-weight-normal">
+                <span class="font-montserrat custom-maroon font-weight-normal">
                     {{ review.timestamp }}
                   </span>
                   <div class="p-montserrat custom-white" id="review{{ review.id }}">
@@ -46,7 +46,7 @@
             </div>
         {% endfor %}
         <!--Form for new reviews-->
-        <h2 class="p-parisienne">Leave a review</h2>
+        <h2 class="p-parisienne pt-4">Leave a review</h2>
         <p class="p-montserrat">Writing as: <span class="font-parisienne custom-gold">{{ user.username }}</span></p>
         <div class="col-md-4 card">
             <div class="card-body">
