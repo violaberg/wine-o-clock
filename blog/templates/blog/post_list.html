@@ -10,21 +10,21 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
-                <div class="col-md-4">
+                <div class="post col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
+                                    <p class="font-montserrat custom-gold author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
+                                <h2 class="font-parisienne text-center custom-gold card-title">{{ post.title }}</h2>
+                                <p class="font-montserrat text-center custom-white card-text">{{ post.excerpt }}</p>
                             </a>
 
-                            <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}}
+                            <hr class="custom-white" />
+                            <p class="custom-maroon card-text h6">{{ post.created_on}}
                             </p>
                         </div>
                     </div>
@@ -40,15 +40,15 @@
     </div>
     {% if is_paginated %}
     <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
+        <ul class="page-btn justify-content-center">
             {% if page_obj.has_previous %}
             <li>
                 <a href="?page={{ page_obj.previous_page_number }}"
-                class="page-link">&laquo; PREV</a>
+                class="button btn page-link">&laquo; PREV</a>
             </li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="button btn page-link"> NEXT &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>

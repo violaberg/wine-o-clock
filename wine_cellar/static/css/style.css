@@ -87,7 +87,6 @@ li.nav-item {
 .cellar-name {
     font-size: 4rem;
     padding: 1rem 1rem;
-    pointer-events:none;
     width: 33vw;
 }
 
@@ -130,6 +129,7 @@ footer {
 
 .button:hover {
     background-color: #4c0013;
+    border-color: #daa520;
     color: #daa520;
 }
 
@@ -146,11 +146,6 @@ button.navbar-toggler {
 .booking-btn:hover {
     background-color: #4c0013;
     opacity: 1;
-}
-
-.book-a-tour-btn:hover {
-    background-color: #4c0013;
-    color: #daa520;
 }
 
 /* Form styling */
@@ -186,20 +181,29 @@ li {
     border-width: 5px;
 }
 
+.card-title {
+    padding-top: 0.3rem;
+}
+
 .image-container {
     position: relative;
 }
 
 .image-flash {
-    position: absolute;
     bottom: 5%;
-    min-width: 30%;
     left: -2px;
+    min-width: 30%;
+    position: absolute;
+}
+
+.post {
+    padding-bottom: 1rem;
 }
 
 .scale {
-    width: 100%;
+    border-radius: 5px;
     height: auto;
+    width: 100%;
 }
 
 .author {
@@ -209,8 +213,7 @@ li {
     border-width: 5px;
     color: #daa520;
     margin: 4px;
-    padding: 0.2rem;
-    text-transform: uppercase;
+    padding: 0.3rem;
 }
 
 .masthead {
@@ -218,7 +221,6 @@ li {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
     width: 100%;
 }
 
@@ -240,11 +242,6 @@ li {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #4c0013;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
 }
 
 .post-link {
@@ -255,6 +252,7 @@ li {
 .post-link:hover,
 .page-link {
     color: #daa520;
+    padding: 0.3rem;
 }
 
 .post-title {
@@ -264,7 +262,6 @@ li {
 
 .post-subtitle {
     margin-left: 5%;
-    color: #daa520;
 }
 
 .link {
@@ -274,14 +271,39 @@ li {
 
 .link:hover,
 .link:active {
-    color: #445261;
-    text-decoration: underline;
+    color: #daa520;
+}
+
+.page-btn {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100px;
 }
 
 .btn-like {
+    border-color: #daa520;
+    border-style: ridge;
+    border-width: 5px;
     color: #daa520;
-    border: none;
     background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #daa520;
+    background: transparent;
+    border: none;
+}
+
+.faded {
+    color: #4c0013;
+    opacity: 0.8;
+}
+
+.approval {
+    color: #daa520;
+    opacity: 0.6;
 }
 
 /* Reviews */
