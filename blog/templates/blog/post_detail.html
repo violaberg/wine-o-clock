@@ -6,9 +6,9 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
-                <h1 class="font-parisienne custom-gold post-title">{{ post.title }}</h1>
+                <h1 class="font-parisienne text-center custom-gold post-title">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="font-montserrat custom-maroon post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="font-montserrat text-center custom-maroon post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <img src="{% static 'images/blog-post.jpg' %}" class="scale" alt="A bottle and a glass of red wine sitting on a barrel">
@@ -20,7 +20,7 @@
 <div class="container">
     <div class="row">
         <div class="col card mb-4 mt-3 left top">
-            <div class="p-montserrat card-body">
+            <div class="p-montserrat text-center card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text">

@@ -149,7 +149,15 @@ button.navbar-toggler {
     opacity: 1;
 }
 
+.btn-signup {
+    margin-left: 3rem;
+}
+
 /* Form styling */
+.form {
+    padding-left: 2.5rem;
+}
+
 label {
     color: #fafafa;
     font-family: "Montserrat", sans-serif;
@@ -166,8 +174,9 @@ a {
 li {
     color: #daa520;
     font-family: "Montserrat", sans-serif;
-    margin-left: -2rem;
+    margin-left: -2.5rem;
     opacity: 0.8;
+    padding: 0.3rem;
 }
 
 .errorlist {
