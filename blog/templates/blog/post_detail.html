@@ -43,7 +43,7 @@
   <!-- Display Comments -->
   <div class="row">
     <div class="col-md-8 card mb-4  mt-3 ">
-      <h3 class="font-parisienne custom-gold text-center p-2" >Comments:</h3>
+      <h3 class="font-parisienne custom-gold text-center p-2" >Comments</h3>
       <div class="p-montserrat text-center p-0 card-body">
         <!-- A for loop inside the empty control tags
           to iterate through each comment in comments -->
@@ -51,9 +51,9 @@
         <div class="p-2 comments
           {% if not comment.approved and comment.author == user %}
           faded{% elif not comment.approved %} d-none{% endif %}">
-          <p class="font-montserrat custom-maroon font-weight-bold">
+          <p class="font-montserrat custom-maroon">
             {{ comment.author }}
-            <span class="font-montserrat custom-maroon font-weight-normal">
+            <span>
               {{ comment.created_on }}
             </span> wrote:
           </p>
@@ -70,6 +70,24 @@
         {% endfor %}
       </div>
     </div>
+    <!-- Creating New Comments -->
+    <div class="font-montserrat col-md-4 card mb-4 mt-3">
+        <div class="card-body">
+          {% if user.is_authenticated %}
+          <h3 class="font-parisienne custom-gold text-center">Leave a comment</h3>
+          <p class="font-montserrat custom-maroon text-center">Posting as: {{ user.username }}</p>
+          <form id="commentForm" method="post"
+            style="margin-top: 1.3em;">
+            {{ comment_form }}
+            {% csrf_token %}
+            <button id="submitButton" type="submit"
+              class="button custom-white btn btn-signup btn-lg">Submit</button>
+          </form>
+          {% else %}
+          <p>Log in to leave a comment</p>
+          {% endif %}
+        </div>
+      </div>
   </div>
 </div>
 

@@ -184,6 +184,10 @@ li {
     list-style-type: none;
 }
 
+textarea {
+    width: -webkit-fill-available;
+}
+
 /* Blog */
 .card {
     background-color: transparent;
