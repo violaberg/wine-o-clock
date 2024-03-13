@@ -87,7 +87,7 @@ The website was tested on various devices using Chrome DevTools and real-life de
 
 ## **Manual Testing**
 
-### ***Navigation**
+### **Navigation**
 
 | Element                | Action      | Expected Result                                         | Pass/Fail         |
 | ---------------------- | ----------- | ------------------------------------------------------- | ----------------- |
@@ -202,5 +202,6 @@ Responsiveness was achieved using TailwindCSS and custom CSS and tested with Chr
 | CSRF verification error when trying to login as admin | Missing CSRF_TRUSTED_ORIGINS in settings.py | Adding <code>CSRF_TRUSTED_ORIGINS=['https://8000-violaberg-wineoclock-3rc52bvzr9m.ws-eu108.gitpod.io']</code> resolved the issue |
 | django.db.migrations.exceptions.InconsistentMigrationHistory | Didn't handle migrations correctly | Contacted tutor support and John very kindly helped me to reset database |
 | Impossible to add a non-nullable field 'author' to review without specifying a default | No default value provided to new field in model | Added default='' to field resolved the issue |
+| Review text not showing | Changed Review module field from text to body, forgot to change template | Changing <code>{{ review.text }}</code> to <code>{{ review.body }}</code> resolved the issue |
 
 [Back to Readme](README.md)

@@ -6,7 +6,7 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <!-- Post title  -->
-                <h1 class="font-parisienne text-center custom-gold post-title">{{ post.title }}</h1>
+                <h1 class="custom-header text-center post-title">{{ post.title }}</h1>
                 <!-- Post author & created date -->
                 <p class="font-montserrat text-center custom-maroon post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
@@ -43,7 +43,7 @@
   <!-- Display Comments -->
   <div class="row">
     <div class="col-md-8 card mb-4  mt-3 ">
-      <h3 class="font-parisienne custom-gold text-center p-2" >Comments</h3>
+      <h3 class="custom-header text-center p-2" >Comments</h3>
       <div class="p-montserrat text-center p-0 card-body">
         <!-- A for loop inside the empty control tags
           to iterate through each comment in comments -->
@@ -74,7 +74,7 @@
     <div class="font-montserrat col-md-4 card mb-4 mt-3">
         <div class="card-body">
           {% if user.is_authenticated %}
-          <h3 class="font-parisienne custom-gold text-center">Leave a comment</h3>
+          <h1 class="custom-header text-center">Leave a comment</h1>
           <p class="font-montserrat custom-maroon text-center">Posting as: {{ user.username }}</p>
           <form id="commentForm" method="post"
             style="margin-top: 1.3em;">
@@ -84,7 +84,7 @@
               class="button custom-white btn btn-signup btn-lg">Submit</button>
           </form>
           {% else %}
-          <p>Log in to leave a comment</p>
+          <p class="font-montserrat text-center custom-gold">Please <a class="custom-gold fw-bold" href="{% url 'account_login' %}">log in</a> to leave a comment</p>
           {% endif %}
         </div>
       </div>

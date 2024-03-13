@@ -36,6 +36,11 @@ body, .bg-body-tertiary {
     background-size: cover;
 }
 
+.custom-header {
+    color: #daa520;
+    font-family: 'Parisienne', cursive;
+}
+
 .p-parisienne {
     color: #fafafa;
     font-family: 'Parisienne', cursive;
@@ -75,10 +80,6 @@ body, .bg-body-tertiary {
 
 li.nav-item {
     padding-left: 2rem;
-}
-
-.navbar-toggler-icon {
-    color: #daa520;
 }
 
 .logo {
@@ -132,10 +133,6 @@ footer {
 .button:hover {
     background-color: #4c0013;
     border-color: #daa520;
-    color: #daa520;
-}
-
-button.navbar-toggler {
     color: #daa520;
 }
 

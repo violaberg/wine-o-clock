@@ -54,6 +54,7 @@ class Review(models.Model):
     body = models.TextField()
     image = models.ImageField(upload_to='review_images/', null=True, blank=True)
     timestamp = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ["timestamp"]

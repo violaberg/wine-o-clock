@@ -3,7 +3,7 @@
 ## **Overview**
 
 Wine O'Clock is a fictional wine cellar nested in the heart of the world-renowned Bordeaux wine region in France. Born from my deep passion for wine and the enchanting allure of France, this project invites enthusiasts to embark on an unforgettable journey into the captivating realms of winemaking.<br>
-The site shares a brief narrative about Wine O'Clock, offering a glimpse into its rich history and commitment to the craft. Immerse yourself in our curated gallery, adorned with exquisite photos captured by both owners and cherished visitors, creating a tapestry of memories that resonate with the essence of our vineyard. Whether you're a seasoned connoisseur or a curious explorer, the user-friendly Booking page ensures a seamless planning experience. For any additional information or inquiries, our Contact Us form is at your disposal. Wine O'Clock beckons, a celebration of passion, tradition, and the timeless beauty of French winemaking.
+The site shares a brief narrative about Wine O'Clock, offering a glimpse into its rich history and commitment to the craft. Immerse yourself in our curated gallery, adorned with exquisite photos captured by owners, reviews left by cherished visitors, creating a tapestry of memories that resonate with the essence of our vineyard, or read our blog if you crave some more info about all things wine. Whether you're a seasoned connoisseur or a curious explorer, Wine O'Clock has something for everyone. For booking or any additional information, our Contact form is at your disposal. Wine O'Clock beckons, a celebration of passion, tradition, and the timeless beauty of French winemaking.
 
 <img scr><br>
 
@@ -30,6 +30,7 @@ Deployed project can be found here: [Wine O'Clock]()
 * [**Testing**](#testing)
 * [**Deployment**](#deployment)
 * [**Acknowledgement & Credits**](#acknowledgement--credits)
+* [**Media**](#media)
 
 # **User experience (UX)**
 
@@ -169,7 +170,7 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 
 To help with a flow of the website, I created a flowchart using [Draw.io](https://www.drawio.com/)
 
-![Flowchart](static/docs/flowchart.drawio.png)
+![Flowchart](wine_cellar/static/docs/flowchart.drawio.png)
 
 ## **Skeleton plane**
 
@@ -179,17 +180,17 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 #### **Desktop wireframes:**
 
-<details><summary>Home Page</summary><img src="static/docs/wireframes/home-page-desktop.png"></details>
+<details><summary>Home Page</summary><img src="wine_cellar/static/docs/wireframes/home-page-desktop.png"></details>
 
-<details><summary>About Page</summary><img src="static/docs/wireframes/about-page-desktop.png"></details>
+<details><summary>About Page</summary><img src="wine_cellar/static/docs/wireframes/about-page-desktop.png"></details>
 
-<details><summary>Gallery Page</summary><img src="static/docs/wireframes/gallery-page-desktop.png"></details>
+<details><summary>Gallery Page</summary><img src="wine_cellar/static/docs/wireframes/gallery-page-desktop.png"></details>
 
-<details><summary>Book a Tour Page</summary><img src="static/docs/wireframes/book-a-tour-page-desktop.png"></details>
+<details><summary>Book a Tour Page</summary><img src="wine_cellar/static/docs/wireframes/book-a-tour-page-desktop.png"></details>
 
-<details><summary>Contact Page</summary><img src="static/docs/wireframes/contact-page-desktop.png"></details>
+<details><summary>Contact Page</summary><img src="wine_cellar/static/docs/wireframes/contact-page-desktop.png"></details>
 
-<details><summary>Login Page</summary><img src="static/docs/wireframes/login-page-desktop.png"></details>
+<details><summary>Login Page</summary><img src="wine_cellar/static/docs/wireframes/login-page-desktop.png"></details>
 
 #### **Mobile wireframes:**
 
@@ -207,15 +208,19 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 ### **Database schema**
 
-![Database schema](static/docs/database-schema.drawio.png)
+![Database schema](wine_cellar/static/docs/database-schema.drawio.png)
 
 ## **Surface plane**
 
 ### **Color Scheme**
 
-The color palette chosen for Wine O'Clock app reflects a thoughtful blend of elegance and richness inspired by the world of wines. The soft and inviting Seasalt shade `#fafafa` serves as the symbol of the purity and clarity found in the process of winemaking. The use of Muted gold shade `#cc9933` represents the allure of gold, mirroring the excellence and sophistication associated with wines bringing a sense of warmth to project. This golden hue speaks to the refined taste and quality that defines the Wine O'Clock experience. Accentuating the palette are deep, juicy tones of Bordeaux `#4c0013`, evoking the essence of rich red wines, and a Classic black `#000000`, representing the depth and complexity found in a perfectly aged bottle. Each color is carefully selected to embody the journey from vine to cellar, culminating in a visual harmony that encapsulates the luxurious world of Bordeaux wines at Wine O'Clock.
+The color palette chosen for Wine O'Clock app reflects a thoughtful blend of elegance and richness inspired by the world of wines. The soft and inviting Seasalt shade `#fafafa` serves as the symbol of the purity and clarity found in the process of winemaking. The use of Muted gold shade `#daa520` represents the allure of gold, mirroring the excellence and sophistication associated with wines bringing a sense of warmth to project. This golden hue speaks to the refined taste and quality that defines the Wine O'Clock experience. Accentuating the palette are deep, juicy tones of Bordeaux `#4c0013`, evoking the essence of rich red wines, and a Classic black `#000000`, representing the depth and complexity found in a perfectly aged bottle. Each color is carefully selected to embody the journey from vine to cellar, culminating in a visual harmony that encapsulates the luxurious world of Bordeaux wines at Wine O'Clock.
 
-![Color palette](static/docs/color/color-palette.png)
+![Color palette](wine_cellar/static/docs/color/color-palette.png)
+
+To add more depth and interest to design but not make it overwhelming for user to look at, I created a pattern for background using one my colors - Classic black `#000000`:
+
+![Pattern](wine_cellar/static/docs/color/pattern.png)
 
 ### **Typography**
 
@@ -255,13 +260,17 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 * [Pattern Monster](https://pattern.monster/) - background pattern
 * [Google Fonts](https://fonts.google.com/) - fonts
 * [Font Awesome](https://fontawesome.com/) - icons
-* [Adobe Firefly](https://firefly.adobe.com/) - Contact page image
-* [Vecteezy](https://www.vecteezy.com/) - Home page image by Chinnachart Martmoh, available at this [link](https://www.vecteezy.com/photo/6660921-red-wine-and-white-wine-in-a-glass-of-wine-wooden-tabletop-there-is-a-wine-cellar-on-the-table-and-red-and-green-grapes-the-background-is-an-underground-wine-cellar-3d-rendering)
-* [Freepik](https://www.freepik.com/) - About page image by wirestock, available at this [link](https://www.freepik.com/free-photo/beautiful-shot-large-agricultural-field-countryside-with-hills-amazing-cloudy-sky_15695562.htm#page=2&query=wine%20cellar&position=24&from_view=search&track=ais&uuid=f149cfd0-a789-4804-9520-8783151b7d53)
 * [Stack Overflow](https://stackoverflow.com/questions/29573163/django-admin-login-suddenly-demanding-csrf-token) - used to check if I remember correct how to set CSRF_TRUSTED_ORIGINS in settings 
 * [Google groups](https://groups.google.com/g/django-users/c/RilA_RKi07c?pli=1) - used to resolve models.py issue
-* Walkthrough blog code from Code Institute course used to set up register/ login/ logout and styled to suit my project.
+* Walkthrough blog code from Code Institute course used to set up register/ login/ logout/ blog and modified/ styled to suit my project.
+* [Reddit](https://www.reddit.com/r/django/comments/3r1z4c/how_do_i_nuke_my_database_and_start_over/) - used to reset my database when I couldn't resolve migration errors.
 
 * The biggest thank you as always to my family during this busy time of juggling the biggest project so far, hackathon and life in general.
 * Thank you as well to my mentor [David Bowers](https://github.com/dnlbowers) who supported me from the very beginning always giving the best advice and ideas for solutions and more importantly never losing hope in me, even when I did.
 * And thank you to [Kim](https://github.com/kimatron) for continuous support and in general for convincing me to take on this course.
+
+# **Media**
+
+* [Adobe Firefly](https://firefly.adobe.com/) - Contact page image
+* [Vecteezy](https://www.vecteezy.com/) - Home page image by Chinnachart Martmoh, available at this [link](https://www.vecteezy.com/photo/6660921-red-wine-and-white-wine-in-a-glass-of-wine-wooden-tabletop-there-is-a-wine-cellar-on-the-table-and-red-and-green-grapes-the-background-is-an-underground-wine-cellar-3d-rendering)
+* [Freepik](https://www.freepik.com/) - About page image by wirestock, available at this [link](https://www.freepik.com/free-photo/beautiful-shot-large-agricultural-field-countryside-with-hills-amazing-cloudy-sky_15695562.htm#page=2&query=wine%20cellar&position=24&from_view=search&track=ais&uuid=f149cfd0-a789-4804-9520-8783151b7d53)

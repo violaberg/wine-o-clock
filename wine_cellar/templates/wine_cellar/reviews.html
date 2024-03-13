@@ -10,7 +10,7 @@
 </div>
 <div class="container">
     <header class="text-center mt-4">
-        <h1 class="font-parisienne custom-white custom-header">Book a Tour</h1>
+        <h1 class="custom-header">Book a Tour</h1>
     </header>
     <div class="row mt-2">
         <div class="col-md-12 text-center">
@@ -20,24 +20,23 @@
         </div>
     </div>
 </div>
-</div>
-</div>
+<hr class="custom-white">
 <!--Reviews-->
-<div class="row text-center mt-5">
+<div class="row text-center mt-4">
     <div class="col-md-12 text-center">
-        <h1 class="font-parisienne custom-white text-center">Customer Reviews</h1>
+        <h1 class="custom-header text-center">Customer Reviews</h1>
         <!--Display Existing Reviews-->
         {% for review in reviews %}
             <div class="review">
-                <p class="font-montserrat custom-gold">by {{ review.author }}</p>
+                <p class="font-montserrat custom-maroon">by {{ review.author }}</p>
                 {% if review.image %}
                     <img class="scale" src="{{ review.image.url }}" alt="Review Image">
                 {% endif %}
-                <span class="font-montserrat custom-maroon font-weight-normal">
+                <span class="font-montserrat custom-maroon">
                     {{ review.timestamp }}
                   </span>
                   <div class="p-montserrat custom-white" id="review{{ review.id }}">
-                    {{ review.text }}
+                    {{ review.body }}
                   </div>
                   {% if user.is_authenticated and review.author == user %}
                   <button class="button custom-white" data-review_id="{{ review.id }}">Delete</button>
@@ -45,9 +44,10 @@
                   {% endif %}
             </div>
         {% endfor %}
+        <hr class="custom-white">
         <!--Form for new reviews-->
-        <h2 class="p-parisienne pt-4">Leave a review</h2>
-        <p class="p-montserrat">Writing as: <span class="font-parisienne custom-gold">{{ user.username }}</span></p>
+        <h1 class="custom-header mt-4">Leave a review</h1>
+        <p class="font-montserrat custom-maroon">Writing as: <span class="font-parisienne custom-maroon">{{ user.username }}</span></p>
         <div class="col-md-4 card">
             <div class="card-body">
                 {% if user.is_authenticated %}
