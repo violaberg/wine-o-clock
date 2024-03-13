@@ -8,42 +8,23 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <header class="text-center mt-4">
+<div class="text-center container">
+    <header class="mt-4">
         <h1 class="custom-header">Contact Us</h1>
     </header>
     <div class="row mt-2">
-        <div class="col-md-12 text-center">
+        <div class="col-md-12">
             <p class="p-montserrat">
                 Feel free to reach out to us with any inquiries or if you wish to secure a booking. We cater for an early morning or late evening bookings too, perfect for those cherished and intimate moments. Our dedicated team is here to enhance your wine journey, ensuring it's a delightful and memorable experience. Your satisfaction is our priority, and we look forward to assisting you in every way possible. Cheers to the joy of wine!
             </p>
         </div>
     </div>
     <!--Contact Form-->
-        <form method="post" action="{% url 'contact' %}" class="form text-center">
-            {% csrf_token %}
-            <!--First Name-->
-            <div class="form-group">
-                <label class="label-fixed-width" for="first_name">First Name:</label>
-                <input type="text" id="first_name" name="first_name" class="mb-3" autocomplete="first_name" required>
-            </div>
-            <!--Last Name-->
-            <div class="form-group">
-                <label class="label-fixed-width" for="last_name">Last Name:</label>
-                <input type="text" id="last_name" name="last_name" class="mb-3" autocomplete="last_name" required>
-            </div>
-            <!--Email-->
-            <div class="form-group">
-                <label class="label-fixed-width" for="email">Email:</label>
-                <input type="email" id="email" name="email" class="mb-3" autocomplete="email" required>
-            </div>
-            <!--Message-->
-            <div class="form-group">
-                <label class="message-label label-fixed-width" for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <!--Submit button-->
-            <button type="button" class="button form-button btn custom-white">Send</button>
-        </form>
+    <form method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button class="contact-btn button custom-white mt-0 btn"
+          type="submit">Submit</button>
+      </form>
 </div>
 {% endblock content %}

@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.http import HttpResponse
 from django.core.exceptions import ValidationError
 from .forms import ContactForm
@@ -23,14 +23,11 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.add_message(
-                request,
-                'Thank you for contacting us! We have received your message and will get back to you soon.')
+            return render(request, 'wine_cellar/contact_form_success.html')
 
     else:
         form = ContactForm()
-
-    return render(request, 'wine_cellar/contact.html', {'form': form})
+        return render(request, 'wine_cellar/contact.html', {'form': form})
 
 
 def gallery(request):
@@ -68,32 +65,37 @@ def write_review(request, slug):
 
 
 def edit_review(request, slug, review_id):
-    review = get_object_or_404(Review, slug=slug, id=review_id, author=request.user)
-
+    """
+    View to edit reviews
+    """
     if request.method == 'POST':
-        review_form = ReviewForm(request.POST, request.FILES, instance=review)
-        if review_form.is_valid():
-            review_form.save()
-            messages.success(request, 'Review updated successfully!')
+
+        queryset = Review.objects.all
+        review = get_object_or_404(Review, pk=review_id)
+        review_form = ReviewForm(data=request.POST, instance=review)
+
+        if review_form.is_valid() and review.author == request.user:
+            review = review_form.save(commit=False)
+            review.save()
+            messages.success(request, messages.SUCCESS, 'Review updated successfully!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating review!')
             return redirect('reviews')
 
-    else:
-        review_form = ReviewForm(data=request.POST,instance=review)
-
-    return render(request, 'wine_cellar/edit_review.html', {'review_form': review_form})
+    return HttpResponseRedirect(reverse('reviews', args=[slug]))
 
 
-def delete_review(request, review_id):
-    review = get_object_or_404(Review, id=review_id, author=request.user)
+def delete_review(request, slug, review_id):
+    """
+    View to delete comment
+    """
+    queryset = Review.objects.all
+    review = get_object_or_404(Review, pk=review_id)
 
-    if request.method == 'POST':
+    if review.author == request.user:
         review.delete()
-        messages.success(request, 'Review deleted successfully!')
-        return redirect('reviews')
-
+        messages.add_message(request, messages.SUCCESS, 'Review deleted!')
     else:
-        messages.add_message(
-            request,
-            messages.ERROR, 'You can only delete your own reviews!')
+        messages.add_message(request, messages.ERROR, 'You can only delete your own reviews!')
 
-    return render(request, 'wine_cellar/delete_review.html', {'review': review})
+    return HttpResponseRedirect(reverse('reviews', args=[slug]))
