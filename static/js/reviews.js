@@ -1,7 +1,7 @@
 const editReviewButtons = document.getElementsByClassName("button-edit");
 const reviewText = document.getElementById("id_body");
 const reviewForm = document.getElementById("reviewForm");
-const submitReviewButton = document.getElementById("submitButton");
+const submitReviewButton = document.getElementById("submitReviewButton");
 
 const deleteReviewModal = new bootstrap.Modal(document.getElementById("deleteReviewModal"));
 const deleteReviewButtons = document.getElementsByClassName("btn-delete");

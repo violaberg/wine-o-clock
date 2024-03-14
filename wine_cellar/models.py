@@ -53,7 +53,7 @@ class Review(models.Model):
     """
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reviewer", max_length=30, default='')
     body = models.TextField()
-    image = models.ImageField(upload_to="gallery/", default="placeholder")
+    image = models.ImageField(upload_to="gallery/", blank=True)
     timestamp = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 
