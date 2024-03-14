@@ -38,6 +38,7 @@ def gallery(request):
 def display_review(request):
     reviews = Review.objects.all()
     return render(request, 'wine_cellar/reviews.html', {'reviews': reviews})
+    paginate_by = 3
 
 
 def write_review(request, slug):
@@ -87,7 +88,7 @@ def edit_review(request, slug, review_id):
 
 def delete_review(request, slug, review_id):
     """
-    View to delete comment
+    View to delete review
     """
     queryset = Review.objects.all
     review = get_object_or_404(Review, pk=review_id)

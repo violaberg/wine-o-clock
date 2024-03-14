@@ -82,6 +82,15 @@ li.nav-item {
     padding-left: 2rem;
 }
 
+.my-toggler {
+    background-color: #daa520;
+    border-color: #daa520;
+    border-radius: 3px;
+    border-style: ridge;
+    border-width: 3px;
+    opacity: 0.8;
+}
+
 .logo {
     width: 5rem;
 }
@@ -90,6 +99,10 @@ li.nav-item {
     font-size: 4rem;
     padding: 1rem 1rem;
     width: 33vw;
+}
+
+.cellar-name:hover {
+    color: #daa520;
 }
 
 img {
@@ -149,6 +162,10 @@ footer {
 }
 
 .delete-comment{
+    background-color: #4c0013;
+}
+
+.button-delete {
     background-color: #4c0013;
 }
 
@@ -402,5 +419,15 @@ textarea {
     }
     .font-montserrat {
         font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .cellar-name {
+        font-size: 2.5rem;
+    }
+    .logo {
+        width: 3rem;
+        margin-left: -0.5rem;
     }
 }

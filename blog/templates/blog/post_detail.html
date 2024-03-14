@@ -20,7 +20,7 @@
 <div class="container">
     <div class="row">
         <div class="col card mb-4 mt-3 left top">
-            <div class="p-montserrat text-center p-0 card-body">
+            <div class="font-montserrat custom-white text-center p-0 card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text">
@@ -57,11 +57,11 @@
               {{ comment.created_on }}
             </span> wrote:
           </p>
-          <div id="comment{{ comment.id }}">
+          <div class="custom-white" id="comment{{ comment.id }}">
             {{ comment.body | linebreaks }}
           </div>
           {% if not comment.approved and comment.author == user %}
-          <p class="font-montserrat custom-maroon approval">
+          <p class="font-montserrat approval">
             This comment is awaiting approval
           </p>
           {% endif %}

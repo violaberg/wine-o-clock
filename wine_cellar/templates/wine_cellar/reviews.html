@@ -14,8 +14,8 @@
     </header>
     <div class="row mt-2">
         <div class="col-md-12 text-center">
-            <p class="p-montserrat">
-                Embark on a journey through the heart of our wine sanctuary with our exclusive cellar tour experience, immerse yourself in the rich history of our vineyards, witness the meticulous craftsmanship behind each bottle, and indulge in the captivating stories that make each sip extraordinary. Our knowledgeable guides will lead you through the hidden gems of our cellar, unveiling the artistry and passion that goes into crafting our exceptional wines. Whether you're a wine enthusiast or a casual connoisseur, a wine cellar tour with us promises an unforgettable blend of education, taste, and ambiance. Book your tour now through <a class="font-parisienne custom-gold" href="{% url 'contact' %}">Contact Us form</a> and elevate your wine experience to new heights!
+            <p class="font-montserrat custom-white">
+                Embark on a journey through the heart of our wine sanctuary with our exclusive cellar tour experience, immerse yourself in the rich history of our vineyards, witness the meticulous craftsmanship behind each bottle, and indulge in the captivating stories that make each sip extraordinary. Our knowledgeable guides will lead you through the hidden gems of our cellar, unveiling the artistry and passion that goes into crafting our exceptional wines. Whether you're a wine enthusiast or a casual connoisseur, a wine cellar tour with us promises an unforgettable blend of education, taste, and ambiance. Book your tour now through <a class="link font-parisienne custom-gold" href="{% url 'contact' %}">Contact Us form</a> and elevate your wine experience to new heights!
             </p>
         </div>
     </div>
@@ -35,7 +35,7 @@
                 <span class="font-montserrat custom-maroon">
                     {{ review.timestamp }}
                   </span>
-                  <div class="p-montserrat custom-white" id="review{{ review.id }}">
+                  <div class="font-montserrat custom-white" id="review{{ review.id }}">
                     {{ review.body }}
                   </div>
                   {% if user.is_authenticated and review.author == user %}
@@ -43,8 +43,25 @@
                   <button class="button btn custom-white button-delete" review_id="{{ review.id }}">Delete</button>
                   {% endif %}
                   <hr class="custom-white">
+                  {% if forloop.counter|divisibleby:3 %}
             </div>
+        {% endif %}
         {% endfor %}
+        {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="page-btn justify-content-center">
+            {% if page_obj.has_previous %}
+            <li>
+                <a href="?page={{ page_obj.previous_page_number }}"
+                class="button btn page-link">&laquo; PREV</a>
+            </li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="button btn page-link"> NEXT &raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
         <hr class="custom-white">
         <!--Form for new reviews-->
         <h1 class="custom-header mt-4">Leave a review</h1>
