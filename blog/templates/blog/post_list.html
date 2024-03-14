@@ -52,11 +52,11 @@
             {% if page_obj.has_previous %}
             <li>
                 <a href="?page={{ page_obj.previous_page_number }}"
-                class="button btn page-link">&laquo; PREV</a>
+                class="button custom-white btn">&laquo; PREV</a>
             </li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="button btn page-link"> NEXT &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="button custom-white btn"> NEXT &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>
