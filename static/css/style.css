@@ -434,14 +434,21 @@ textarea {
         width: 3rem;
         margin-left: -0.5rem;
     }
+    .my-toggler {
+        margin-top: -1.5rem;
+    }
     .booking-btn {
         padding: 0.3rem;
     }
-    /* .navbar-nav {
-        display: none !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .author {
+        margin: -1rem;
+        margin-left: -1.8rem;
+        margin-top: -8rem;
     }
-    .navbar-toggler {
-        display: inline-block !important;
-        position: relative;
-    } */
+    p {
+        margin-top: 1rem;
+    }
 }
