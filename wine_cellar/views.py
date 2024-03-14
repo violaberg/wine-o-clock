@@ -38,7 +38,6 @@ def gallery(request):
 def display_review(request):
     reviews = Review.objects.all()
     return render(request, 'wine_cellar/reviews.html', {'reviews': reviews})
-    paginate_by = 3
 
 
 def write_review(request, slug):

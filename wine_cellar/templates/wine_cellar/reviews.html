@@ -40,28 +40,11 @@
                   </div>
                   {% if user.is_authenticated and review.author == user %}
                   <button class="button btn custom-white button-edit" review_id="{{ review.id }}">Edit</button>
-                  <button class="button btn custom-white button-delete" review_id="{{ review.id }}">Delete</button>
+                  <button class="button btn custom-white button-delete btn-delete" review_id="{{ review.id }}">Delete</button>
                   {% endif %}
                   <hr class="custom-white">
-                  {% if forloop.counter|divisibleby:3 %}
             </div>
-        {% endif %}
         {% endfor %}
-        {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="page-btn justify-content-center">
-            {% if page_obj.has_previous %}
-            <li>
-                <a href="?page={{ page_obj.previous_page_number }}"
-                class="button btn page-link">&laquo; PREV</a>
-            </li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="button btn page-link"> NEXT &raquo;</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
         <hr class="custom-white">
         <!--Form for new reviews-->
         <h1 class="custom-header mt-4">Leave a review</h1>

@@ -1,9 +1,9 @@
-const editButtons = document.getElementsByClassName("button-edit");
+const editReviewButtons = document.getElementsByClassName("button-edit");
 const reviewText = document.getElementById("id_body");
 const reviewForm = document.getElementById("reviewForm");
-const submitButton = document.getElementById("submitButton");
+const submitReviewButton = document.getElementById("submitButton");
 
-const deleteReviewModal = new bootstrap.Modal(document.getElementById("deleteCommentModal"));
+const deleteReviewModal = new bootstrap.Modal(document.getElementById("deleteReviewModal"));
 const deleteReviewButtons = document.getElementsByClassName("btn-delete");
 const deleteReviewConfirm = document.getElementById("deleteReviewConfirm");
 
@@ -17,12 +17,12 @@ const deleteReviewConfirm = document.getElementById("deleteReviewConfirm");
 * - Updates the submit button's text to "Update".
 * - Sets the form's action attribute to the `edit_review/{reviewId}` endpoint.
 */
-for (let button of editButtons) {
+for (let button of editReviewButtons) {
   button.addEventListener("click", (e) => {
     let reviewId = e.target.getAttribute("review_id");
     let reviewContent = document.getElementById(`review${reviewId}`).innerText;
     reviewText.value = reviewContent;
-    submitButton.innerText = "Update";
+    submitReviewButton.innerText = "Update";
     reviewForm.setAttribute("action", `edit_review/${reviewId}`);
   });
 }
