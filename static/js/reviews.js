@@ -20,8 +20,8 @@ const deleteReviewConfirm = document.getElementById("deleteReviewConfirm");
 for (let button of editReviewButtons) {
   button.addEventListener("click", (e) => {
     let reviewId = e.target.getAttribute("review_id");
-    let reviewContent = document.getElementById(`review${reviewId}`).innerText;
-    reviewText.value = reviewContent;
+    let reviewBody = document.getElementById(`review${reviewId}`).innerText;
+    reviewText.value = reviewBody;
     submitReviewButton.innerText = "Update";
     reviewForm.setAttribute("action", `edit_review/${reviewId}`);
   });
