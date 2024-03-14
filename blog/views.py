@@ -8,6 +8,14 @@ from .forms import CommentForm
 
 # Create your views here.
 class PostList(generic.ListView):
+    """
+    View to display a list of posts.
+
+    Attributes:
+        queryset: Queryset of posts filtered by status.
+        template_name: Name of the template used to render the list of posts.
+        paginate_by: Number of posts per page for pagination.
+    """
     queryset = Post.objects.filter(status=1)
     template_name = "blog/post_list.html"
     paginate_by = 3
@@ -15,7 +23,14 @@ class PostList(generic.ListView):
 
 def post_detail(request, slug):
     """
-    Display an individual blog post
+    Display an individual blog post.
+
+    Args:
+        request: HttpRequest object.
+        slug: The slug parameter to identify the blog post.
+
+    Returns:
+        HttpResponse object rendering the post detail page.
     """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
@@ -36,7 +51,15 @@ def post_detail(request, slug):
 
 def comment_edit(request, slug, comment_id):
     """
-    View to edit comments
+    Handle editing comments.
+
+    Args:
+        request: HttpRequest object.
+        slug: The slug parameter to identify the blog post.
+        comment_id: The ID of the comment to be edited.
+
+    Returns:
+        HttpResponse object redirecting to the post detail page after editing the comment.
     """
     if request.method == "POST":
 
@@ -59,7 +82,15 @@ def comment_edit(request, slug, comment_id):
 
 def comment_delete(request, slug, comment_id):
     """
-    View to delete comment
+    Handle deleting comments.
+
+    Args:
+        request: HttpRequest object.
+        slug: The slug parameter to identify the blog post.
+        comment_id: The ID of the comment to be deleted.
+
+    Returns:
+        HttpResponse object redirecting to the post detail page after deleting the comment.
     """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)

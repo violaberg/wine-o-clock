@@ -19,7 +19,7 @@ const deleteReviewConfirm = document.getElementById("deleteReviewConfirm");
 */
 for (let button of editReviewButtons) {
   button.addEventListener("click", (e) => {
-    let reviewId = e.target.getAttribute("review_id");
+    let reviewId = e.target.getAttribute("data-review_id");
     let reviewBody = document.getElementById(`review${reviewId}`).innerText;
     reviewText.value = reviewBody;
     submitReviewButton.innerText = "Update";
@@ -39,7 +39,7 @@ for (let button of editReviewButtons) {
 */
 for (let button of deleteReviewButtons) {
   button.addEventListener("click", (e) => {
-    let reviewId = e.target.getAttribute("review_id");
+    let reviewId = e.target.getAttribute("data-review_id");
     deleteReviewConfirm.href = `delete_review/${reviewId}`;
     deleteReviewModal.show();
   });

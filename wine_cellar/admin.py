@@ -1,13 +1,22 @@
 from django.contrib import admin
-from django_summernote.admin import SummernoteModelAdmin
-from django.utils.html import format_html
-from django.utils.safestring import mark_safe
-from .models import GalleryImage, Review, Contact
 from django.urls import reverse
 from django.http import HttpResponseRedirect
+from django.utils.html import format_html
+from django.utils.safestring import mark_safe
+from django_summernote.admin import SummernoteModelAdmin
+from .models import GalleryImage, Review, Contact
 
 # Register your models here.
 class GalleryImageAdmin(admin.ModelAdmin):
+    """
+    Admin configuration for managing gallery images.
+
+    Attributes:
+        list_display: Fields to be displayed in the list view.
+        search_fields: Fields to be searched in the admin interface.
+        list_per_page: Number of items per page in the list view.
+        actions: Actions available for bulk operations.
+    """
     list_display = ['id', 'description', 'image_thumbnail']
     search_fields = ['description']
     list_per_page = 20
@@ -35,6 +44,12 @@ class GalleryImageAdmin(admin.ModelAdmin):
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
+    """
+    Admin configuration for managing contact messages.
+
+    Attributes:
+        list_display: Fields to be displayed in the list view.
+    """
 
     list_display = ('message', 'read',)
 

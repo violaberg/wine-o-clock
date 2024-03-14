@@ -43,7 +43,7 @@ class GalleryImage(models.Model):
 # Review model
 class Review(models.Model):
     """
-    Represents a review written by a user for a wine cellar tour.
+    Stores a single review entry related to :model:`auth.User`
 
     Fields:
         - author (ForeignKey to User): The user who wrote the review.

@@ -39,8 +39,8 @@
                     {{ review.body }}
                   </div>
                   {% if user.is_authenticated and review.author == user %}
-                  <button class="button btn custom-white button-edit" review_id="{{ review.id }}">Edit</button>
-                  <button class="button btn custom-white button-delete btn-delete" review_id="{{ review.id }}">Delete</button>
+                  <button class="button btn custom-white button-edit" data-review_id="{{ review.id }}">Edit</button>
+                  <button class="button btn custom-white button-delete btn-delete" data-review_id="{{ review.id }}">Delete</button>
                   {% endif %}
                   <hr class="custom-white">
             </div>
