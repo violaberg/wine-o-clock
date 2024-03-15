@@ -245,6 +245,7 @@ I have included details of agile development in a separate file [AGILE.md](AGILE
 * Heroku PostreSQL & [ElephantSQL](https://www.elephantsql.com/)
 * Jinja
 * Whitenoise
+* Cloudinary
 * Summernote
 
 # **Testing**
@@ -271,6 +272,33 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 
 # **Media**
 
-* [Adobe Firefly](https://firefly.adobe.com/) - Contact page image
+## **Page images**
 * [Vecteezy](https://www.vecteezy.com/) - Home page image by Chinnachart Martmoh, available at this [link](https://www.vecteezy.com/photo/6660921-red-wine-and-white-wine-in-a-glass-of-wine-wooden-tabletop-there-is-a-wine-cellar-on-the-table-and-red-and-green-grapes-the-background-is-an-underground-wine-cellar-3d-rendering)
 * [Freepik](https://www.freepik.com/) - About page image by wirestock, available at this [link](https://www.freepik.com/free-photo/beautiful-shot-large-agricultural-field-countryside-with-hills-amazing-cloudy-sky_15695562.htm#page=2&query=wine%20cellar&position=24&from_view=search&track=ais&uuid=f149cfd0-a789-4804-9520-8783151b7d53)
+* [Vecteezy](https://www.vecteezy.com/) - Reviews page image by somchai sanvongchaiya, available at this [link](https://www.vecteezy.com/photo/29630339-pouring-red-wine-into-a-glass-in-the-vineyard-french-red-wine)
+* [Vecteezy](https://www.vecteezy.com/) - Contact page image by icon ade, available at this [link](https://www.vecteezy.com/photo/32944686-old-fashioned-letter-with-ancient-calligraphy-on-parchment)
+
+## **Blog images**
+* [Vecteezy](https://www.vecteezy.com/) - blog image by icon ade, available at this [link](https://www.vecteezy.com/photo/32937082-farmers-harvesting-fresh-fruit-in-the-autumn-sunlight-heat)
+* [Vecteezy](https://www.vecteezy.com/) - blog image by Idalba Granada, available at this [link](https://www.vecteezy.com/photo/36222024-ai-generated-gourmet-food-wine-cheese-bread-and-variety-generated-by-ai)
+* [Vecteezy](https://www.vecteezy.com/) - blog image by Idalba Granada, available at this [link](https://www.vecteezy.com/photo/36222005-ai-generated-gourmet-wineglass-on-table-celebrating-with-elegance-generated-by-ai)
+* [Vecteezy](https://www.vecteezy.com/) - blog image by Chinnachart Martmoh, available at this [link](https://www.vecteezy.com/photo/6667071-red-and-white-wine-in-clear-glass-many-blurred-wine-whisky-and-brandy-bottle-backgrounds-place-it-on-a-wooden-and-mable-floor-with-a-wooden-board-wall-the-cellar-tasting-production-concept)
+
+## **Review images**
+* [Pexels](https://www.pexels.com/) - review image by Grape Things, available at this [link](https://www.pexels.com/photo/woman-in-white-long-sleeve-shirt-sitting-on-green-grass-field-7347162/)
+* [Vecteezy](https://www.vecteezy.com/) - review image by Iftikhar Alam, available at this [link](https://www.vecteezy.com/photo/35779505-ai-generated-close-up-of-wineglasses-with-red-wine-in-vineyard-blurred-image-of-friends-toasting-wine-in-a-vineyard-in-the-daytime-outdoors-ai-generated)
+* [Vecteezy](https://www.vecteezy.com/) - review image by Yulia Gapeenko, available at this [link](https://www.vecteezy.com/photo/29559149-woman-raises-her-wine-glass-to-a-couple-of-friends)
+
+## **Gallery images**
+* [Vecteezy](https://www.vecteezy.com/) - gallery image by Pierluigi Palazzi, available at this [link](https://www.vecteezy.com/photo/5893154-vineyard-with-tractor)
+* [Vecteezy](https://www.vecteezy.com/) - gallery image by Chinnachart Martmoh, available at this [link](https://www.vecteezy.com/photo/6660079-red-wine-bottle-and-clear-glass-with-red-wine-put-on-a-wooden-tank-with-many-wine-fermentation-tanks-at-cellar-placed-close-to-the-red-brick-wall-3d-rendering)
+* [Vecteezy](https://www.vecteezy.com/) - gallery image by icon ade, available at this [link](https://www.vecteezy.com/photo/30655839-vineyard-with-rows-of-vines-in-the-background-and)
+* [Vecteezy](https://www.vecteezy.com/) - gallery image by Giuseppe Ramos, available at this [link](https://www.vecteezy.com/photo/25494680-sun-kissed-grapes-harvested-for-organic-winemaking-perfect-for-autumn-picnics-generated-by-ai)
+* [Vecteezy](https://www.vecteezy.com/) - gallery image by Chinnachart Martmoh, available at this [link](https://www.vecteezy.com/photo/6666904-red-wine-in-clear-glass-red-grapes-green-grapes-and-wine-fermentation-tank-on-a-table-with-a-wooden-floor-or-tree-bark-the-background-image-was-a-morning-mountain-fog-and-morning-sun-3d-rendering)
+* [Vecteezy](https://www.vecteezy.com/) - gallery image by Kseniia Chunaeva, available at this [link](https://www.vecteezy.com/photo/27895081-wine-barrels-in-a-old-wine-cellar)
+* [Vecteezy](https://www.vecteezy.com/) - gallery image by Chinnachart Martmoh, available at this [link](https://www.vecteezy.com/photo/6666923-wooden-barrels-for-wine-fermentation-room-for-storing-multiple-wine-fermentation-tanks-the-brick-wall-is-red-orange-3d-rendering)
+* [Vecteezy](https://www.vecteezy.com/) - gallery image by Irina Kryvasheina, available at this [link](https://www.vecteezy.com/photo/35756202-ai-generated-many-people-are-laughing-while-toasting)
+* [Freepik](https://freepik.com/) - gallery image by freepik, available at this [link](https://www.freepik.com/free-photo/medium-shot-woman-tasting-wine_27260416.htm#fromView=search&page=1&position=7&uuid=edae1f89-c433-4e03-b036-d6e263e3f303)
+* [Freepik](https://www.freepik.com/) - gallery image by pressfoto, available at this [link](https://www.freepik.com/free-photo/smell-wine_5402327.htm#fromView=search&page=1&position=42&uuid=edae1f89-c433-4e03-b036-d6e263e3f303)
+* [Freepik](https://www.freepik.com/) - gallery image by lookstudio, available at this [link](https://www.freepik.com/free-photo/ginger-lady-green-trendy-dress-holding-glass-with-wine-sitting-with-short-haired-girl-white-cool-tshirt-outdoor_23993417.htm#fromView=search&page=2&position=7&uuid=edae1f89-c433-4e03-b036-d6e263e3f303)
+* [Pexels](https://www.pexels.com/) - gallery image by furkanfdemir, available at this [link](https://www.pexels.com/photo/modern-restaurant-with-wine-cellar-in-daylight-6309844/)

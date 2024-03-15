@@ -7,7 +7,7 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <!-- Post title  -->
-                <h1 class="custom-header text-center post-title">{{ post.title }}</h1>
+                <h1 class="font-parisienne custom-gold text-center post-title">{{ post.title }}</h1>
                 <!-- Post author & created date -->
                 <p class="font-montserrat text-center custom-maroon post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
@@ -50,7 +50,7 @@
   <!-- Display Comments -->
   <div class="row">
     <div class="col-md-8 card mb-4  mt-3 ">
-      <h1 class="custom-header text-center p-2" >Comments</h1>
+      <h1 class="font-parisienne custom-gold text-center p-2" >Comments</h1>
       <div class="font-montserrat custom-white text-center p-0 card-body">
         <!-- A for loop inside the empty control tags
           to iterate through each comment in comments -->
@@ -88,7 +88,7 @@
     <div class="font-montserrat col-md-4 card mb-4 mt-3">
         <div class="text-center card-body">
           {% if user.is_authenticated %}
-          <h1 class="custom-header">Leave a comment</h1>
+          <h1 class="font-parisienne custom-gold">Leave a comment</h1>
           <p class="font-montserrat custom-maroon">Posting as: {{ user.username }}</p>
           <form id="commentForm" method="post"
             style="margin-top: 1.3em;">
