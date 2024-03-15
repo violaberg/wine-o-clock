@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <div class="container mt-4">
-    <p class="p-montserrat gallery-text text-center">Feel free to look through our gallery with images uploaded by staff member to get a better feel of this fabulous place!</p>
+    <p class="gallery-text font-montserrat custom-white text-center">Feel free to look through our gallery with images uploaded by staff member to get a better feel of this fabulous place!</p>
 </div>
 <div class="container">
   <div class="row">
@@ -10,10 +10,13 @@
     <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
       <div class="gallery-image">
         <img src="{{ image.image.url }}" class="img-fluid" alt="{{ image.description }}">
-        <p class="p-montserrat text-center">{{ image.description }}</p>
+        <p class="gallery-text font-montserrat custom-white text-center">{{ image.description }}</p>
       </div>
     </div>
     {% endfor %}
   </div>
+  <div class="text-center col">
+    <a href="{% url 'gallery' %}"><button class="button btn custom-white btn-lg">Back to top</button></a>
+</div>
 </div>
 {% endblock content %}

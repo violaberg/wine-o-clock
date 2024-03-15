@@ -13,21 +13,21 @@
         <div class="text-center col-md-8 mt-3 offset-md-2">
             <h1 class="custom-header text-center">{% trans "Login" %}</h1>
 
-            <p class="p-montserrat text-center custom-white">{% blocktrans %}Welcome back to the Wine O'Clock. To leave a review, please log in. If
+            <p class="font-montserrat text-center custom-white">{% blocktrans %}Welcome back to the Wine O'Clock. To leave a review, please log in. If
                 you
                 have not created an account yet, then <a class="custom-header link" href="{{ signup_url }}">Sign up</a>
                 first.{% endblocktrans %}</p>
         </div>
     </div>
     <div class="row">
-        <div class="mt-3 offset-md-2">
+        <div class="mt-3">
             <form class="text-center login" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button class="p-montserrat button btn custom-white right" type="submit">{% trans "Login" %}</button>
+                <button class="font-montserrat button btn custom-white right" type="submit">{% trans "Login" %}</button>
             </form>
         </div>
     </div>

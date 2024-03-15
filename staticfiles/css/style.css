@@ -41,16 +41,6 @@ body, .bg-body-tertiary {
     font-family: 'Parisienne', cursive;
 }
 
-.p-parisienne {
-    color: #fafafa;
-    font-family: 'Parisienne', cursive;
-}
-
-.p-montserrat {
-    color: #fafafa;
-    font-family: "Montserrat", sans-serif;
-}
-
 .navbar-expand-lg .navbar-collapse {
     font-size: 1.5rem;
     position: absolute;
@@ -74,14 +64,6 @@ body, .bg-body-tertiary {
     color: #daa520;
 }
 
-.custom-nav {
-    font-size: 20px;
-}
-
-li.nav-item {
-    padding-left: 2rem;
-}
-
 .my-toggler {
     background-color: #daa520;
     border-color: #daa520;
@@ -89,16 +71,6 @@ li.nav-item {
     border-style: ridge;
     border-width: 3px;
     opacity: 0.8;
-}
-
-.logo {
-    width: 5rem;
-}
-
-.cellar-name {
-    font-size: 4rem;
-    padding: 1rem 1rem;
-    width: 33vw;
 }
 
 .cellar-name:hover {
@@ -174,6 +146,10 @@ footer {
     font-weight: 700;
 }
 
+.close:hover {
+    color: #daa520;
+}
+
 /* Form styling */
 label {
     color: #fafafa;
@@ -182,6 +158,10 @@ label {
 
 .label-fixed-width {
     width: 7rem;
+}
+
+input {
+    font-family: 'Montserrat';
 }
 
 a {
@@ -195,17 +175,13 @@ li {
     padding: 0.3rem;
 }
 
-input {
-    color: #fafafa;
-}
-
 .errorlist {
     list-style-type: none;
 }
 
 textarea {
     border-radius: 5px;
-    color: #fafafa;
+    font-family: 'Montserrat';
     width: -webkit-fill-available;
 }
 
@@ -273,10 +249,10 @@ textarea {
 }
 
 .masthead {
+    display: inline-block;
     margin-top: 10px;
     overflow: hidden;
     position: relative;
-    display: inline-block;
     width: 100%;
 }
 
@@ -293,16 +269,16 @@ textarea {
 
 .masthead-image:after {
     content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
     height: 100%;
+    position: absolute;
+    right: 90%;
+    top: 0;
     width: 150%;
 }
 
 .post-link {
-    text-decoration: none;
     color: #daa520;
+    text-decoration: none;
 }
 
 .post-link:hover,
@@ -338,11 +314,11 @@ textarea {
 }
 
 .btn-like {
+    background: transparent;
     border-color: #daa520;
     border-style: ridge;
     border-width: 5px;
     color: #daa520;
-    background: transparent;
 }
 
 .btn-like:hover,
@@ -407,8 +383,8 @@ textarea {
         margin-top: 1rem;
     }
     .logo {
-        width: 2.5rem;
         margin-left: -0.5rem;
+        width: 2.5rem;
     }
     .booking-btn {
         font-size: 16px;
@@ -427,7 +403,93 @@ textarea {
         font-size: 2.5rem;
     }
     .logo {
-        width: 3rem;
         margin-left: -0.5rem;
+        width: 3rem;
+    }
+    .my-toggler {
+        margin-top: -1.5rem;
+    }
+    .booking-btn {
+        padding: 0.3rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .author {
+        margin: -1rem;
+        margin-left: -1.8rem;
+        margin-top: -8rem;
+    }
+    p {
+        margin-top: 1rem;
+    }
+    .logo {
+        width: 4rem;
+    }
+    .cellar-name {
+        font-size: 3rem;
+    }
+    .my-toggler {
+        height: 3rem;
+        margin-top: -1.5rem;
+        width: 3rem;
+    }
+    .booking-btn {
+        padding: 0.5rem;
+    }
+    ul {
+        list-style: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .cellar-name {
+        font-size: 3.5rem;
+    }
+    .my-toggler {
+        margin-right: 1.5rem;
+    }
+    .logo {
+        margin-left: 1rem;
+        width: 4.5rem;
+    }
+    a.nav-link {
+        font-size: 20px;
+        padding: 0;
+    }
+    .booking-btn {
+        font-size: 1.2rem;
+    }
+    .author {
+        margin-top: -10rem;
+    }
+    .footer-text {
+        font-size: 1.4rem;
+    }
+    .button {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    a.nav-link {
+        padding: 0.3rem;
+    }
+    .my-toggler {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+    .footer-text {
+        font-size: 1.8rem;
+    }
+    .quote {
+        font-size: 1.5rem;
+    }
+    .author {
+        margin-top: -12.3rem;
+    }
+    .card-text:last-child {
+        margin-bottom: 1.5rem;
     }
 }

@@ -68,22 +68,22 @@
       <p class="font-montserrat custom-gold opacity-50 text-end m-3">You are not logged in</p>
       {% endif %}
     </header>
-    <main class="container mx-auto my-8">
+    <main class="container mx-auto my-5">
       {% block content %}
       <!--Content goes here-->
       {% endblock content %}
     </main>
-    <footer class="py-6">
+    <footer class="py-5">
       <div class="container-lg">
         <div class="row">
           <div class="col-md-4">
             <div class="text-md-start">
-              <p class="text-center custom-gold font-montserrat mb-0">&copy; 2024 <a href="{% url 'home' %}" class="font-parisienne custom-white text-decoration-none">Wine O'Clock</a> Copyright</p>
+              <p class="text-center custom-gold font-montserrat mb-0">&copy; 2024 <a href="{% url 'home' %}" class="footer-text font-parisienne custom-white text-decoration-none">Wine O'Clock</a> Copyright</p>
             </div>
           </div>
           <div class="col-md-4 mt-4 mt-md-0">
             <div class="text-center">
-              <a class="font-montserrat custom-gold mb-0" href="{% url 'contact' %}">Click here to <span class="font-parisienne custom-white">Contact Us</span></a>
+              <a class="font-montserrat custom-gold mb-0" href="{% url 'contact' %}">Click here to <span class="footer-text font-parisienne custom-white">Contact Us</span></a>
               <div class="opening-hours font-montserrat custom-white mb-0">
                 <span class="custom-gold">Opening Hours:</span><br>
                 Monday - Sunday: 9 AM - 9 PM <br>
@@ -94,7 +94,7 @@
           </div>
           <div class="col-md-4 mt-4 mt-md-0">
             <div class="text-md-end">
-              <p class="font-montserrat text-center custom-gold mb-0">Created by <span class="font-parisienne custom-white">Viola Bergere</span>
+              <p class="font-montserrat text-center custom-gold mb-0">Created by <span class="footer-text font-parisienne custom-white">Viola Bergere</span>
               <a href="https://github.com/violaberg" target="_blank" class="custom-gold ms-2 text-decoration-none"><i class="fa-brands fa-github"></i>
               </a>
               <a href="https://linkedin.com/in/viola-bergere-5a668699" target="_blank" class="custom-gold ms-2 text-decoration-none"><i class="fa-brands fa-linkedin"></i>
