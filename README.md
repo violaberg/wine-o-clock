@@ -7,7 +7,7 @@ The site shares a brief narrative about Wine O'Clock, offering a glimpse into it
 
 <img scr><br>
 
-Deployed project can be found here: [Wine O'Clock]()
+Deployed project can be found here: [Wine O'Clock](https://wine-o-clock-223a2b0e8720.herokuapp.com/)
 
 ## **Table of Contents**
 * [**Overview**](#overview)
@@ -34,7 +34,7 @@ Deployed project can be found here: [Wine O'Clock]()
 
 # **User experience (UX)**
 
-During the planning phase I revisited UX videos provided on the course and used 5 planes to create my design.
+During the planning phase I revisited UX videos provided on the course and used 5 planes to create my design. I tried to keep original idea of project as much as I could but as I got unwell for majority of project time, some big changes can be seen. I have left original planning part for Strategy and Scope plane to show what I begun with. Opportunities in Strategy plane and MoSCoW in Scope plane shows exactly how different project was when I planned it.
 
 ## **Strategy plane**
 
@@ -79,7 +79,7 @@ Total |95|96
 
 ## **Scope plane**
 
-Due to a incredible amount of new knowledge and deadline for this project as for anything in life and to avoid scope creep, I used MoSCoW method to keep project on track and concentrate on delivering fully functional site. Unfortunately, since beginning of the project I knew I won't have time to implement everything I would like to leaving some features for future development.
+Due to a incredible amount of new knowledge and deadline for this project as for anything in life and to avoid scope creep, I used MoSCoW method to keep project on track and concentrate on delivering fully functional site. Unfortunately, since beginning of the project I knew I won't have time to implement everything I would like so decided to leave some features for future development.
 
 * Must Have:
     + Age verification
@@ -135,7 +135,7 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 |                           |  | As a user, I can read relevant content|
 |USER REGISTRATION & LOGIN  |  ||
 |                           |  | As a user, I can register on the site|
-|                           |  | As a user, I can login using email and password|
+|                           |  | As a user, I can login using USERNAME and password|
 |                           |  | As a user, I can logout|
 |BOOKING                    |  ||
 |                           |  | As a user, I can book a tour|
@@ -149,28 +149,42 @@ Due to a incredible amount of new knowledge and deadline for this project as for
 |                           |  | As a logged-in user, I can delete my previously added photo to review|
 |                           |  | As a logged-in user, I can edit my review|
 |                           |  | As a logged-in user, I can delete my review|
+|BLOG                       |  ||
+|                           |  | As a user, I can see a paginated list of posts|
+|                           |  | As a user, I can click on a post to see full text|
+|COMMENTS                   |  ||
+|                           |  | As a logged-in user, I can write a comment on post|
+|                           |  | As a logged-in user, I can edit my comment|
+|                           |  | As a logged-in user, I can delete my comment|
+|                           |  | As a user, I can read other people comments|
 |GALLERY                    |  ||
-|                           |  | As and admin, I can upload/ delete images from gallery |
+|                           |  | As a user, I explore images in gallery|
 |CONTACT                    |  ||
 |                           |  | As a user, I can find wine cellar's opening hours|
 |                           |  | As a user, I can find wine cellar's location|
 |                           |  | As a user, I can contact someone at wine cellar|
 |ADMIN                      |  ||
-|                           |  | As an admin, I can login via front end|
+|                           |  | As an admin, I can login to access admin panel|
 |                           |  | As an admin, I can add/edit content|
+|                           |  | As an admin, I can create draft posts|
+|                           |  | As an admin, I can create, read, update and delete posts|
 |                           |  | As an admin, I can delete inappropriate reviews/photos|
+|                           |  | As an admin, I can approve comments|
+|                           |  | As an admin, I can delete inappropriate comments|
+|                           |  | As an admin, I can upload/ delete images from gallery|
+|                           |  | As an admin, I can add description to images in gallery|
 |DEVELOPER                  |  ||
-|                           |  | As a developer, I can create wireframes so that I can clearly see website layout|
-|                           |  | As a developer, I can create a fully responsive site so that it is accessible on all devices|
-|                           |  | As a developer, I can choose color scheme and style of the website it is pleasant to use|
-|                           |  | As a developer, I can choose fonts so they match website style|
+|                           |  | As a developer, I can create wireframes|
+|                           |  | As a developer, I can create a fully responsive site|
+|                           |  | As a developer, I can choose color scheme and style of the website|
+|                           |  | As a developer, I can choose fonts|
 |                           |  ||
 
 ### **Flowchart**
 
 To help with a flow of the website, I created a flowchart using [Draw.io](https://www.drawio.com/)
 
-![Flowchart](wine_cellar/static/docs/flowchart.drawio.png)
+![Flowchart](static/docs/flowchart.drawio.png)
 
 ## **Skeleton plane**
 
@@ -178,19 +192,21 @@ To help with a flow of the website, I created a flowchart using [Draw.io](https:
 
 Wireframes for both desktop and mobile were created with [Balsamiq](https://balsamiq.com/) and can be seen below:
 
+#### **Original wireframes:**
+
 #### **Desktop wireframes:**
 
-<details><summary>Home Page</summary><img src="wine_cellar/static/docs/wireframes/home-page-desktop.png"></details>
+<details><summary>Home Page</summary><img src="static/docs/wireframes/home-page-desktop.png"></details>
 
-<details><summary>About Page</summary><img src="wine_cellar/static/docs/wireframes/about-page-desktop.png"></details>
+<details><summary>About Page</summary><img src="static/docs/wireframes/about-page-desktop.png"></details>
 
-<details><summary>Gallery Page</summary><img src="wine_cellar/static/docs/wireframes/gallery-page-desktop.png"></details>
+<details><summary>Gallery Page</summary><img src="static/docs/wireframes/gallery-page-desktop.png"></details>
 
-<details><summary>Book a Tour Page</summary><img src="wine_cellar/static/docs/wireframes/book-a-tour-page-desktop.png"></details>
+<details><summary>Book a Tour Page</summary><img src="static/docs/wireframes/book-a-tour-page-desktop.png"></details>
 
-<details><summary>Contact Page</summary><img src="wine_cellar/static/docs/wireframes/contact-page-desktop.png"></details>
+<details><summary>Contact Page</summary><img src="static/docs/wireframes/contact-page-desktop.png"></details>
 
-<details><summary>Login Page</summary><img src="wine_cellar/static/docs/wireframes/login-page-desktop.png"></details>
+<details><summary>Login Page</summary><img src="static/docs/wireframes/login-page-desktop.png"></details>
 
 #### **Mobile wireframes:**
 
@@ -206,9 +222,59 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 <details><summary>Login Page</summary><img src="static/docs/wireframes/login-page-mobile.png"></details>
 
+#### **New wireframes:**
+
+#### **Desktop wireframes:**
+
+<details><summary>Home Page</summary><img src="static/docs/wireframes/home-page-desktop-new.png"></details>
+
+<details><summary>About Page</summary><img src="static/docs/wireframes/about-page-desktop-new.png"></details>
+
+<details><summary>Gallery Page</summary><img src="static/docs/wireframes/gallery-page-desktop-new.png"></details>
+
+<details><summary>Reviews Page</summary><img src="static/docs/wireframes/review-page-desktop-new.png"></details>
+
+<details><summary>Blog Page</summary><img src="static/docs/wireframes/blog-page-desktop-new.png"></details>
+
+<details><summary>Blog post Page</summary><img src="static/docs/wireframes/blog-post-page-desktop-new.png"></details>
+
+<details><summary>Contact Page</summary><img src="static/docs/wireframes/contact-page-desktop-new.png"></details>
+
+<details><summary>Contact Success Page</summary><img src="static/docs/wireframes/contact-successful-page-desktop-new.png"></details>
+
+<details><summary>Login Page</summary><img src="static/docs/wireframes/login-page-desktop-new.png"></details>
+
+<details><summary>Logout Page</summary><img src="static/docs/wireframes/logout-page-desktop-new.png"></details>
+
+<details><summary>Register Page</summary><img src="static/docs/wireframes/sign-up-page-desktop.png"></details>
+
+#### **Mobile wireframes:**
+
+<details><summary>Home Page</summary><img src="static/docs/wireframes/home-page-mobile-new.png"></details>
+
+<details><summary>About Page</summary><img src="static/docs/wireframes/about-page-mobile-new.png"></details>
+
+<details><summary>Gallery Page</summary><img src="static/docs/wireframes/gallery-page-mobile-new.png"></details>
+
+<details><summary>Reviews Page</summary><img src="static/docs/wireframes/review-page-mobile-new.png"></details>
+
+<details><summary>Blog Page</summary><img src="static/docs/wireframes/blog-page-mobile-new.png"></details>
+
+<details><summary>Blog post Page</summary><img src="static/docs/wireframes/blog-post-page-mobile-new.png"></details>
+
+<details><summary>Contact Page</summary><img src="static/docs/wireframes/contact-page-mobile-new.png"></details>
+
+<details><summary>Contact Success Page</summary><img src="static/docs/wireframes/contact-successful-page-mobile-new.png"></details>
+
+<details><summary>Login Page</summary><img src="static/docs/wireframes/login-page-mobile-new.png"></details>
+
+<details><summary>Logout Page</summary><img src="static/docs/wireframes/logout-page-mobile-new.png"></details>
+
+<details><summary>Register Page</summary><img src="static/docs/wireframes/sign-up-page-desktop.png"></details>
+
 ### **Database schema**
 
-![Database schema](wine_cellar/static/docs/database-schema.drawio.png)
+![Database schema](static/docs/database-schema.drawio.png)
 
 ## **Surface plane**
 
@@ -216,11 +282,11 @@ Wireframes for both desktop and mobile were created with [Balsamiq](https://bals
 
 The color palette chosen for Wine O'Clock app reflects a thoughtful blend of elegance and richness inspired by the world of wines. The soft and inviting Seasalt shade `#fafafa` serves as the symbol of the purity and clarity found in the process of winemaking. The use of Muted gold shade `#daa520` represents the allure of gold, mirroring the excellence and sophistication associated with wines bringing a sense of warmth to project. This golden hue speaks to the refined taste and quality that defines the Wine O'Clock experience. Accentuating the palette are deep, juicy tones of Bordeaux `#4c0013`, evoking the essence of rich red wines, and a Classic black `#000000`, representing the depth and complexity found in a perfectly aged bottle. Each color is carefully selected to embody the journey from vine to cellar, culminating in a visual harmony that encapsulates the luxurious world of Bordeaux wines at Wine O'Clock.
 
-![Color palette](wine_cellar/static/docs/color/color-palette.png)
+![Color palette](static/docs/color/color-palette.png)
 
 To add more depth and interest to design but not make it overwhelming for user to look at, I created a pattern for background using one my colors - Classic black `#000000`:
 
-![Pattern](wine_cellar/static/docs/color/pattern.png)
+![Pattern](static/docs/color/pattern.png)
 
 ### **Typography**
 
