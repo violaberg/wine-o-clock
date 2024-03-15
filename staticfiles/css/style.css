@@ -36,11 +36,6 @@ body, .bg-body-tertiary {
     background-size: cover;
 }
 
-.custom-header {
-    color: #daa520;
-    font-family: 'Parisienne', cursive;
-}
-
 .navbar-expand-lg .navbar-collapse {
     font-size: 1.5rem;
     position: absolute;
@@ -491,5 +486,8 @@ textarea {
     }
     .card-text:last-child {
         margin-bottom: 1.5rem;
+    }
+    label {
+        padding: 1rem;
     }
 }
