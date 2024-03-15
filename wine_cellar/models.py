@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 
 # Create your models here.
@@ -33,7 +34,7 @@ class GalleryImage(models.Model):
         image (ImageField): The image field for storing the image.
         description (TextField): The description of the gallery image.
     """
-    image = models.ImageField(upload_to="gallery/", default="placeholder")
+    image = CloudinaryField('image', default='placeholder')
     description = models.TextField()
 
     def __str__(self):
@@ -53,7 +54,7 @@ class Review(models.Model):
     """
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reviewer", max_length=30, default='')
     body = models.TextField()
-    image = models.ImageField(upload_to="gallery/", blank=True)
+    image = CloudinaryField('image', blank=True)
     timestamp = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 
