@@ -298,6 +298,17 @@ I have included details of agile development in a separate file [AGILE.md](AGILE
 
 # **Features & Future Development**
 
+## **Features**
+
+## **Future Development**
+
+In the second half of development I realized what I won't be able to implement due to dealine fast approaching. I decided to leave following features for future development:
+* Map with marker so that location is easier to find
+* Option to book and edit a tour online
+* Option to book special occasions online
+* Option to pay for everything online
+* I would like to add an option to purchase wine directly from site
+
 # **Technologies used**
 
 * HTML
