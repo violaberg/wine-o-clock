@@ -61,7 +61,7 @@
       <div class="card-body">
         {% if user.is_authenticated %}
         <form id="reviewForm" method="post">
-          {{ review_form }}
+          {{ review_form.as_p }}
           {% csrf_token %}
         </form>
         {% else %}

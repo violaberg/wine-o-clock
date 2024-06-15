@@ -8,9 +8,12 @@ class ContactForm(forms.ModelForm):
     Form for capturing contact information.
 
     Attributes:
-        first_name (CharField): The first name of the person submitting the form.
-        last_name (CharField): The last name of the person submitting the form.
-        email (EmailField): The email address of the person submitting the form.
+        first_name (CharField): The first name \
+        of the person submitting the form.
+        last_name (CharField): The last name \
+        of the person submitting the form.
+        email (EmailField): The email address \
+        of the person submitting the form.
         message (TextField): The message submitted through the form.
     """
     class Meta:
@@ -26,7 +29,8 @@ class ContactForm(forms.ModelForm):
             'first_name': forms.TextInput(attrs={'placeholder': 'First Name'}),
             'last_name': forms.TextInput(attrs={'placeholder': 'Last Name'}),
             'email': forms.EmailInput(attrs={'placeholder': 'Your email'}),
-            'message': forms.Textarea(attrs={'placeholder':'Enter your message here'}),
+            'message': forms.Textarea(
+                attrs={'placeholder': 'Enter your message here'}),
         }
 
 
