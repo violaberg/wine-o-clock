@@ -30,14 +30,14 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = [
-    '8000-violaberg-wineoclock-3rc52bvzr9m.ws-eu110.gitpod.io',
+    '8000-violaberg-wineoclock-og889e7n0xm.ws.codeinstitute-ide.net',
     '.herokuapp.com',
 ]
 
 CSRF_TRUSTED_ORIGINS=[
-    'https://8000-violaberg-wineoclock-3rc52bvzr9m.ws-eu110.gitpod.io',
+    'https://8000-violaberg-wineoclock-og889e7n0xm.ws.codeinstitute-ide.net',
     'https://*.herokuapp.com'
 ]
 

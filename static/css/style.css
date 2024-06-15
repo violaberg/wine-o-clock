@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&display=swap');
 
 
-/* Custom CSS */
+:root {
+    --seasalt: #fafafa;
+    --muted-gold: #daa520;
+    --bordeaux: #4c0013;
+    --black: #000000;
+}
 
 /* Fonts */
 .font-parisienne {
@@ -14,24 +19,25 @@
 
 /* Colors */
 .custom-white {
-    color: #fafafa;
+    color: var(--seasalt);
 }
 
 .custom-black {
-    color: #000000;
+    color: var(--black);
 }
 
 .custom-maroon {
-    color: #4c0013;
+    color: var(--bordeaux);
     font-weight: 600;
 }
 
 .custom-gold {
-    color: #daa520;
+    color: var(--muted-gold);
 }
 
-body, .bg-body-tertiary {
-    background-color: #000000;
+body,
+.bg-body-tertiary {
+    background-color: var(--black);
     background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 0%, 1)'/><path d='M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z'  stroke-width='1' stroke='hsla(47, 8%, 5%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
     background-size: cover;
 }
@@ -43,40 +49,35 @@ body, .bg-body-tertiary {
 }
 
 .navbar {
-    border-bottom-color: #daa520;
-    border-bottom-style: ridge;
-    border-bottom-width: 8px;
+    border-bottom: 8px ridge var(--muted-gold);
     padding: 1rem;
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .nav-link {
-    color: #fafafa;
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link {
+    color: var(--seasalt);
     font-family: "Montserrat", sans-serif;
 }
 
 .nav-link:hover,
 .nav-link.active:hover {
-    color: #daa520;
+    color: var(--muted-gold);
 }
 
 .my-toggler {
-    background-color: #daa520;
-    border-color: #daa520;
+    background-color: var(--muted-gold);
+    border: 3px ridge var(--muted-gold);
     border-radius: 3px;
-    border-style: ridge;
-    border-width: 3px;
     opacity: 0.8;
 }
 
 .cellar-name:hover {
-    color: #daa520;
+    color: var(--muted-gold);
 }
 
 img {
-    border-color: #daa520;
+    border: 5px ridge var(--muted-gold);
     border-radius: 5px;
-    border-style: ridge;
-    border-width: 8px;
 }
 
 .hero-img {
@@ -86,13 +87,12 @@ img {
 
 /* Footer */
 footer {
-    border-top-color: #daa520;
-    border-top-style: ridge;
-    border-top-width: 8px;
+    border-top: 8px ridge var(--muted-gold);
     padding: 1rem;
 }
 
-.fa-github, .fa-linkedin {
+.fa-github,
+.fa-linkedin {
     font-size: 1.5rem;
 }
 
@@ -103,37 +103,35 @@ footer {
 /* Buttons */
 .button {
     background: none;
-    border-color: #daa520;
-    border-style: ridge;
-    border-width: 5px;
+    border: 5px ridge var(--muted-gold);
     font-family: "Montserrat", sans-serif;
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
 
 .button:hover {
-    background-color: #4c0013;
-    border-color: #daa520;
-    color: #daa520;
+    background-color: var(--bordeaux);
+    border-color: var(--muted-gold);
+    color: var(--muted-gold);
 }
 
 .booking-btn {
-    background-color: #4c0013;
+    background-color: var(--bordeaux);
     opacity: 0.8;
     text-decoration: none;
 }
 
 .booking-btn:hover {
-    background-color: #4c0013;
+    background-color: var(--bordeaux);
     opacity: 1;
 }
 
-.delete-comment{
-    background-color: #4c0013;
+.delete-comment {
+    background-color: var(--bordeaux);
 }
 
 .button-delete {
-    background-color: #4c0013;
+    background-color: var(--bordeaux);
 }
 
 .close {
@@ -142,12 +140,12 @@ footer {
 }
 
 .close:hover {
-    color: #daa520;
+    color: var(--muted-gold);
 }
 
 /* Form styling */
 label {
-    color: #fafafa;
+    color: var(--seasalt);
     font-family: "Montserrat", sans-serif;
 }
 
@@ -164,7 +162,7 @@ a {
 }
 
 li {
-    color: #daa520;
+    color: var(--muted-gold);
     font-family: "Montserrat", sans-serif;
     opacity: 0.8;
     padding: 0.3rem;
@@ -182,29 +180,25 @@ textarea {
 
 /* Modal */
 .modal-dialog {
-    border-color: #daa520;
+    border: 5px ridge var(--muted-gold);
     border-radius: 5px;
-    border-style: ridge;
-    border-width: 5px;
-    color: #daa520;
+    color: var(--muted-gold);
 }
 
 .modal-content {
-    background-color: #000000;
+    background-color: var(--black);
     background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 0%, 1)'/><path d='M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z'  stroke-width='1' stroke='hsla(47, 8%, 5%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
     background-size: cover;
 }
 
 .modal-body {
-    border: #fafafa;
+    border: var(--seasalt);
 }
 
 /* Blog */
 .card {
     background-color: transparent;
-    border-color: #daa520;
-    border-style: ridge;
-    border-width: 5px;
+    border: 5px ridge var(--muted-gold);
 }
 
 .card-title {
@@ -233,12 +227,12 @@ textarea {
 }
 
 .author {
-    background-color: #4c0013;
-    border-color: #daa520;
+    background-color: var(--bordeaux);
+    border-color: var(--muted-gold);
     border-radius: 5px;
     border-style: ridge;
     border-width: 5px;
-    color: #daa520;
+    color: var(--muted-gold);
     margin: 4px;
     padding: 0.3rem;
 }
@@ -253,7 +247,7 @@ textarea {
 
 .masthead-text {
     background-color: none;
-    color: #fafafa;
+    color: var(--seasalt);
     position: relative;
 }
 
@@ -272,13 +266,13 @@ textarea {
 }
 
 .post-link {
-    color: #daa520;
+    color: var(--muted-gold);
     text-decoration: none;
 }
 
 .post-link:hover,
 .page-link {
-    color: #daa520;
+    color: var(--muted-gold);
     padding: 0.3rem;
 }
 
@@ -291,14 +285,14 @@ textarea {
 }
 
 .link {
-    color: #daa520;
+    color: var(--muted-gold);
     font-size: 1.5rem;
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: #daa520;
+    color: var(--muted-gold);
 }
 
 .page-btn {
@@ -310,26 +304,24 @@ textarea {
 
 .btn-like {
     background: transparent;
-    border-color: #daa520;
-    border-style: ridge;
-    border-width: 5px;
-    color: #daa520;
+    border: 5px ridge var(--muted-gold);
+    color: var(--muted-gold);
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #daa520;
+    color: var(--muted-gold);
     background: transparent;
     border: none;
 }
 
 .faded {
-    color: #4c0013;
+    color: var(--bordeaux);
     opacity: 0.8;
 }
 
 .approval {
-    color: #daa520;
+    color: var(--muted-gold);
     opacity: 0.6;
 }
 
@@ -344,6 +336,10 @@ textarea {
     position: relative;
 }
 
+.user-review {
+    border: 5px ridge var(--muted-gold);
+}
+
 /* Gallery page */
 .gallery-text {
     padding-bottom: 2rem;
@@ -351,7 +347,7 @@ textarea {
 
 /* Login & Sign Up page */
 .helptext {
-    color: #daa520;
+    color: var(--muted-gold);
     font-family: "Montserrat", sans-serif;
     opacity: 0.6;
 }
@@ -366,28 +362,36 @@ textarea {
         padding: 0;
         width: 33vw;
     }
+
     .navbar {
         border-bottom-width: 5px;
     }
+
     a.nav-link {
         font-size: 16px;
         padding: 4px;
     }
+
     button.navbar-toggler {
         margin-right: -1.5rem;
         margin-top: 1rem;
     }
+
     .logo {
         margin-left: -0.5rem;
         width: 2.5rem;
     }
+
     .booking-btn {
         font-size: 16px;
         padding: 0.1rem;
     }
-    img, footer {
+
+    img,
+    footer {
         border-width: 5px;
     }
+
     .font-montserrat {
         font-size: 16px;
     }
@@ -397,13 +401,16 @@ textarea {
     .cellar-name {
         font-size: 2.5rem;
     }
+
     .logo {
         margin-left: -0.5rem;
         width: 3rem;
     }
+
     .my-toggler {
         margin-top: -1.5rem;
     }
+
     .booking-btn {
         padding: 0.3rem;
     }
@@ -415,23 +422,29 @@ textarea {
         margin-left: -1.8rem;
         margin-top: -8rem;
     }
+
     p {
         margin-top: 1rem;
     }
+
     .logo {
         width: 4rem;
     }
+
     .cellar-name {
         font-size: 3rem;
     }
+
     .my-toggler {
         height: 3rem;
         margin-top: -1.5rem;
         width: 3rem;
     }
+
     .booking-btn {
         padding: 0.5rem;
     }
+
     ul {
         list-style: none;
     }
@@ -441,26 +454,33 @@ textarea {
     .cellar-name {
         font-size: 3.5rem;
     }
+
     .my-toggler {
         margin-right: 1.5rem;
     }
+
     .logo {
         margin-left: 1rem;
         width: 4.5rem;
     }
+
     a.nav-link {
         font-size: 20px;
         padding: 0;
     }
+
     .booking-btn {
         font-size: 1.2rem;
     }
+
     .author {
         margin-top: -10rem;
     }
+
     .footer-text {
         font-size: 1.4rem;
     }
+
     .button {
         font-size: 1.2rem;
         padding: 0.8rem;
@@ -471,22 +491,28 @@ textarea {
     a.nav-link {
         padding: 0.3rem;
     }
+
     .my-toggler {
         height: 3.5rem;
         width: 3.5rem;
     }
+
     .footer-text {
         font-size: 1.8rem;
     }
+
     .quote {
         font-size: 1.5rem;
     }
+
     .author {
         margin-top: -12.3rem;
     }
+
     .card-text:last-child {
         margin-bottom: 1.5rem;
     }
+
     label {
         padding: 1rem;
     }

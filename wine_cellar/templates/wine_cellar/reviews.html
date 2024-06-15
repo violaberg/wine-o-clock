@@ -2,87 +2,94 @@
 {% load static %}
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center position-relative">
-            <img src="{% static 'images/book-a-cellar-tour.jpeg' %}" class="img-fluid" alt="Wine pouring in glass sitting on wooden table in sunshine">
-        </div>
+  <div class="row">
+    <div class="col-md-12 text-center position-relative">
+      <img src="{% static 'images/reviews.jpg' %}" class="img-fluid"
+        alt="Wine pouring in glass sitting on wooden table in sunshine">
     </div>
+  </div>
 </div>
 <div class="container">
-    <header class="text-center mt-4">
-        <h1 class="font-parisienne custom-gold">Book a Tour</h1>
-    </header>
-    <div class="row mt-2">
-        <div class="col-md-12 text-center">
-            <p class="font-montserrat custom-white">
-                Embark on a journey through the heart of our wine sanctuary with our exclusive cellar tour experience, immerse yourself in the rich history of our vineyards, witness the meticulous craftsmanship behind each bottle, and indulge in the captivating stories that make each sip extraordinary. Our knowledgeable guides will lead you through the hidden gems of our cellar, unveiling the artistry and passion that goes into crafting our exceptional wines. Whether you're a wine enthusiast or a casual connoisseur, a wine cellar tour with us promises an unforgettable blend of education, taste, and ambiance. Book your tour now through <a class="link font-parisienne custom-gold" href="{% url 'contact' %}">Contact Us form</a> and elevate your wine experience to new heights!
-            </p>
-        </div>
+  <header class="text-center mt-4">
+    <h1 class="font-parisienne custom-gold">Book a Tour</h1>
+  </header>
+  <div class="row mt-2">
+    <div class="col-md-12 text-center">
+      <p class="font-montserrat custom-white">
+        Embark on a journey through the heart of our wine sanctuary with our exclusive cellar tour experience, immerse
+        yourself in the rich history of our vineyards, witness the meticulous craftsmanship behind each bottle, and
+        indulge in the captivating stories that make each sip extraordinary. Our knowledgeable guides will lead you
+        through the hidden gems of our cellar, unveiling the artistry and passion that goes into crafting our
+        exceptional wines. Whether you're a wine enthusiast or a casual connoisseur, a wine cellar tour with us promises
+        an unforgettable blend of education, taste, and ambiance. Book your tour now through <a
+          class="link font-parisienne custom-gold" href="{% url 'contact' %}">Contact Us form</a> and elevate your wine
+        experience to new heights!
+      </p>
     </div>
+  </div>
 </div>
 <hr class="custom-white">
 <!--Reviews-->
 <div class="row text-center mt-4">
-    <div class="col-md-12 text-center">
-        <h1 class="font-parisienne custom-gold text-center">Customer Reviews</h1>
-        <!--Display Existing Reviews-->
-        {% for review in reviews %}
-            <div class="text-center review">
-                <p class="font-montserrat custom-maroon">by {{ review.author }}</p>
-                {% if review.image %}
-                    <img class="img-fluid scale" src="{{ review.image.url }}" alt="Review Image">
-                {% endif %}
-                <span class="font-montserrat custom-maroon">
-                    {{ review.timestamp }}
-                  </span>
-                  <div class="font-montserrat custom-white" id="review{{ review.id }}">
-                    {{ review.body }}
-                  </div>
-                  {% if user.is_authenticated and review.author == user %}
-                  <button class="button btn custom-white button-edit" data-review_id="{{ review.id }}">Edit</button>
-                  <button class="button btn custom-white button-delete btn-delete" data-review_id="{{ review.id }}">Delete</button>
-                  {% endif %}
-                  <hr class="custom-white">
-            </div>
-        {% endfor %}
-        <hr class="custom-white">
-        <!--Form for new reviews-->
-        <h1 class="font-parisienne custom-gold mt-4">Leave a review</h1>
-        <p class="font-montserrat custom-maroon">Writing as: <span class="font-parisienne custom-maroon">{{ user.username }}</span></p>
-        <div class="col-md-4 card">
-            <div class="card-body">
-                {% if user.is_authenticated %}
-                <form id="reviewForm" method="post">
-                    {{ review_form }}
-                    {% csrf_token %}
-                </form>
-                {% else %}
-                <p class="font-montserrat custom-gold">Please <a class="custom-gold fw-bold" href="{% url 'account_login' %}">log in</a> to leave a review</p>
-                {% endif %}
-            </div>
-        </div>
-        <button type="submit" class="review-btn button btn custom-white" id="submitReviewButton">Submit Review</button>
+  <div class="col-md-12 text-center">
+    <h1 class="font-parisienne custom-gold text-center">Customer Reviews</h1>
+    <!--Display Existing Reviews-->
+    {% for review in reviews %}
+    <div class="user-review text-center review p-2 my-2">
+      {% if review.image %}
+      <img class="img-fluid scale" src="{{ review.image.url }}" alt="Review Image">
+      {% endif %}
+      <p class="font-montserrat custom-maroon">by {{ review.author }}</p>
+      <span class="font-montserrat custom-maroon">
+        {{ review.timestamp }}
+      </span>
+      <div class="font-montserrat custom-white pt-2" id="review{{ review.id }}">
+        {{ review.body }}
+      </div>
+      {% if user.is_authenticated and review.author == user %}
+      <button class="button btn custom-white button-edit" data-review_id="{{ review.id }}">Edit</button>
+      <button class="button btn custom-white button-delete btn-delete" data-review_id="{{ review.id }}">Delete</button>
+      {% endif %}
     </div>
+    {% endfor %}
+    <hr class="custom-white">
+    <!--Form for new reviews-->
+    <h1 class="font-parisienne custom-gold mt-4">Leave a review</h1>
+    <p class="font-montserrat custom-maroon">Writing as: <span
+        class="font-parisienne custom-maroon">{{ user.username }}</span></p>
+    <div class="col-md-4 card">
+      <div class="card-body">
+        {% if user.is_authenticated %}
+        <form id="reviewForm" method="post">
+          {{ review_form }}
+          {% csrf_token %}
+        </form>
+        {% else %}
+        <p class="font-montserrat custom-gold">Please <a class="custom-gold fw-bold"
+            href="{% url 'account_login' %}">log in</a> to leave a review</p>
+        {% endif %}
+      </div>
+    </div>
+    <button type="submit" class="review-btn button btn custom-white" id="submitReviewButton">Submit Review</button>
+  </div>
 </div>
 
 <!-- Delete review confirmation modal -->
-<div class="modal fade" id="deleteReviewModal" tabindex="-1"
-  aria-labelledby="deleteReviewModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteReviewModal" tabindex="-1" aria-labelledby="deleteReviewModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog">
     <div class="text-center modal-content">
       <div class="modal-header">
-        <h5 class="custom-white text-center modal-title"
-          id="deleteReviewModalLabel">Delete review?</h5>
-        <button type="button" class="close custom-gold pb-4 btn-close"
-          data-bs-dismiss="modal" aria-label="Close">X</button>
+        <h5 class="custom-white text-center modal-title" id="deleteReviewModalLabel">Delete review?</h5>
+        <button type="button" class="close custom-gold pb-4 btn-close" data-bs-dismiss="modal"
+          aria-label="Close">X</button>
       </div>
       <div class="modal-body">
         Are you sure you want to delete your review?
         This action cannot be undone.
       </div>
       <div class="modal-footer">
-        <button type="button" class="button custom-white btn"
-          data-bs-dismiss="modal">Close</button>
+        <button type="button" class="button custom-white btn" data-bs-dismiss="modal">Close</button>
         <a id="deleteReviewConfirm" href="#" class="delete-comment button btn custom-white">Delete</a>
       </div>
     </div>
