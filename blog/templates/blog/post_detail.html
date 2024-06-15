@@ -3,40 +3,38 @@
 {% block content %}
 
 <div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- Post title  -->
-                <h1 class="font-parisienne custom-gold text-center post-title">{{ post.title }}</h1>
-                <!-- Post author & created date -->
-                <p class="font-montserrat text-center custom-maroon post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-              {% if "placeholder" in post.featured_image.url %}
-              <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                  alt="placeholder image">
-              {% else %}
-              <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                  alt="{{ post.title }}">
-              {% endif %}
-            </div>
-        </div>
+  <div class="container">
+    <div class="row g-0">
+      <div class="col-md-6 masthead-text">
+        <!-- Post title  -->
+        <h1 class="font-parisienne custom-gold text-center post-title">{{ post.title }}</h1>
+        <!-- Post author & created date -->
+        <p class="font-montserrat text-center custom-maroon post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+      </div>
+      <div class="d-none d-md-block col-md-6 masthead-image">
+        {% if "placeholder" in post.featured_image.url %}
+        <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+        {% else %}
+        <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+        {% endif %}
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col card mb-4 mt-3 left top">
-            <div class="font-montserrat custom-white text-center p-0 card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <article class="card-text">
-                    {{ post.content | safe }}
-                </article>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col card mb-4 mt-3 left top">
+      <div class="font-montserrat custom-white text-center p-0 card-body">
+        <!-- The post content goes inside the card-text. -->
+        <!-- Use the | safe filter inside the template tags -->
+        <article class="card-text">
+          {{ post.content | safe }}
+        </article>
+      </div>
     </div>
-    <!-- Display count of comments -->
+  </div>
+  <!-- Display count of comments -->
   <div class="font-montserrat row">
     <div class="col-12">
       <strong class="text-secondary">
@@ -50,7 +48,7 @@
   <!-- Display Comments -->
   <div class="row">
     <div class="col-md-8 card mb-4  mt-3 ">
-      <h1 class="font-parisienne custom-gold text-center p-2" >Comments</h1>
+      <h1 class="font-parisienne custom-gold text-center p-2">Comments</h1>
       <div class="font-montserrat custom-white text-center p-0 card-body">
         <!-- A for loop inside the empty control tags
           to iterate through each comment in comments -->
@@ -73,9 +71,8 @@
           </p>
           {% endif %}
           {% if user.is_authenticated and comment.author == user %}
-          <button class="button custom-white btn btn-edit"
-            data-comment_id="{{ comment.id }}">Edit</button>
-            <button class="delete-comment button custom-white btn btn-delete"
+          <button class="button custom-white btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
+          <button class="delete-comment button custom-white btn btn-delete"
             data-comment_id="{{ comment.id }}">Delete</button>
           {% endif %}
           <hr class="custom-white">
@@ -86,47 +83,44 @@
     </div>
     <!-- Creating New Comments -->
     <div class="font-montserrat col-md-4 card mb-4 mt-3">
-        <div class="text-center card-body">
-          {% if user.is_authenticated %}
-          <h1 class="font-parisienne custom-gold">Leave a comment</h1>
-          <p class="font-montserrat custom-maroon">Posting as: {{ user.username }}</p>
-          <form id="commentForm" method="post"
-            style="margin-top: 1.3em;">
-            {{ comment_form }}
-            {% csrf_token %}
-            <button id="submitButton" type="submit"
-              class="button custom-white btn btn-lg">Submit</button>
-          </form>
-          {% else %}
-          <p class="font-montserrat text-center custom-gold">Please <a class="custom-gold fw-bold" href="{% url 'account_login' %}">log in</a> to leave a comment</p>
-          {% endif %}
-        </div>
+      <div class="text-center card-body">
+        {% if user.is_authenticated %}
+        <h1 class="font-parisienne custom-gold">Leave a comment</h1>
+        <p class="font-montserrat custom-maroon">Posting as: {{ user.username }}</p>
+        <form id="commentForm" method="post" style="margin-top: 1.3em;">
+          {{ comment_form }}
+          {% csrf_token %}
+          <button id="submitButton" type="submit" class="button custom-white btn btn-lg">Submit</button>
+        </form>
+        {% else %}
+        <p class="font-montserrat text-center custom-gold">Please <a class="custom-gold fw-bold"
+            href="{% url 'account_login' %}">log in</a> to leave a comment</p>
+        {% endif %}
       </div>
+    </div>
   </div>
   <div class="row">
     <div class="text-center col">
-        <a class="button btn custom-white btn-lg" href="{% url 'blog' %}">Back to blog</a>
+      <a class="button btn custom-white btn-lg" href="{% url 'blog' %}">Back to blog</a>
     </div>
-</div>
+  </div>
 </div>
 <!-- Delete comment confirmation modal -->
-<div class="modal fade" id="deleteCommentModal" tabindex="-1"
-  aria-labelledby="deleteCommentModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteCommentModal" tabindex="-1" aria-labelledby="deleteCommentModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog">
     <div class="text-center modal-content">
       <div class="modal-header">
-        <h5 class="custom-white text-center modal-title"
-          id="deleteCommentModalLabel">Delete comment?</h5>
-        <button type="button" class="close custom-gold pb-4 btn-close"
-          data-bs-dismiss="modal" aria-label="Close">X</button>
+        <h5 class="custom-white text-center modal-title" id="deleteCommentModalLabel">Delete comment?</h5>
+        <button type="button" class="close custom-gold pb-4 btn-close" data-bs-dismiss="modal"
+          aria-label="Close">X</button>
       </div>
       <div class="modal-body">
         Are you sure you want to delete your comment?
         This action cannot be undone.
       </div>
       <div class="modal-footer">
-        <button type="button" class="button custom-white btn"
-          data-bs-dismiss="modal">Close</button>
+        <button type="button" class="button custom-white btn" data-bs-dismiss="modal">Close</button>
         <a id="deleteCommentConfirm" href="#" class="delete-comment button btn custom-white">Delete</a>
       </div>
     </div>

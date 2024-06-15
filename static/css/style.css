@@ -340,6 +340,9 @@ textarea {
     border: 5px ridge var(--muted-gold);
 }
 
+.user {
+    font-size: 24px;
+}
 /* Gallery page */
 .gallery-text {
     padding-bottom: 2rem;

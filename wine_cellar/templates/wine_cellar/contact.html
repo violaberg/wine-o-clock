@@ -4,7 +4,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center position-relative">
-            <img src="{% static 'images/contact-us.jpg' %}" class="img-fluid" alt="Wine pouring in glass sitting on wooden table in sunshine">
+            <img src="{% static 'images/contact-us.jpg' %}" class="img-fluid"
+                alt="Wine pouring in glass sitting on wooden table in sunshine">
         </div>
     </div>
 </div>
@@ -15,7 +16,11 @@
     <div class="row mt-2">
         <div class="col-md-12">
             <p class="font-montserrat custom-white">
-                Feel free to reach out to us with any inquiries or if you wish to secure a booking. We cater for an early morning or late evening bookings too, perfect for those cherished and intimate moments. Our dedicated team is here to enhance your wine journey, ensuring it's a delightful and memorable experience. Your satisfaction is our priority, and we look forward to assisting you in every way possible. Cheers to the joy of wine!
+                Feel free to reach out to us with any inquiries or if you wish to secure a booking. We cater for an
+                early morning or late evening bookings too, perfect for those cherished and intimate moments. Our
+                dedicated team is here to enhance your wine journey, ensuring it's a delightful and memorable
+                experience. Your satisfaction is our priority, and we look forward to assisting you in every way
+                possible. Cheers to the joy of wine!
             </p>
         </div>
     </div>
@@ -23,8 +28,7 @@
     <form method="post">
         {{ form.as_p }}
         {% csrf_token %}
-        <button class="contact-btn button custom-white mt-0 btn"
-          type="submit">Submit</button>
-      </form>
+        <button class="contact-btn button custom-white mt-0 btn" type="submit">Submit</button>
+    </form>
 </div>
 {% endblock content %}

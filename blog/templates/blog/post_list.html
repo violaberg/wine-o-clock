@@ -16,12 +16,11 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                    <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                                        alt="placeholder image">
-                                    {% else %}
-                                    <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                                        alt="{{ post.title }}">
-                                    {% endif %}
+                                <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+                                    alt="placeholder image">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                                {% endif %}
                                 <div class="image-flash">
                                     <p class="font-montserrat custom-gold author">Author: {{ post.author }}</p>
                                 </div>
@@ -51,8 +50,7 @@
         <ul class="page-btn justify-content-center">
             {% if page_obj.has_previous %}
             <li>
-                <a href="?page={{ page_obj.previous_page_number }}"
-                class="button custom-white btn">&laquo; PREV</a>
+                <a href="?page={{ page_obj.previous_page_number }}" class="button custom-white btn">&laquo; PREV</a>
             </li>
             {% endif %}
             {% if page_obj.has_next %}

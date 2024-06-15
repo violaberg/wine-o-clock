@@ -31,19 +31,19 @@
 <hr class="custom-white">
 <!--Reviews-->
 <div class="row text-center mt-4">
-  <div class="col-md-12 text-center">
+  <div class="col-12 col-md-8 text-center mx-auto">
     <h1 class="font-parisienne custom-gold text-center">Customer Reviews</h1>
     <!--Display Existing Reviews-->
     {% for review in reviews %}
-    <div class="user-review text-center review p-2 my-2">
+    <div class="user-review text-center my-3">
       {% if review.image %}
-      <img class="img-fluid scale" src="{{ review.image.url }}" alt="Review Image">
+      <img class="img-fluid border-0 scale" src="{{ review.image.url }}" alt="Review Image">
       {% endif %}
-      <p class="font-montserrat custom-maroon">by {{ review.author }}</p>
-      <span class="font-montserrat custom-maroon">
+      <p class="font-montserrat custom-gold">by {{ review.author }}</p>
+      <span class="font-montserrat custom-gold">
         {{ review.timestamp }}
       </span>
-      <div class="font-montserrat custom-white pt-2" id="review{{ review.id }}">
+      <div class="font-montserrat custom-white p-2" id="review{{ review.id }}">
         {{ review.body }}
       </div>
       {% if user.is_authenticated and review.author == user %}
@@ -55,8 +55,8 @@
     <hr class="custom-white">
     <!--Form for new reviews-->
     <h1 class="font-parisienne custom-gold mt-4">Leave a review</h1>
-    <p class="font-montserrat custom-maroon">Writing as: <span
-        class="font-parisienne custom-maroon">{{ user.username }}</span></p>
+    <p class="font-montserrat custom-white">Writing as: <span
+        class="user font-parisienne custom-gold">{{ user.username }}</span></p>
     <div class="col-md-4 card">
       <div class="card-body">
         {% if user.is_authenticated %}
