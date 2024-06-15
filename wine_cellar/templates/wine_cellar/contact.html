@@ -25,9 +25,9 @@
         </div>
     </div>
     <!--Contact Form-->
-    <form method="post">
-        {{ form.as_p }}
+    <form class="contact-form p-2" method="post">
         {% csrf_token %}
+        {{form|crispy}}
         <button class="contact-btn button custom-white mt-0 btn" type="submit">Submit</button>
     </form>
 </div>

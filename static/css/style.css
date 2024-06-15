@@ -175,6 +175,7 @@ li {
 textarea {
     border-radius: 5px;
     font-family: 'Montserrat';
+    margin: 2rem;
     width: -webkit-fill-available;
 }
 
@@ -343,6 +344,12 @@ textarea {
 .user {
     font-size: 24px;
 }
+
+/* Contact page */
+.contact-form {
+    border: 5px ridge var(--muted-gold);
+}
+
 /* Gallery page */
 .gallery-text {
     padding-bottom: 2rem;
