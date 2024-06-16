@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-md-12 text-center position-relative">
+    <div class="col-md-12 col-lg-10 text-center mx-auto">
       <img src="{% static 'images/reviews.jpg' %}" class="img-fluid"
         alt="Wine pouring in glass sitting on wooden table in sunshine">
     </div>
@@ -31,7 +32,7 @@
 <hr class="custom-white">
 <!--Reviews-->
 <div class="row text-center mt-4">
-  <div class="col-12 col-md-8 text-center mx-auto">
+  <div class="col-12 col-md-8 col-lg-6 text-center mx-auto">
     <h1 class="font-parisienne custom-gold text-center">Customer Reviews</h1>
     <!--Display Existing Reviews-->
     {% for review in reviews %}
@@ -89,7 +90,7 @@
     <h1 class="font-parisienne custom-gold mt-4">Leave a review</h1>
     <p class="font-montserrat custom-white">Writing as: <span
         class="user font-parisienne custom-gold">{{ user.username }}</span></p>
-    <div class="new-review col-12 col-md-6 mx-auto">
+    <div class="new-review col-12 col-md-10 mx-auto p-2">
       {% if user.is_authenticated %}
       <form id="reviewForm" method="post" action="{% url 'reviews' %}">
         {% csrf_token %}

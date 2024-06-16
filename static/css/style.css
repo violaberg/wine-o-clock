@@ -351,6 +351,15 @@ textarea {
     font-size: 24px;
 }
 
+input#id_image {
+    color: var(--seasalt) !important;
+}
+
+span.page-link.rounded-0 {
+    color: var(--seasalt);
+    background-color: var(--muted-gold);
+}
+
 /* Contact page */
 .contact-form {
     border: 5px ridge var(--muted-gold);
