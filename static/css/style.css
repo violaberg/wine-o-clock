@@ -322,7 +322,7 @@ p {
 
 .btn-like {
     background: transparent;
-    border: 5px ridge var(--muted-gold);
+    border: 3px ridge var(--muted-gold);
     color: var(--muted-gold);
 }
 
@@ -361,6 +361,7 @@ p {
 }
 
 .review-btn {
+    border-width: 3px;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 1rem;
     position: relative;
@@ -380,9 +381,16 @@ input#id_image {
     color: var(--seasalt) !important;
 }
 
-span.page-link.rounded-0 {
+.active>.page-link, .page-link.active {
     color: var(--seasalt);
-    background-color: var(--muted-gold);
+    background-color: transparent;
+    border: 3px ridge var(--muted-gold);
+    border-radius: 5px;
+}
+
+.page-link:hover {
+    background-color: var(--bordeaux);
+    color: var(--muted-gold);
 }
 
 /* Contact page */

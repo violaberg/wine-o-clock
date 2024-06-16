@@ -41,7 +41,7 @@
       <img class="img-fluid border-0 scale" src="{{ review.image.url }}" alt="Review Image">
       {% endif %}
       <p class="font-montserrat custom-gold">by {{ review.author }}</p>
-      <span class="font-montserrat custom-gold">
+      <span class="font-montserrat custom-gold opacity-50">
         {{ review.timestamp }}
       </span>
       <div class="font-montserrat custom-white p-2" id="review{{ review.id }}">
@@ -68,13 +68,13 @@
             {% endif %}
             {% for num in page_obj.paginator.page_range %}
             {% if page_obj.number == num %}
-            <li class="page-item active"><span class="page-link rounded-0">{{ num }}</span></li>
+            <li class="page-btn page-item active p-3"><span class="page-link">{{ num }}</span></li>
             {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-            <li class="page-item px-2"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+            <li class="page-btn page-item px-2"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
             {% endif %}
             {% endfor %}
             {% if page_obj.has_next %}
-            <li class="page-item rounded-0">
+            <li class="page-btn page-item">
               <a class="page-link rounded-0" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
                 <span aria-hidden="true">&raquo;</span>
               </a>
