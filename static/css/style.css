@@ -8,6 +8,15 @@
     --black: #000000;
 }
 
+html {
+    height: 100%;
+}
+
+main {
+    flex: 1;
+    min-height: 100%;
+}
+
 /* Fonts */
 .font-parisienne {
     font-family: 'Parisienne', cursive;
@@ -103,7 +112,7 @@ footer {
 /* Buttons */
 .button {
     background: none;
-    border: 5px ridge var(--muted-gold);
+    border: 3px ridge var(--muted-gold);
     font-family: "Montserrat", sans-serif;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -395,7 +404,7 @@ input#id_image {
 
 /* Contact page */
 .contact-form {
-    border: 5px ridge var(--muted-gold);
+    border: 3px ridge var(--muted-gold);
     border-radius: 5px;
 }
 
