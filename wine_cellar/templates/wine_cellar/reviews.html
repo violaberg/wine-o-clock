@@ -89,18 +89,16 @@
     <h1 class="font-parisienne custom-gold mt-4">Leave a review</h1>
     <p class="font-montserrat custom-white">Writing as: <span
         class="user font-parisienne custom-gold">{{ user.username }}</span></p>
-    <div class="col-md-4 card">
-      <div class="card-body">
-        {% if user.is_authenticated %}
-        <form id="reviewForm" method="post" action="{% url 'reviews' %}">
-          {% csrf_token %}
-          {{ form|crispy }}
-        </form>
-        {% else %}
-        <p class="font-montserrat custom-gold">Please <a class="custom-gold fw-bold"
-            href="{% url 'account_login' %}">log in</a> to leave a review</p>
-        {% endif %}
-      </div>
+    <div class="new-review col-12 col-md-6 mx-auto">
+      {% if user.is_authenticated %}
+      <form id="reviewForm" method="post" action="{% url 'reviews' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+      </form>
+      {% else %}
+      <p class="font-montserrat custom-gold">Please <a class="custom-gold fw-bold" href="{% url 'account_login' %}">log
+          in</a> to leave a review</p>
+      {% endif %}
     </div>
     <button type="submit" class="review-btn button btn custom-white" id="submitReviewButton">Submit Review</button>
   </div>
