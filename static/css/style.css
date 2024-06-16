@@ -298,6 +298,7 @@ p {
 }
 
 .post-subtitle {
+    color: var(--seasalt);
     margin-left: 5%;
 }
 
@@ -344,6 +345,14 @@ p {
 
 .fa-comments {
     color: var(--seasalt);
+}
+
+.comment-author {
+    color: var(--seasalt);
+}
+
+.text-secondary {
+    color: var(--muted-gold)!important;
 }
 
 /* Reviews */

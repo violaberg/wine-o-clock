@@ -59,7 +59,8 @@ def comment_edit(request, slug, comment_id):
         comment_id: The ID of the comment to be edited.
 
     Returns:
-        HttpResponse object redirecting to the post detail page after editing the comment.
+        HttpResponse object redirecting to the post detail page \
+        after editing the comment.
     """
     if request.method == "POST":
 
@@ -75,7 +76,8 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request, messages.ERROR, 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
@@ -90,7 +92,8 @@ def comment_delete(request, slug, comment_id):
         comment_id: The ID of the comment to be deleted.
 
     Returns:
-        HttpResponse object redirecting to the post detail page after deleting the comment.
+        HttpResponse object redirecting to the post detail page \
+        after deleting the comment.
     """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
@@ -100,6 +103,7 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
