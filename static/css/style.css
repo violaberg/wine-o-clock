@@ -162,10 +162,13 @@ a {
 }
 
 li {
-    color: var(--muted-gold);
     font-family: "Montserrat", sans-serif;
     opacity: 0.8;
     padding: 0.3rem;
+}
+
+b {
+    color: var(--muted-gold);
 }
 
 .errorlist {
@@ -203,11 +206,20 @@ textarea {
 /* Blog */
 .card {
     background-color: transparent;
-    border: 5px ridge var(--muted-gold);
+    border: 3px ridge var(--muted-gold);
 }
 
 .card-title {
+    font-family: 'Parisienne', cursive;
     padding-top: 0.3rem;
+}
+
+.card-img-top {
+    border-radius: 5px;
+}
+
+p {
+    color: var(--seasalt);
 }
 
 .image-container {
@@ -330,6 +342,10 @@ textarea {
     opacity: 0.6;
 }
 
+.fa-comments {
+    color: var(--seasalt);
+}
+
 /* Reviews */
 .col-md-4.card {
     margin: 0 auto;
@@ -413,7 +429,10 @@ span.page-link.rounded-0 {
         padding: 0.1rem;
     }
 
-    img,
+    img {
+        border-width: 3px;
+    }
+
     footer {
         border-width: 5px;
     }

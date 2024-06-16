@@ -42,10 +42,10 @@ def post_detail(request, slug):
         request,
         "blog/post_detail.html",
         {"post": post,
-        "comments": comments,
-        "comment_count": comment_count,
-        "comment_form": comment_form,
-        },
+         "comments": comments,
+         "comment_count": comment_count,
+         "comment_form": comment_form,
+         },
     )
 
 
