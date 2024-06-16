@@ -37,7 +37,8 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-violaberg-wineoclock-og889e7n0xm.ws.codeinstitute-ide.net', 'https://*.herokuapp.com',
+    'https://8000-violaberg-wineoclock-og889e7n0xm.ws.codeinstitute-ide.net',
+    'https://*.herokuapp.com',
 ]
 
 # Application definition
@@ -57,11 +58,13 @@ INSTALLED_APPS = [
     'django_summernote',
     'cloudinary',
     'crispy_forms',
+    'crispy_bootstrap4',
     'wine_cellar',
     'blog',
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'

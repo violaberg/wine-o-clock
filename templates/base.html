@@ -44,8 +44,8 @@
                 href="{% url 'gallery' %}">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% if request.path == display_url %}active" aria-current="page{% endif %}"
-                href="{% url 'display_review' %}">Reviews</a>
+              <a class="nav-link {% if request.path == reviews_url %}active" aria-current="page{% endif %}"
+                href="{% url 'reviews' %}">Reviews</a>
             </li>
             <li class="nav-item">
               <a class="nav-link {% if request.path == blog_url %}active" aria-current="page{% endif %}"

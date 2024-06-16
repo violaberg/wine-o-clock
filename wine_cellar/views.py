@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib import messages
+from django.core.mail import send_mail, BadHeaderError
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 from .forms import ReviewForm, ContactForm
 from .models import GalleryImage
 from .models import Review
@@ -30,11 +33,50 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'wine_cellar/contact_form_success.html')
-
+            send_contact_success_email(form.cleaned_data['email'])
+            return redirect('contact_form_success.html')
+        else:
+            messages.error(
+                request, 'An error occured. Please try again.')
     else:
         form = ContactForm()
         return render(request, 'wine_cellar/contact.html', {'form': form})
+
+
+def contact_form_success(request):
+    """
+    Render the contact success page.
+
+    Returns:
+        HttpResponse: The HTTP response object rendering \
+        the contact success page.
+    """
+    return render(request, 'contact_form_success.html')
+
+
+def send_contact_success_email(user_email):
+    """
+    Send a confirmation email to the user \
+    upon successful contact form submission.
+
+    Args:
+        user_email (str): The email address of the user \
+        who submitted the contact form.
+    """
+    subject = 'Contact Form Received'
+    message_body = "Thank you for contacting us! \
+                    We will get back to you as soon as possible!"
+    signature = "\n\nSincerely yours,\nWine O'Clock!"
+    message = f"{message_body}{signature}"
+    from_email = 'viola.bergere@gmail.com'
+    recipient_list = [user_email]
+
+    try:
+        send_mail(subject, message, from_email, recipient_list)
+    except BadHeaderError:
+        return HttpResponse('Invalid header found.')
+    except Exception as e:
+        raise Exception(f'An error occurred: {e}')
 
 
 def gallery(request):
@@ -47,62 +89,35 @@ def gallery(request):
             'gallery_images': gallery_images})
 
 
-def display_review(request):
-    """
-    Display all reviews.
-    """
-    reviews = Review.objects.all()
-    return render(request, 'wine_cellar/reviews.html', {'reviews': reviews})
+def reviews(request):
+    reviews = Review.objects.all().order_by('-timestamp')
+    p = Paginator(reviews, 6)
+    page_number = request.GET.get('page')
+    try:
+        page_obj = p.get_page(page_number)
+    except PageNotAnInteger:
+        page_obj = p.page(1)
+    except EmptyPage:
+        page_obj = p.page(p.num_pages)
 
-
-def write_review(request, slug):
-    """
-    Handle writing a new review.
-
-    Renders the reviews page with a review form for writing a new review.
-    Handles form submission for creating a new review.
-    """
     if request.method == 'POST':
-        review_form = ReviewForm(request.POST, request.FILES)
-        if review_form.is_valid():
-            new_review = review_form.save(commit=False)
-            new_review.author = request.user
-            new_review.save()
-            messages.success(request, 'Review submitted successfully!')
-            return redirect('display_review')
-        else:
-            messages.error(request, 'There was an error with your submission.')
-    else:
-        review_form = ReviewForm()
-
-    reviews = Review.objects.all()
-
-    return render(
-        request,
-        'wine_cellar/reviews.html',
-        {'reviews': reviews,
-         'review_form': review_form}
-    )
-
-
-def edit_review(request, slug, review_id):
-    """
-    Handle editing reviews.
-    """
-    review = get_object_or_404(Review, pk=review_id)
-    if request.method == 'POST':
-        review_form = ReviewForm(data=request.POST, instance=review)
-        if review_form.is_valid() and review.author == request.user:
-            review_form.save()
-            messages.success(
-                request, messages.SUCCESS, 'Review updated successfully!')
-            return redirect('display_review')
-        else:
-            messages.add_message(
-                request, messages.ERROR, 'Error updating review!')
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Thank you for your review!')
             return redirect('reviews')
+        else:
+            messages.error(request, 'Something went wrong! Please try again.')
+    else:
+        form = ReviewForm()
 
-    return HttpResponseRedirect(reverse('display_review', args=[slug]))
+    context = {
+        'reviews': reviews,
+        'page_obj': page_obj,
+        'form': form,
+    }
+
+    return render(request, 'wine_cellar/reviews.html', context)
 
 
 def delete_review(request, slug, review_id):
@@ -116,4 +131,4 @@ def delete_review(request, slug, review_id):
     else:
         messages.error(request, 'You can only delete your own reviews!')
 
-    return HttpResponseRedirect(reverse('display_review', args=[slug]))
+    return HttpResponseRedirect(reverse('reviews', args=[slug]))
