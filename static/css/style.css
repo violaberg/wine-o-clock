@@ -127,9 +127,7 @@ footer {
 .booking-btn {
     background-color: var(--bordeaux);
     opacity: 0.8;
-    position: relative;
     text-decoration: none;
-    top: -5rem;
 }
 
 .booking-btn:hover {
@@ -444,7 +442,6 @@ input#id_image {
 
     button.navbar-toggler {
         margin-right: -1.5rem;
-        margin-top: 1rem;
     }
 
     .logo {
