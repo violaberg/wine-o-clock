@@ -52,9 +52,13 @@ body,
 }
 
 .navbar-expand-lg .navbar-collapse {
-    font-size: 1.5rem;
-    position: absolute;
-    right: 2rem;
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+div#navbarNav {
+    position: fixed;
 }
 
 .navbar {
@@ -85,7 +89,7 @@ body,
 }
 
 img {
-    border: 5px ridge var(--muted-gold);
+    border: 3px ridge var(--muted-gold);
     border-radius: 5px;
 }
 
@@ -361,7 +365,7 @@ p {
 }
 
 .text-secondary {
-    color: var(--muted-gold)!important;
+    color: var(--muted-gold) !important;
 }
 
 /* Reviews */
@@ -390,7 +394,8 @@ input#id_image {
     color: var(--seasalt) !important;
 }
 
-.active>.page-link, .page-link.active {
+.active>.page-link,
+.page-link.active {
     color: var(--seasalt);
     background-color: transparent;
     border: 3px ridge var(--muted-gold);
@@ -437,7 +442,6 @@ input#id_image {
 
     a.nav-link {
         font-size: 16px;
-        padding: 4px;
     }
 
     button.navbar-toggler {
@@ -477,10 +481,6 @@ input#id_image {
         width: 3rem;
     }
 
-    .my-toggler {
-        margin-top: -1.5rem;
-    }
-
     .booking-btn {
         padding: 0.3rem;
     }
@@ -501,14 +501,9 @@ input#id_image {
         width: 4rem;
     }
 
-    .cellar-name {
-        font-size: 3rem;
-    }
-
     .my-toggler {
-        height: 3rem;
-        margin-top: -1.5rem;
-        width: 3rem;
+        height: 2.5rem;
+        width: 2.5rem;
     }
 
     .booking-btn {
@@ -521,21 +516,17 @@ input#id_image {
 }
 
 @media only screen and (min-width: 992px) {
-    .cellar-name {
-        font-size: 3.5rem;
-    }
-
     .my-toggler {
         margin-right: 1.5rem;
     }
 
     .logo {
-        margin-left: 1rem;
-        width: 4.5rem;
+        margin-left: 0.5rem;
+        width: 3rem;
     }
 
     a.nav-link {
-        font-size: 20px;
+        font-size: 18px;
         padding: 0;
     }
 
@@ -554,6 +545,12 @@ input#id_image {
     .button {
         font-size: 1.2rem;
         padding: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 1010px) {
+    .navbar-expand-lg .navbar-collapse {
+        right: 1.5rem;
     }
 }
 
