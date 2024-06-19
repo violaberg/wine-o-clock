@@ -26,9 +26,21 @@ class ContactForm(forms.ModelForm):
             'message': 'Message',
         }
         widgets = {
-            'first_name': forms.TextInput(attrs={'placeholder': 'First Name'}),
-            'last_name': forms.TextInput(attrs={'placeholder': 'Last Name'}),
-            'email': forms.EmailInput(attrs={'placeholder': 'Your email'}),
+            'first_name': forms.TextInput(
+                attrs={
+                    'placeholder': 'First Name',
+                    'autocomplete': 'name'
+                }),
+            'last_name': forms.TextInput(
+                attrs={
+                    'placeholder': 'Last Name',
+                    'autocomplete': 'surname'
+                }),
+            'email': forms.EmailInput(
+                attrs={
+                    'placeholder': 'Your email',
+                    'autocomplete': 'email'
+                }),
             'message': forms.Textarea(
                 attrs={'placeholder': 'Enter your message here'}),
         }
