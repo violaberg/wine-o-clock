@@ -34,7 +34,7 @@ def contact(request):
         if form.is_valid():
             form.save()
             send_contact_success_email(form.cleaned_data['email'])
-            return redirect('contact_form_success.html')
+            return redirect('contact_form_success')
         else:
             messages.error(
                 request, 'An error occured. Please try again.')
@@ -51,7 +51,7 @@ def contact_form_success(request):
         HttpResponse: The HTTP response object rendering \
         the contact success page.
     """
-    return render(request, 'contact_form_success.html')
+    return render(request, 'wine_cellar/contact_form_success.html')
 
 
 def send_contact_success_email(user_email):
