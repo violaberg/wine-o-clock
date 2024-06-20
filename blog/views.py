@@ -6,7 +6,6 @@ from .models import Post, Comment
 from .forms import CommentForm
 
 
-# Create your views here.
 class PostList(generic.ListView):
     """
     View to display a list of posts.

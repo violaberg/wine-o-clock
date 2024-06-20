@@ -1,12 +1,9 @@
 from django.contrib import admin
 from django.urls import reverse
 from django.http import HttpResponseRedirect
-from django.utils.html import format_html
-from django.utils.safestring import mark_safe
-from django_summernote.admin import SummernoteModelAdmin
 from .models import GalleryImage, Review, Contact
 
-# Register your models here.
+
 class GalleryImageAdmin(admin.ModelAdmin):
     """
     Admin configuration for managing gallery images.
@@ -31,11 +28,14 @@ class GalleryImageAdmin(admin.ModelAdmin):
     def edit_selected_image(self, request, queryset):
         if queryset.count() == 1:
             selected_id = queryset[0].id
-            edit_url = reverse ('admin:wine_cellar_galleryimage_change', args=[selected_id])
+            edit_url = reverse(
+                'admin:wine_cellar_galleryimage_change', args=[selected_id])
             return HttpResponseRedirect(edit_url)
         else:
-            self.message_user(request, 'Please select only one image to edit.', level='warning')
-    
+            self.message_user(
+                request,
+                'Please select only one image to edit.', level='warning')
+
     edit_selected_image.short_description = 'Edit selected image'
 
     def change_view(self, request, object_id, form_url='', extra_context=None):

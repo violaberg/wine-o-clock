@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail, BadHeaderError
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
@@ -89,6 +90,7 @@ def gallery(request):
             'gallery_images': gallery_images})
 
 
+@login_required
 def reviews(request):
     reviews = Review.objects.all().order_by('-timestamp')
     p = Paginator(reviews, 6)
@@ -101,9 +103,11 @@ def reviews(request):
         page_obj = p.page(p.num_pages)
 
     if request.method == 'POST':
-        form = ReviewForm(request.POST)
+        form = ReviewForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            review = form.save(commit=False)
+            review.author = request.user
+            review.save()
             messages.success(request, 'Thank you for your review!')
             return redirect('reviews')
         else:

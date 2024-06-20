@@ -92,16 +92,16 @@
         class="user font-parisienne custom-gold">{{ user.username }}</span></p>
     <div class="new-review col-12 col-md-10 mx-auto p-2">
       {% if user.is_authenticated %}
-      <form id="reviewForm" method="post" action="{% url 'reviews' %}">
+      <form id="reviewForm" method="post" action="{% url 'reviews' %}" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form|crispy }}
+        <button type="submit" class="review-btn button btn custom-white" id="submitReviewButton">Submit Review</button>
       </form>
       {% else %}
       <p class="font-montserrat custom-gold">Please <a class="custom-gold fw-bold" href="{% url 'account_login' %}">log
           in</a> to leave a review</p>
       {% endif %}
     </div>
-    <button type="submit" class="review-btn button btn custom-white" id="submitReviewButton">Submit Review</button>
   </div>
 </div>
 
