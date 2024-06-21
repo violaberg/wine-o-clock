@@ -358,10 +358,6 @@ p {
     color: var(--seasalt);
 }
 
-.comment-author {
-    color: var(--seasalt);
-}
-
 .text-secondary {
     color: var(--muted-gold) !important;
 }

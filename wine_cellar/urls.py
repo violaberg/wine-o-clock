@@ -16,8 +16,8 @@ urlpatterns = [
      name='contact_form_success'),
     path('gallery/', gallery, name='gallery'),
     path('reviews', views.reviews, name='reviews'),
-    path('<slug:slug>/edit_review/<int:review_id>',
+    path('edit_review/<int:review_id>',
          views.edit_review, name='edit_review'),
-    path('<slug:slug>/delete_review/<int:review_id>',
+    path('delete_review/<int:review_id>',
          views.delete_review, name='delete_review'),
 ]

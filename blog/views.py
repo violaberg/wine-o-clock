@@ -35,6 +35,19 @@ def post_detail(request, slug):
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.author = request.user
+            comment.post = post
+            comment.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Comment submitted and awaiting approval'
+            )
+
     comment_form = CommentForm()
 
     return render(
@@ -76,7 +89,8 @@ def comment_edit(request, slug, comment_id):
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
             messages.add_message(
-                request, messages.ERROR, 'Error updating comment!')
+                request,
+                messages.ERROR, 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
@@ -103,6 +117,7 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
         messages.add_message(
-            request, messages.ERROR, 'You can only delete your own comments!')
+            request,
+            messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))

@@ -56,4 +56,4 @@ class ReviewForm(forms.ModelForm):
     """
     class Meta:
         model = Review
-        fields = ('body', 'image',)
+        fields = ['body', 'image',]

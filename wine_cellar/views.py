@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect, get_object_or_404, reverse
-from django.http import HttpResponseRedirect, HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail, BadHeaderError
@@ -47,10 +47,6 @@ def contact(request):
 def contact_form_success(request):
     """
     Render the contact success page.
-
-    Returns:
-        HttpResponse: The HTTP response object rendering \
-        the contact success page.
     """
     return render(request, 'wine_cellar/contact_form_success.html')
 
@@ -124,7 +120,7 @@ def reviews(request):
     return render(request, 'wine_cellar/reviews.html', context)
 
 
-def delete_review(request, slug, review_id):
+def delete_review(request, review_id):
     """
     Handle deleting reviews.
     """
@@ -135,4 +131,27 @@ def delete_review(request, slug, review_id):
     else:
         messages.error(request, 'You can only delete your own reviews!')
 
-    return HttpResponseRedirect(reverse('reviews', args=[slug]))
+    return redirect('reviews')
+
+
+def edit_review(request, review_id):
+    """
+    Handle editing reviews.
+    """
+    review = get_object_or_404(Review, pk=review_id)
+
+    if review.author != request.user:
+        messages.error(request, 'You can only edit your own reviews!')
+        return redirect('reviews')
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, request.FILES, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Review updated!')
+            return redirect('reviews')
+    else:
+        form = ReviewForm(instance=review)
+
+    return render(
+        request, 'reviews.html', {'form': form, 'review': review})

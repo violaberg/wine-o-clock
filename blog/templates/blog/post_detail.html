@@ -50,13 +50,11 @@
     <div class="col-md-8 card mb-4  mt-3 ">
       <h1 class="font-parisienne custom-gold text-center p-2">Comments</h1>
       <div class="font-montserrat custom-white text-center p-0 card-body">
-        <!-- A for loop inside the empty control tags
-          to iterate through each comment in comments -->
         {% for comment in comments %}
         <div class="p-2 comments
           {% if not comment.approved and comment.author == user %}
           faded{% elif not comment.approved %} d-none{% endif %}">
-          <p class="comment-author font-montserrat">
+          <p class="custom-gold font-montserrat">
             {{ comment.author }}
             <span>
               {{ comment.created_on }}
@@ -66,7 +64,7 @@
             {{ comment.body | linebreaks }}
           </div>
           {% if not comment.approved and comment.author == user %}
-          <p class="font-montserrat approval">
+          <p class="font-montserrat custom-white approval">
             This comment is awaiting approval
           </p>
           {% endif %}
@@ -77,16 +75,17 @@
           {% endif %}
           <hr class="custom-white">
         </div>
-        <!-- for loop ends here -->
         {% endfor %}
       </div>
     </div>
+
     <!-- Creating New Comments -->
     <div class="font-montserrat col-md-4 card mb-4 mt-3">
       <div class="text-center card-body">
         {% if user.is_authenticated %}
         <h1 class="font-parisienne custom-gold">Leave a comment</h1>
-        <p class="comment-author font-montserrat">Posting as: <span class="font-parisienne custom-gold">{{ user.username }}</span></p>
+        <p class="font-montserrat">Posting as: <span
+            class="font-parisienne custom-gold">{{ user.username }}</span></p>
         <form id="commentForm" method="post" style="margin-top: 1.3em;">
           {{ comment_form }}
           {% csrf_token %}
@@ -105,6 +104,7 @@
     </div>
   </div>
 </div>
+
 <!-- Delete comment confirmation modal -->
 <div class="modal fade" id="deleteCommentModal" tabindex="-1" aria-labelledby="deleteCommentModalLabel"
   aria-hidden="true">
