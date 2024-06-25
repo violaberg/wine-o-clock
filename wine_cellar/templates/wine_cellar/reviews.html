@@ -31,76 +31,82 @@
 </div>
 <hr class="custom-white">
 <!--Reviews-->
-<div class="row text-center mt-4">
-  <div class="col-12 col-md-8 col-lg-6 text-center mx-auto">
-    <h1 class="font-parisienne custom-gold text-center">Customer Reviews</h1>
-    <!--Display Existing Reviews-->
-    {% for review in reviews %}
-    <div class="user-review text-center my-3">
-      {% if review.image %}
-      <img class="img-fluid border-0 scale" src="{{ review.image.url }}" alt="Review Image">
-      {% endif %}
-      <p class="font-montserrat custom-gold">by {{ review.author }}</p>
-      <span class="font-montserrat custom-gold opacity-50">
-        {{ review.timestamp }}
-      </span>
-      <div class="font-montserrat custom-white p-2" id="review{{ review.id }}">
-        {{ review.body }}
+<div class="container">
+  <div class="row text-center mt-4">
+    <div class="col-12">
+      <h1 class="font-parisienne custom-gold text-center">Customer Reviews</h1>
+      <!--Display Existing Reviews-->
+      <div class="row">
+        {% for review in reviews %}
+        <div class="col-md-6">
+          <div class="user-review text-center my-3">
+            {% if review.image %}
+            <img class="img-fluid border-0 scale" src="{{ review.image.url }}" alt="Review Image">
+            {% endif %}
+            <p class="font-montserrat custom-gold">by {{ review.author }}</p>
+            <span class="font-montserrat custom-gold opacity-50">
+              {{ review.timestamp }}
+            </span>
+            <div class="font-montserrat custom-white p-2" id="review{{ review.id }}">
+              {{ review.body }}
+            </div>
+            {% if user.is_authenticated and review.author == user %}
+            <button class="button btn custom-white review-btn-edit" data-review_id="{{ review.id }}">Edit</button>
+            <button class="button btn custom-white review-btn-delete" data-review_id="{{ review.id }}">Delete</button>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
       </div>
-      {% if user.is_authenticated and review.author == user %}
-      <button class="button btn custom-white review-btn-edit" data-review_id="{{ review.id }}">Edit</button>
-      <button class="button btn custom-white review-btn-delete" data-review_id="{{ review.id }}">Delete</button>
-      {% endif %}
-    </div>
-    {% endfor %}
 
-    <!-- Pagination -->
-    <div class="row mt-3">
-      <div class="col">
-        <nav aria-label="Page navigation">
-          <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li class="page-item">
-              <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            {% endif %}
-            {% for num in page_obj.paginator.page_range %}
-            {% if page_obj.number == num %}
-            <li class="page-btn page-item active p-3"><span class="page-link">{{ num }}</span></li>
-            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-            <li class="page-btn page-item px-2"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
-            {% endif %}
-            {% endfor %}
-            {% if page_obj.has_next %}
-            <li class="page-btn page-item">
-              <a class="page-link rounded-0" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-            {% endif %}
-          </ul>
-        </nav>
+      <!-- Pagination -->
+      <div class="row mt-3">
+        <div class="col">
+          <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+              {% if page_obj.has_previous %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              {% endif %}
+              {% for num in page_obj.paginator.page_range %}
+              {% if page_obj.number == num %}
+              <li class="page-btn page-item active p-3"><span class="page-link">{{ num }}</span></li>
+              {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+              <li class="page-btn page-item px-2"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+              {% endif %}
+              {% endfor %}
+              {% if page_obj.has_next %}
+              <li class="page-btn page-item">
+                <a class="page-link rounded-0" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+              {% endif %}
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
 
-    <hr class="custom-white">
-    <!--Form for new reviews-->
-    <h1 class="font-parisienne custom-gold mt-4">Leave a review</h1>
-    <p class="font-montserrat custom-white">Writing as: <span
-        class="user font-parisienne custom-gold">{{ user.username }}</span></p>
-    <div class="new-review col-12 col-md-10 mx-auto p-2">
-      {% if user.is_authenticated %}
-      <form id="reviewForm" method="post" action="{% url 'reviews' %}" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="review-btn button btn custom-white" id="submitReviewButton">Submit Review</button>
-      </form>
-      {% else %}
-      <p class="font-montserrat custom-gold">Please <a class="custom-gold fw-bold" href="{% url 'account_login' %}">log
-          in</a> to leave a review</p>
-      {% endif %}
+      <hr class="custom-white">
+      <!--Form for new reviews-->
+      <h1 class="font-parisienne custom-gold mt-4">Leave a review</h1>
+      <p class="font-montserrat custom-white">Writing as: <span
+          class="user font-parisienne custom-gold">{{ user.username }}</span></p>
+      <div class="new-review col-12 col-md-10 col-lg-8 col-xl-6 mx-auto p-2">
+        {% if user.is_authenticated %}
+        <form id="reviewForm" method="post" action="{% url 'reviews' %}" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form|crispy }}
+          <button type="submit" class="review-btn button btn custom-white" id="submitReviewButton">Submit Review</button>
+        </form>
+        {% else %}
+        <p class="font-montserrat custom-gold">Please <a class="custom-gold fw-bold" href="{% url 'account_login' %}">log
+            in</a> to leave a review</p>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
