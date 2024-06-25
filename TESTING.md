@@ -71,19 +71,37 @@ The website was tested on various devices using Chrome DevTools and real-life de
 
 ## **Lighthouse**
 
-| Page            | Performance | Accessibility | Best Practices | SEO | Screenshot                                                                                                                  |
-| --------------- | --------- | ----------- | ------------ | - | --------------------------------------------------------------------------------------------------------------------------- |
-| ***Desktop***     |             |               |                |     |
-| Home            |           |            |             |  | <details><summary>Home</summary><img src=""></details> |
-|                 |             |               |                |     |
+| Page            |  Screenshot  |
+| --------------- | ------------ |
+| ***Desktop***   |              |
+| Home            | <details><summary>Home</summary><img src="static/images/lighthouse/desktop/home-desktop-lhouse.png"></details> |
+| About           | <details><summary>About</summary><img src="static/images/lighthouse/desktop/about-desktop-lhouse.png"></details> |
+| Gallery         | <details><summary>Gallery</summary><img src="static/images/lighthouse/desktop/gallery-desktop-lhouse.png"></details> |
+| Reviews         | <details><summary>Reviews</summary><img src="static/images/lighthouse/desktop/reviews-desktop-lhouse.png"></details> |
+| Contact         | <details><summary>Contact</summary><img src="static/images/lighthouse/desktop/contact-desktop-lhouse.png"></details> |
+| Sign Up         | <details><summary>Sign Up</summary><img src="static/images/lighthouse/desktop/signup-desktop-lhouse.png"></details> |
+| Login           | <details><summary>Login</summary><img src="static/images/lighthouse/desktop/login-desktop-lhouse.png"></details> |
+| Logout          | <details><summary>Logout</summary><img src="static/images/lighthouse/desktop/logout-desktop-lhouse.png"></details> |
+| Blog            | <details><summary>Blog</summary><img src="static/images/lighthouse/desktop/blog-desktop-lhouse.png"></details> |
+| Blog Post       | <details><summary> Post</summary><img src="static/images/lighthouse/desktop/blog-post-desktop-lhouse.png"></details> |
+|  |  |
 
 <br>
 
-| Page            | Performance | Accessibility | Best Practices | SEO | Screenshot                                                                                                                  |
-| --------------- | --------- | ----------- | ------------ | - | --------------------------------------------------------------------------------------------------------------------------- |
-| ***Mobile***     |             |               |                |     |
-| Home            |           |            |             |  | <details><summary>Home</summary><img src=""></details> |
-|                 |             |               |                |     |
+| Page            |  Screenshot  |
+| --------------- | ------------ |
+| ***Mobile***   |              |
+| Home            | <details><summary>Home</summary><img src="static/images/lighthouse/mobile/home-mobile-lhouse.png"></details> |
+| About           | <details><summary>About</summary><img src="static/images/lighthouse/mobile/about-mobile-lhouse.png"></details> |
+| Gallery         | <details><summary>Gallery</summary><img src="static/images/lighthouse/mobile/gallery-mobile-lhouse.png"></details> |
+| Reviews         | <details><summary>Reviews</summary><img src="static/images/lighthouse/mobile/reviews-mobile-lhouse.png"></details> |
+| Contact         | <details><summary>Contact</summary><img src="static/images/lighthouse/mobile/contact-mobile-lhouse.png"></details> |
+| Sign Up         | <details><summary>Sign Up</summary><img src="static/images/lighthouse/mobile/signup-mobile-lhouse.png"></details> |
+| Login           | <details><summary>Login</summary><img src="static/images/lighthouse/mobile/login-mobile-lhouse.png"></details> |
+| Logout          | <details><summary>Logout</summary><img src="static/images/lighthouse/mobile/logout-mobile-lhouse.png"></details> |
+| Blog            | <details><summary>Blog</summary><img src="static/images/lighthouse/mobile/blog-mobile-lhouse.png"></details> |
+| Blog Post       | <details><summary> Post</summary><img src="static/images/lighthouse/mobile/blog-post-mobile-lhouse.png"></details> |
+|  |  |
 
 ## **Manual Testing**
 
