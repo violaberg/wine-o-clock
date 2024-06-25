@@ -173,8 +173,9 @@ a {
 }
 
 li {
+    color: var(--muted-gold);
     font-family: "Montserrat", sans-serif;
-    opacity: 0.8;
+    opacity: 0.5;
     padding: 0.3rem;
 }
 
