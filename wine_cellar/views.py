@@ -88,6 +88,20 @@ def gallery(request):
 
 @login_required
 def reviews(request):
+    """
+    Display and handle reviews.
+
+    This view function retrieves and displays all reviews, paginates them,
+    handles new review submissions, and displays the review form. Only
+    authenticated users can access this view.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object rendering the reviews page with
+        the reviews, pagination object, and review form.
+    """
     reviews = Review.objects.all().order_by('-timestamp')
     p = Paginator(reviews, 6)
     page_number = request.GET.get('page')
