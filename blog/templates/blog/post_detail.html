@@ -84,8 +84,7 @@
       <div class="text-center card-body">
         {% if user.is_authenticated %}
         <h1 class="font-parisienne custom-gold">Leave a comment</h1>
-        <p class="font-montserrat">Posting as: <span
-            class="font-parisienne custom-gold">{{ user.username }}</span></p>
+        <p class="font-montserrat">Posting as: <span class="font-parisienne custom-gold">{{ user.username }}</span></p>
         <form id="commentForm" method="post" style="margin-top: 1.3em;">
           {{ comment_form }}
           {% csrf_token %}

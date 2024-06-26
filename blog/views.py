@@ -108,8 +108,6 @@ def comment_delete(request, slug, comment_id):
         HttpResponse object redirecting to the post detail page \
         after deleting the comment.
     """
-    queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
 
     if comment.author == request.user:

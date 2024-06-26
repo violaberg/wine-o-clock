@@ -34,7 +34,7 @@ class ContactForm(forms.ModelForm):
             'last_name': forms.TextInput(
                 attrs={
                     'placeholder': 'Last Name',
-                    'autocomplete': 'last_name'
+                    'autocomplete': 'family_name'
                 }),
             'email': forms.EmailInput(
                 attrs={
