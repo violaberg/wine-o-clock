@@ -2,20 +2,20 @@
 {% load static %}
 {% block content %}
 
-<div class="masthead">
+<div class="masthead" aria-labelledby="postTitle">
   <div class="container">
     <div class="row g-0">
       <div class="col-md-6 masthead-text">
         <!-- Post title  -->
-        <h1 class="font-parisienne custom-gold text-center post-title">{{ post.title }}</h1>
+        <h1 id="postTitle" class="font-parisienne custom-gold text-center post-title">{{ post.title }}</h1>
         <!-- Post author & created date -->
         <p class="font-montserrat text-center post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
       </div>
       <div class="d-none d-md-block col-md-6 masthead-image">
         {% if "placeholder" in post.featured_image.url %}
-        <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+        <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Placeholder image">
         {% else %}
-        <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+        <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
         {% endif %}
       </div>
     </div>
@@ -35,9 +35,9 @@
     </div>
   </div>
   <!-- Display count of comments -->
-  <div class="font-montserrat row">
+  <div class="font-montserrat row" aria-labelledby="commentsCount">
     <div class="col-12">
-      <strong class="text-secondary">
+      <strong id="commentsCount" class="text-secondary">
         <i class="far fa-comments"></i> {{ comment_count }}
       </strong>
     </div>
@@ -47,13 +47,13 @@
   </div>
   <!-- Display Comments -->
   <div class="row">
-    <div class="col-md-8 card mb-4  mt-3 ">
+    <div class="col-md-8 card mb-4 mt-3">
       <h1 class="font-parisienne custom-gold text-center p-2">Comments</h1>
       <div class="font-montserrat custom-white text-center p-0 card-body">
         {% for comment in comments %}
         <div class="p-2 comments
           {% if not comment.approved and comment.author == user %}
-          faded{% elif not comment.approved %} d-none{% endif %}">
+          faded{% elif not comment.approved %} d-none{% endif %}" aria-labelledby="comment{{ comment.id }}">
           <p class="custom-gold font-montserrat">
             {{ comment.author }}
             <span>
@@ -69,9 +69,10 @@
           </p>
           {% endif %}
           {% if user.is_authenticated and comment.author == user %}
-          <button class="button custom-white btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
-          <button class="delete-comment button custom-white btn btn-delete"
-            data-comment_id="{{ comment.id }}">Delete</button>
+          <button class="button custom-white btn btn-edit" data-comment_id="{{ comment.id }}"
+            aria-label="Edit comment">Edit</button>
+          <button class="delete-comment button custom-white btn btn-delete" data-comment_id="{{ comment.id }}"
+            aria-label="Delete comment">Delete</button>
           {% endif %}
           <hr class="custom-white">
         </div>
@@ -85,21 +86,22 @@
         {% if user.is_authenticated %}
         <h1 class="font-parisienne custom-gold">Leave a comment</h1>
         <p class="font-montserrat">Posting as: <span class="font-parisienne custom-gold">{{ user.username }}</span></p>
-        <form id="commentForm" method="post" style="margin-top: 1.3em;">
+        <form id="commentForm" method="post" style="margin-top: 1.3em;" aria-label="leaveComment">
           {{ comment_form }}
           {% csrf_token %}
-          <button id="submitButton" type="submit" class="button custom-white btn btn-lg">Submit</button>
+          <button id="submitButton" type="submit" class="button custom-white btn btn-lg"
+            aria-label="Submit comment">Submit</button>
         </form>
         {% else %}
         <p class="font-montserrat text-center custom-gold">Please <a class="custom-gold fw-bold"
-            href="{% url 'account_login' %}">log in</a> to leave a comment</p>
+            href="{% url 'account_login' %}" aria-label="Log in to leave a comment">log in</a> to leave a comment</p>
         {% endif %}
       </div>
     </div>
   </div>
   <div class="row">
     <div class="text-center col">
-      <a class="button btn custom-white btn-lg" href="{% url 'blog' %}">Back to blog</a>
+      <a class="button btn custom-white btn-lg" href="{% url 'blog' %}" aria-label="Back to blog">Back to blog</a>
     </div>
   </div>
 </div>
@@ -115,12 +117,13 @@
           aria-label="Close">X</button>
       </div>
       <div class="modal-body">
-        Are you sure you want to delete your comment?
-        This action cannot be undone.
+        Are you sure you want to delete your comment? This action cannot be undone.
       </div>
       <div class="modal-footer">
-        <button type="button" class="button custom-white btn" data-bs-dismiss="modal">Close</button>
-        <a id="deleteCommentConfirm" href="#" class="delete-comment button btn custom-white">Delete</a>
+        <button type="button" class="button custom-white btn" data-bs-dismiss="modal"
+          aria-label="Close delete comment modal">Close</button>
+        <a id="deleteCommentConfirm" href="#" class="delete-comment button btn custom-white"
+          aria-label="Confirm delete comment">Delete</a>
       </div>
     </div>
   </div>

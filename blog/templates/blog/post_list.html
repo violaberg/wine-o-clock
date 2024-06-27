@@ -11,28 +11,26 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
-                <div class="post col-md-4">
+                <div class="post col-md-4" aria-labelledby="postTitle{{ forloop.counter }}">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                                    alt="placeholder image">
+                                <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                                <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="font-montserrat custom-gold author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="custom-header text-center card-title">{{ post.title }}</h2>
+                            <a href="{% url 'post_detail' post.slug %}" class="post-link" aria-labelledby="postTitle{{ forloop.counter }}">
+                                <h2 id="postTitle{{ forloop.counter }}" class="custom-header text-center card-title">{{ post.title }}</h2>
                                 <p class="font-montserrat text-center custom-white card-text">{{ post.excerpt }}</p>
                             </a>
 
                             <hr class="custom-white">
-                            <p class="custom-gold opacity-50 card-text h6">{{ post.created_on}}
-                            </p>
+                            <p class="custom-gold opacity-50 card-text h6">{{ post.created_on }}</p>
                         </div>
                     </div>
                 </div>
@@ -50,11 +48,11 @@
         <ul class="page-btn justify-content-center">
             {% if page_obj.has_previous %}
             <li>
-                <a href="?page={{ page_obj.previous_page_number }}" class="button custom-white btn">&laquo; PREV</a>
+                <a href="?page={{ page_obj.previous_page_number }}" class="button custom-white btn" aria-label="Previous page">&laquo; PREV</a>
             </li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="button custom-white btn"> NEXT &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="button custom-white btn" aria-label="Next page"> NEXT &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>

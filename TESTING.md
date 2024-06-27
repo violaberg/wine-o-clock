@@ -292,18 +292,27 @@ All HTML pages were validated using [W3C HTML Validator](https://validator.w3.or
 
 ### **CSS**
 
+CSS was validated using [Jigsaw W3](https://jigsaw.w3.org/css-validator/)
+
 ### **JavaScript**
+
+|   FILE                                     |  VALIDATOR SCREENSHOT                                     |   RESULT    |
+|--------------------------------------------|-----------------------------------------------------------|-------------|
+| reviews.js                                 |<details><summary>reviews.js</summary><img src=""></details>| <mark>PASS</mark> ("one unidentified variable 'bootstrap'" ignored as it's caused by cross referencing scripts)|
+| comments.js                                |<details><summary>comments.js</summary><img src=""></details>| <mark>PASS</mark> ("one unidentified variable 'bootstrap'" ignored as it's caused by cross referencing scripts)|
 
 ### **Python**
 
-| FILE    | VALIDATOR SCREENSHOT                                                                                                    | RESULT            |
-| -------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| Models   | <details><summary>Models</summary><img src=""></details>     | <mark></mark> |
-| Views    | <details><summary>Views</summary><img src=""></details>       | <mark></mark> |
-| Forms    | <details><summary>Forms</summary><img src=""></details>       | <mark></mark> |
-| Urls     | <details><summary>Urls</summary><img src=""></details>      | <mark></mark> |
-| Admin    | <details><summary>Admin</summary><img src=""></details>       | <mark></mark> |
-| Settings | <details><summary>Settings</summary><img src=""></details> | <mark></mark> |
+All Python pages were validated using [CI Python Linter](https://pep8ci.herokuapp.com/)
+
+| FILE        | VALIDATOR SCREENSHOT                                                                                                    | RESULT            |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| models.py   | <details><summary>Models</summary><img src=""></details>     | <mark></mark> |
+| views.py    | <details><summary>Views</summary><img src=""></details>       | <mark></mark> |
+| forms.py    | <details><summary>Forms</summary><img src=""></details>       | <mark></mark> |
+| urls.py     | <details><summary>Urls</summary><img src=""></details>      | <mark></mark> |
+| admin.py    | <details><summary>Admin</summary><img src=""></details>       | <mark></mark> |
+| settings.py | <details><summary>Settings</summary><img src=""></details> | <mark></mark> |
 
 ## **Browser Testing**
 

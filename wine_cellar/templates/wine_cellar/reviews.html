@@ -51,8 +51,8 @@
               {{ review.body }}
             </div>
             {% if user.is_authenticated and review.author == user %}
-            <button class="button btn custom-white review-btn-edit" data-review_id="{{ review.id }}">Edit</button>
-            <button class="button btn custom-white review-btn-delete" data-review_id="{{ review.id }}">Delete</button>
+            <button class="button btn custom-white review-btn-edit" data-review_id="{{ review.id }}" aria-label="Edit button for review">Edit</button>
+            <button class="button btn custom-white review-btn-delete" data-review_id="{{ review.id }}" aria-label="Delete button for review">Delete</button>
             {% endif %}
           </div>
         </div>
@@ -100,7 +100,7 @@
         <form id="reviewForm" method="post" action="{% url 'reviews' %}" enctype="multipart/form-data">
           {% csrf_token %}
           {{ form|crispy }}
-          <button type="submit" class="review-btn button btn custom-white" id="submitReviewButton">Submit Review</button>
+          <button type="submit" class="review-btn button btn custom-white" id="submitReviewButton" aria-label="Submit button for review form">Submit Review</button>
         </form>
         {% else %}
         <p class="font-montserrat custom-gold">Please <a class="custom-gold fw-bold" href="{% url 'account_login' %}">log
