@@ -298,8 +298,8 @@ CSS was validated using [Jigsaw W3](https://jigsaw.w3.org/css-validator/)
 
 |   FILE                                     |  VALIDATOR SCREENSHOT                                     |   RESULT    |
 |--------------------------------------------|-----------------------------------------------------------|-------------|
-| reviews.js                                 |<details><summary>reviews.js</summary><img src=""></details>| <mark>PASS</mark> ("one unidentified variable 'bootstrap'" ignored as it's caused by cross referencing scripts)|
-| comments.js                                |<details><summary>comments.js</summary><img src=""></details>| <mark>PASS</mark> ("one unidentified variable 'bootstrap'" ignored as it's caused by cross referencing scripts)|
+| reviews.js                                 |<details><summary>reviews.js</summary><img src="static/docs/validators/js/reviews-jshint-validator.png"></details>| <mark>PASS</mark> ("one unidentified variable 'bootstrap'" ignored as it's caused by cross referencing scripts)|
+| comments.js                                |<details><summary>comments.js</summary><img src="static/docs/validators/js/comments-jshint-validator.png"></details>| <mark>PASS</mark> ("one unidentified variable 'bootstrap'" ignored as it's caused by cross referencing scripts)|
 
 ### **Python**
 
@@ -327,16 +327,16 @@ The website was tested on various devices using Chrome DevTools and real-life de
 | Page            |  Screenshot  |
 | --------------- | ------------ |
 | ***Desktop***   |              |
-| Home            | <details><summary>Home</summary><img src="static/images/lighthouse/desktop/home-desktop-lhouse.png"></details> |
-| About           | <details><summary>About</summary><img src="static/images/lighthouse/desktop/about-desktop-lhouse.png"></details> |
-| Gallery         | <details><summary>Gallery</summary><img src="static/images/lighthouse/desktop/gallery-desktop-lhouse.png"></details> |
-| Reviews         | <details><summary>Reviews</summary><img src="static/images/lighthouse/desktop/reviews-desktop-lhouse.png"></details> |
-| Contact         | <details><summary>Contact</summary><img src="static/images/lighthouse/desktop/contact-desktop-lhouse.png"></details> |
-| Sign Up         | <details><summary>Sign Up</summary><img src="static/images/lighthouse/desktop/signup-desktop-lhouse.png"></details> |
-| Login           | <details><summary>Login</summary><img src="static/images/lighthouse/desktop/login-desktop-lhouse.png"></details> |
-| Logout          | <details><summary>Logout</summary><img src="static/images/lighthouse/desktop/logout-desktop-lhouse.png"></details> |
-| Blog            | <details><summary>Blog</summary><img src="static/images/lighthouse/desktop/blog-desktop-lhouse.png"></details> |
-| Blog Post       | <details><summary> Post</summary><img src="static/images/lighthouse/desktop/blog-post-desktop-lhouse.png"></details> |
+| Home            | <details><summary>Home</summary><img src="static/docs/lighthouse/desktop/home-desktop-lhouse.png"></details> |
+| About           | <details><summary>About</summary><img src="static/docs/lighthouse/desktop/about-desktop-lhouse.png"></details> |
+| Gallery         | <details><summary>Gallery</summary><img src="static/docs/lighthouse/desktop/gallery-desktop-lhouse.png"></details> |
+| Reviews         | <details><summary>Reviews</summary><img src="static/docs/lighthouse/desktop/reviews-desktop-lhouse.png"></details> |
+| Contact         | <details><summary>Contact</summary><img src="static/docs/lighthouse/desktop/contact-desktop-lhouse.png"></details> |
+| Sign Up         | <details><summary>Sign Up</summary><img src="static/docs/lighthouse/desktop/signup-desktop-lhouse.png"></details> |
+| Login           | <details><summary>Login</summary><img src="static/docs/lighthouse/desktop/login-desktop-lhouse.png"></details> |
+| Logout          | <details><summary>Logout</summary><img src="static/docs/lighthouse/desktop/logout-desktop-lhouse.png"></details> |
+| Blog            | <details><summary>Blog</summary><img src="static/docs/lighthouse/desktop/blog-desktop-lhouse.png"></details> |
+| Blog Post       | <details><summary> Post</summary><img src="static/docs/lighthouse/desktop/blog-post-desktop-lhouse.png"></details> |
 |  |  |
 
 <br>
@@ -344,16 +344,16 @@ The website was tested on various devices using Chrome DevTools and real-life de
 | Page            |  Screenshot  |
 | --------------- | ------------ |
 | ***Mobile***   |              |
-| Home            | <details><summary>Home</summary><img src="static/images/lighthouse/mobile/home-mobile-lhouse.png"></details> |
-| About           | <details><summary>About</summary><img src="static/images/lighthouse/mobile/about-mobile-lhouse.png"></details> |
-| Gallery         | <details><summary>Gallery</summary><img src="static/images/lighthouse/mobile/gallery-mobile-lhouse.png"></details> |
-| Reviews         | <details><summary>Reviews</summary><img src="static/images/lighthouse/mobile/reviews-mobile-lhouse.png"></details> |
-| Contact         | <details><summary>Contact</summary><img src="static/images/lighthouse/mobile/contact-mobile-lhouse.png"></details> |
-| Sign Up         | <details><summary>Sign Up</summary><img src="static/images/lighthouse/mobile/signup-mobile-lhouse.png"></details> |
-| Login           | <details><summary>Login</summary><img src="static/images/lighthouse/mobile/login-mobile-lhouse.png"></details> |
-| Logout          | <details><summary>Logout</summary><img src="static/images/lighthouse/mobile/logout-mobile-lhouse.png"></details> |
-| Blog            | <details><summary>Blog</summary><img src="static/images/lighthouse/mobile/blog-mobile-lhouse.png"></details> |
-| Blog Post       | <details><summary> Post</summary><img src="static/images/lighthouse/mobile/blog-post-mobile-lhouse.png"></details> |
+| Home            | <details><summary>Home</summary><img src="static/docs/lighthouse/mobile/home-mobile-lhouse.png"></details> |
+| About           | <details><summary>About</summary><img src="static/docs/lighthouse/mobile/about-mobile-lhouse.png"></details> |
+| Gallery         | <details><summary>Gallery</summary><img src="static/docs/lighthouse/mobile/gallery-mobile-lhouse.png"></details> |
+| Reviews         | <details><summary>Reviews</summary><img src="static/docs/lighthouse/mobile/reviews-mobile-lhouse.png"></details> |
+| Contact         | <details><summary>Contact</summary><img src="static/docs/lighthouse/mobile/contact-mobile-lhouse.png"></details> |
+| Sign Up         | <details><summary>Sign Up</summary><img src="static/docs/lighthouse/mobile/signup-mobile-lhouse.png"></details> |
+| Login           | <details><summary>Login</summary><img src="static/docs/lighthouse/mobile/login-mobile-lhouse.png"></details> |
+| Logout          | <details><summary>Logout</summary><img src="static/docs/lighthouse/mobile/logout-mobile-lhouse.png"></details> |
+| Blog            | <details><summary>Blog</summary><img src="static/docs/lighthouse/mobile/blog-mobile-lhouse.png"></details> |
+| Blog Post       | <details><summary> Post</summary><img src="static/docs/lighthouse/mobile/blog-post-mobile-lhouse.png"></details> |
 |  |  |
 
 ## **Manual Testing**
@@ -362,102 +362,101 @@ The website was tested on various devices using Chrome DevTools and real-life de
 
 | Element                | Action      | Expected Result                                         | Pass/Fail         |
 | ---------------------- | ----------- | ------------------------------------------------------- | ----------------- |
-| Logo                   | Click       | Redirect to Home page                                   | <mark></mark> |
-| Home Link              | Click       | Redirect to Home page                                   |  |
-| Register Link          | Click       | Redirect to sign up page                                |  |
-| Log in Link            | Click       | Redirect to sign in page                                |  |
-| Log out Link           | Click       | Redirect to log out page                                |  |
-| Hamburger Menu         | Click       | Render a dropdown menu of all links                     |  |
-| Footer Socials         | Click       | Redirect in a new tab to all respective media platforms |  |
-| Footer Email           | Click       | Open up an email provider with developer email attached |  |
-| Register Link          | Display     | Render for non authenticated users                      |  |
-| Log in Link            | Display     | Render for non authenticated users                      |  |
-| Log out Link           | Display     | Render only if user is authenticated                    |  |
+| Logo                   | Click       | Redirect to Home page                                   | <mark>PASS</mark> |
+| Home Link              | Click       | Redirect to Home page                                   | <mark>PASS</mark> |
+| Register Link          | Click       | Redirect to sign up page                                | <mark>PASS</mark> |
+| Log in Link            | Click       | Redirect to sign in page                                | <mark>PASS</mark> |
+| Log out Link           | Click       | Redirect to log out page                                | <mark>PASS</mark> |
+| Hamburger Menu         | Click       | Render a dropdown menu of all links                     | <mark>PASS</mark> |
+| Footer Socials         | Click       | Redirect in a new tab to all respective media platforms | <mark>PASS</mark> |
+| Footer Email           | Click       | Open up an email provider with developer email attached | <mark>PASS</mark> |
+| Register Link          | Display     | Render for non authenticated users                      | <mark>PASS</mark> |
+| Log in Link            | Display     | Render for non authenticated users                      | <mark>PASS</mark> |
+| Log out Link           | Display     | Render only if user is authenticated                    | <mark>PASS</mark> |
 
 ### Home Page
 
 | Element            | Action      | Expected Result                          | Pass/Fail         |
 | ------------------ | ----------- | ---------------------------------------- | ----------------- |
-| Book a Tour button | Click       | Redirect to Book a Tour page             | <mark></mark> |
-
-### About Page
-
-| Element            | Action      | Expected Result                          | Pass/Fail         |
-| ------------------ | ----------- | ---------------------------------------- | ----------------- |
-| Book a Tour button | Click       | Redirect to Book a Tour page             | <mark></mark> |
+| Book a Tour button | Click       | Redirect to Contact page                 | <mark>PASS</mark> |
 
 ### Gallery Page
 
 | Element            | Action      | Expected Result                          | Pass/Fail         |
 | ------------------ | ----------- | ---------------------------------------- | ----------------- |
-| Book a Tour button | Click       | Redirect to Book a Tour page             | <mark></mark> |
+| Back to Top button | Click       | Bring to top of the page                 | <mark>PASS</mark> |
 
-### Book a Tour
+### Blog
 
 | Element            | Action      | Expected Result                          | Pass/Fail         |
 | ------------------ | ----------- | ---------------------------------------- | ----------------- |
-| Book a Tour button | Click       | Redirect to Book a Tour page             | <mark></mark> |
+| Post card | Click on text | Bring to post detail page | <mark>PASS</mark> |
+| Back to blog button | Click      | Bring back to post list page | <mark>PASS</mark> |
+| Next Button | Click | Bring to next page for posts | <mark>PASS</mark> |
+| Next Button | Hover/Focus | Change  Background colour | <mark>PASS</mark> |
+| Login link for comments | Click  | Bring to login page | <mark>PASS</mark> |
+| Leave a comment form | Display | Allow logged-in user to leave a comment and submit it | <mark>PASS</mark> |
+| Submit Button | Click | Submit review form | <mark>PASS</mark> |
+| Submit Button | Hover/Focus | Change  Background colour | <mark>PASS</mark> |
 
 ### Contact Page
 
 | Element            | Action      | Expected Result                          | Pass/Fail         |
 | ------------------ | ----------- | ---------------------------------------- | ----------------- |
-| Book a Tour button | Click       | Redirect to Book a Tour page             | <mark></mark> |
+| Contact form | Display | Allow user to contact admin by submitting form | <mark>PASS</mark> |
+| Submit Button | Click | Submit contact form | <mark>PASS</mark> |
+| Submit Button | Hover/Focus | Change  Background colour | <mark>PASS</mark> |
 
-### Review
+### Reviews Page
 
 | Element       | Action      | Expected Result                             | Pass/Fail         |
 | ------------- | ----------- | ------------------------------------------- | ----------------- |
-| Comment       | Display     | Render the review content, author and date  | <mark></mark> |
-| Author Link   | Click       | Redirect to authors profile page            |  |
-| Author Icon   | Click       | Redirect to authors profile page            |  |
-| Delete Button | Display     | Render if authenticated author              |  |
-| Delete Button | Click       | Delete Confirmation Modal appears           |  |
-| Delete Button | Hover/Focus | Darken Background                           |  |
+| Link to Contact Us form     | Click | Bring to Contact page | <mark>PASS</mark> |
+| Review        | Display     | Render the review content, author and date  | <mark>PASS</mark> |
+| Edit Button | Click     | Allow review author to edit it | <mark>PASS</mark> |
+| Edit Button | Hover/Focus   | Change  Background colour   | <mark>PASS</mark> |
+| Delete Button | Click       | Delete Confirmation Modal appears           | <mark>PASS</mark> |
+| Delete Button | Hover/Focus | Change  Background colour                   | <mark>PASS</mark> |
+| Leave a review form | Display | Allow logged-in user to enter review and submit it | <mark>PASS</mark> |
+| Submit Button | Click | Submit review form | <mark>PASS</mark> |
+| Submit Button | Hover/Focus | Change  Background colour | <mark>PASS</mark> |
+| Choose file Button | Click | Allow logged-in user to add iamge to review | <mark>PASS</mark> |
 
 ### Delete Confirmation Modal
 
 | Element               | Action      | Expected Result                       | Pass/Fail         |
 | --------------------- | ----------- | ------------------------------------- | ----------------- |
-| Close Button          | Click       | Modal and opacic background disappear | <mark></mark> |
-| Confirm Delete Button | Click       | Context item is delete from database  |  |
-| Close Button          | Hover/Focus | Darken Background                     |  |
-| Confirm Delete Button | Hover/Focus | Darken Background                     |  |
+| Close Button          | Click       | Modal closess | <mark>PASS</mark> |
+| Confirm Delete Button | Click       | Delete review/ comment | <mark>PASS</mark> |
+| Close Button          | Hover/Focus | Darken Background                     | <mark>PASS</mark> |
+| Confirm Delete Button | Hover/Focus | Darken Background                     | <mark>PASS</mark> |
 
 ### Sign Up Page
 
 | Element       | Action         | Expected Result                             | Pass/Fail         |
 | ------------- | -------------- | ------------------------------------------- | ----------------- |
-| Page          | Authentication | Authenticated users redirected to Home page | <mark></mark> |
-| Form(Valid)   | Submit         | Redirected to Home page                     |  |
-| Form(Valid)   | Submit         | Sign up in Notification received            |  |
-| Form(Invalid) | Submit         | Error Context rendered to UI                |  |
-| Form(Invalid) | Submit         | Error Notification received                 |  |
-| Login Link    | Click          | Redirect to Login Page                      |  |
-| Form Button   | Hover/Focus    | Darken Background                           |  |
-| Login Link    | Hover/Focus    | Darken Text                                 |  |
+| Form(Valid)   | Submit         | Redirected to Home page                     | <mark>PASS</mark> |
+| Form(Invalid) | Submit         | Error Context rendered to UI                | <mark>PASS</mark> |
+| Login Link    | Click          | Redirect to Login Page                      | <mark>PASS</mark> |
+| Logout Button   | Hover/Focus  | Change Background colour                    | <mark>PASS</mark> |
 
 ### Login Page
 
 | Element       | Action         | Expected Result                             | Pass/Fail         |
 | ------------- | -------------- | ------------------------------------------- | ----------------- |
-| Page          | Authentication | Authenticated users redirected to Home page | <mark></mark> |
-| Form(Valid)   | Submit         | Redirected to Home page                     |  |
-| Form(Valid)   | Submit         | Sign up in Notification received            |  |
-| Form(Invalid) | Submit         | Error Context rendered to UI                |  |
-| Form(Invalid) | Submit         | Error Notification received                 |  |
-| Register Link | Click          | Redirect to Sign Up Page                    |  |
-| Form Button   | Hover/Focus    | Darken Background                           |  |
-| Register Link | Hover/Focus    | Darken Text                                 |  |
+| Form(Valid)   | Submit         | Redirected to Home page                     | <mark>PASS</mark> |
+| Form(Valid)   | Submit         | Sign up in Notification received            | <mark>PASS</mark> |
+| Form(Invalid) | Submit         | Error Context rendered to UI                | <mark>PASS</mark> |
+| Sign Up Link | Click           | Redirect to Sign Up Page                    | <mark>PASS</mark> |
+| Login Button  | Hover/Focus    | Change Background colour                    | <mark>PASS</mark> |
 
 ### Log Out Page
 
 | Element       | Action         | Expected Result                                | Pass/Fail         |
 | ------------- | -------------- | ---------------------------------------------- | ----------------- |
-| Page          | Authentication | Un-authenticated users redirected to Home page | <mark></mark> |
-| Logout Button | Click          | User session is Logged out                     |  |
-| Logout Button | Click          | Redirected to Home page                        |  |
-| Form Button   | Hover/Focus    | Darken Background                              |  |
+| Logout Button | Click          | User session is safely finished                | <mark>PASS</mark> |
+| Logout Button | Click          | Redirected to Home page                        | <mark>PASS</mark> |
+| Form Button   | Hover/Focus    | Change Background colour                       | <mark>PASS</mark> |
 
 ## **Responsiveness**
 
