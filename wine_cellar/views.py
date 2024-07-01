@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail, BadHeaderError
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
@@ -86,7 +85,6 @@ def gallery(request):
             'gallery_images': gallery_images})
 
 
-@login_required
 def reviews(request):
     """
     Display and handle reviews.

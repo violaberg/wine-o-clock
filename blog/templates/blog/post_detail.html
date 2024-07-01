@@ -27,9 +27,9 @@
     <div class="col card mb-4 mt-3 left top">
       <div class="font-montserrat custom-white text-center p-0 card-body">
         <!-- The post content goes inside the card-text. -->
-        <article class="card-text">
+        <div class="card-text">
           {{ post.content | safe }}
-        </article>
+        </div>
       </div>
     </div>
   </div>
@@ -86,11 +86,12 @@
         <h1 class="font-parisienne custom-gold">Leave a comment</h1>
         <p class="font-montserrat">Posting as: <span class="font-parisienne custom-gold">{{ user.username }}</span></p>
         <form id="commentForm" method="post" style="margin-top: 1.3em;" aria-label="leaveComment">
-          {{ comment_form }}
           {% csrf_token %}
-          <button id="submitButton" type="submit" class="button custom-white btn btn-lg"
-            aria-label="Submit comment">Submit</button>
-        </form>
+          <div class="form-group">
+            {{ comment_form.as_p }}
+          </div>
+          <button id="submitButton" type="submit" class="button custom-white btn btn-lg" aria-label="Submit comment">Submit</button>
+        </form>        
         {% else %}
         <p class="font-montserrat text-center custom-gold">Please <a class="custom-gold fw-bold"
             href="{% url 'account_login' %}" aria-label="Log in to leave a comment">log in</a> to leave a comment</p>

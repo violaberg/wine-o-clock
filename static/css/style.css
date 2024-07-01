@@ -413,7 +413,7 @@ input#id_image {
     padding-bottom: 2rem;
 }
 
-/* Login & Sign Up page */
+/* Login, logout & Sign Up page */
 .helptext {
     color: var(--muted-gold);
     font-family: "Montserrat", sans-serif;
@@ -422,6 +422,11 @@ input#id_image {
 
 .reg-link {
     padding-top: 1rem;
+}
+
+.user-form {
+    border: 3px ridge var(--muted-gold);
+    border-radius: 5px;
 }
 
 @media only screen and (min-width: 320px) {

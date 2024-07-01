@@ -277,22 +277,29 @@ Then a site user can click on the comment thread to read the conversation |&chec
 
 ### **HTML**
 
-All HTML pages were validated using [W3C HTML Validator](https://validator.w3.org/).
+All HTML pages were validated using [W3C HTML Validator](https://validator.w3.org/)
 
 |   PAGE                                     |  VALIDATOR SCREENSHOT                                     |   RESULT    |
 |--------------------------------------------|-----------------------------------------------------------|-------------|
-| Home Page                                  |<details><summary>Home Page</summary><img src=""></details>| <mark>PASS</mark> |
-| About Page                                 |<details><summary>About Page</summary><img src=""></details>| <mark>PASS</mark> |
-| Gallery Page                               |<details><summary>Gallery</summary><img src=""></details>| <mark>PASS</mark> |
-| Book a Tour                                |<details><summary>Book a Tour</summary><img src=""></details>| <mark>PASS</mark> |
-| Contact Page                               |<details><summary>Contact Page</summary><img src=""></details>| <mark>PASS</mark> |
-| Sign up Page                               |<details><summary>Sign up Page</summary><img src=""></details>| <mark>PASS</mark> |
-| Login Page                                 |<details><summary>Login Page</summary><img src=""></details>| <mark>PASS</mark> |
-| Logout Page                                |<details><summary>Logout Page</summary><img src=""></details>| <mark>PASS</mark> |
+| Home Page                                  |<details><summary>Home</summary><img src="static/docs/validators/html/home-page-html-validator.png"></details>| <mark>PASS</mark> |
+| About Page                                 |<details><summary>About</summary><img src="static/docs/validators/html/about-page-html-validator.png"></details>| <mark>PASS</mark> |
+| Gallery Page                               |<details><summary>Gallery</summary><img src="static/docs/validators/html/gallery-page-html-validator.png"></details>| <mark>PASS</mark> |
+| Reviews Page                               |<details><summary>Reviews</summary><img src="static/docs/validators/html/reviews-page-html-validator.png"></details>| <mark>PASS</mark> |
+| Blog Post List Page                        |<details><summary>Blog Post List</summary><img src="static/docs/validators/html/post-list-page-html-validator.png"></details>| <mark>PASS</mark> |
+| Blog Post Detail Page                      |<details><summary>Blog Post Detail</summary><img src="static/docs/validators/html/post-detail-page-html-validator.png"></details>| <mark>PASS</mark> |
+| Contact Page                               |<details><summary>Contact</summary><img src="static/docs/validators/html/contact-page-html-validator.png"></details>| <mark>PASS</mark> |
+| Contact Success Page                       |<details><summary>Contact Success</summary><img src="static/docs/validators/html/contact-success-page-html-validator.png"></details>| <mark>PASS</mark> |
+| Sign up Page                               |<details><summary>Sign up</summary><img src="static/docs/validators/html/signup-page-html-validator.png"></details>| <mark>PASS</mark> |
+| Login Page                                 |<details><summary>Login</summary><img src="static/docs/validators/html/login-page-html-validator.png"></details>| <mark>PASS</mark> |
+| Logout Page                                |<details><summary>Logout</summary><img src="static/docs/validators/html/logout-page-html-validator.png"></details>| <mark>PASS</mark> |
 
 ### **CSS**
 
 CSS was validated using [Jigsaw W3](https://jigsaw.w3.org/css-validator/)
+
+|   PAGE                                     |  VALIDATOR SCREENSHOT                                     |   RESULT    |
+|--------------------------------------------|-----------------------------------------------------------|-------------|
+| style.css                                |<details><summary>style.css</summary><img src="static/docs/validators/css/css-validator.png"></details>| <mark>PASS</mark> |
 
 ### **JavaScript**
 
@@ -307,12 +314,27 @@ All Python pages were validated using [CI Python Linter](https://pep8ci.herokuap
 
 | FILE        | VALIDATOR SCREENSHOT                                                                                                    | RESULT            |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| models.py   | <details><summary>Models</summary><img src=""></details>     | <mark></mark> |
-| views.py    | <details><summary>Views</summary><img src=""></details>       | <mark></mark> |
-| forms.py    | <details><summary>Forms</summary><img src=""></details>       | <mark></mark> |
-| urls.py     | <details><summary>Urls</summary><img src=""></details>      | <mark></mark> |
-| admin.py    | <details><summary>Admin</summary><img src=""></details>       | <mark></mark> |
-| settings.py | <details><summary>Settings</summary><img src=""></details> | <mark></mark> |
+| middleware.py | <details><summary>Middleware</summary><img src="static/docs/validators/python/middleware-linter-validator.png"></details> | <mark></mark> |
+| urls.py | <details><summary>Project's urls</summary><img src="static/docs/validators/python/project-urls-linter-validator.png"></details> | <mark></mark> |
+
+
+| FILE        | VALIDATOR SCREENSHOT                                                                                                    | RESULT            |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| blog/models.py   | <details><summary>Blog models</summary><img src="static/docs/validators/python/blog-models-linter-validator.png"></details> | <mark></mark> |
+| blog/views.py    | <details><summary>Blog Views</summary><img src="static/docs/validators/python/blog-views-linter-validator.png"></details>       | <mark></mark> |
+| blog/forms.py    | <details><summary>Blog Forms</summary><img src="static/docs/validators/python/blog-forms-linter-validator.png"></details>       | <mark></mark> |
+| blog/urls.py     | <details><summary>Blog Urls</summary><img src="static/docs/validators/python/blog-urls-linter-validator.png"></details>      | <mark></mark> |
+| blog/admin.py    | <details><summary>Blog Admin</summary><img src="static/docs/validators/python/blog-admin-linter-validator.png"></details>       | <mark></mark> |
+| blog/apps.py    | <details><summary>Blog Apps</summary><img src="static/docs/validators/python/blog-apps-linter-validator.png"></details>       | <mark></mark> |
+
+| FILE        | VALIDATOR SCREENSHOT                                                                                                    | RESULT            |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| wine-cellar/models.py   | <details><summary>Wine Cellar models</summary><img src="static/docs/validators/python/wine-cellar-models-linter-validator.png"></details> | <mark></mark> |
+| wine-cellar/views.py   | <details><summary>Wine Cellar views</summary><img src="static/docs/validators/python/wine-cellar-views-linter-validator.png"></details> | <mark></mark> |
+| wine-cellar/forms.py   | <details><summary>Wine Cellar forms</summary><img src="static/docs/validators/python/wine-cellar-forms-linter-validator.png"></details> | <mark></mark> |
+| wine-cellar/urls.py   | <details><summary>Wine Cellar urls</summary><img src="static/docs/validators/python/wine-cellar-urls-linter-validator.png"></details> | <mark></mark> |
+| wine-cellar/admin.py   | <details><summary>Wine Cellar admin</summary><img src="static/docs/validators/python/wine-cellar-admin-linter-validator.png"></details> | <mark></mark> |
+| wine-cellar/apps.py   | <details><summary>Wine Cellar apps</summary><img src="static/docs/validators/python/wine-cellar-apps-linter-validator.png"></details> | <mark></mark> |
 
 ## **Browser Testing**
 
@@ -320,7 +342,7 @@ The website was tested on Google Chrome, Firefox and Microsoft Edge browsers.
 
 ## **Device Testing**
 
-The website was tested on various devices using Chrome DevTools and real-life device, such as iPhone 12, Dell laptop and iPad Air.
+The website was tested on various devices using Chrome DevTools and real-life device, such as iPhone 12, Dell and Lenovo X1 laptop and iPad Air.
 
 ## **Lighthouse**
 
