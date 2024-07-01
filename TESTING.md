@@ -490,7 +490,7 @@ The website was tested on various devices using Chrome DevTools and real-life de
 
 ## **Responsiveness**
 
-Responsiveness was achieved using TailwindCSS and custom CSS and tested with Chrome DevTools making sure all pages adjust to screens starting from 280px wide.
+Responsiveness was achieved using Bootstrap and custom CSS and tested with Chrome DevTools making sure all pages adjust to screens starting from 320px wide.
 
 ## **Bugs & Fixes**
 
