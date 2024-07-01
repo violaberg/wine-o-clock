@@ -429,6 +429,13 @@ The website was tested on various devices using Chrome DevTools and real-life de
 | Submit Button | Click | Submit contact form | <mark>PASS</mark> |
 | Submit Button | Hover/Focus | Change  Background colour | <mark>PASS</mark> |
 
+### Contact Success Page
+
+| Element            | Action      | Expected Result                          | Pass/Fail         |
+| ------------------ | ----------- | ---------------------------------------- | ----------------- |
+| Back to Home Page Button | Click | Bring back to home page | <mark>PASS</mark> |
+| Submit Button | Hover/Focus | Change  Background colour | <mark>PASS</mark> |
+
 ### Reviews Page
 
 | Element       | Action      | Expected Result                             | Pass/Fail         |
@@ -443,6 +450,7 @@ The website was tested on various devices using Chrome DevTools and real-life de
 | Submit Button | Click | Submit review form | <mark>PASS</mark> |
 | Submit Button | Hover/Focus | Change  Background colour | <mark>PASS</mark> |
 | Choose file Button | Click | Allow logged-in user to add iamge to review | <mark>PASS</mark> |
+| Log in Button | Click | Allow logged-in user to add iamge to review | <mark>PASS</mark> |
 
 ### Delete Confirmation Modal
 
