@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
     min-height: 100%;
 }
 
@@ -104,9 +104,9 @@ img {
 
 /* Footer */
 footer {
-    bottom: 0;
     border-top: 8px ridge var(--muted-gold);
     padding: 1rem;
+    width: 100%;
 }
 
 .fa-github,
@@ -541,6 +541,10 @@ input#id_image {
 
     a.nav-link {
         font-size: 18px;
+        padding: 0;
+    }
+
+    li.nav-item {
         padding: 0;
     }
 
