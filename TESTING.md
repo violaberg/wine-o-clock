@@ -314,27 +314,28 @@ All Python pages were validated using [CI Python Linter](https://pep8ci.herokuap
 
 | FILE        | VALIDATOR SCREENSHOT                                                                                                    | RESULT            |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| middleware.py | <details><summary>Middleware</summary><img src="static/docs/validators/python/middleware-linter-validator.png"></details> | <mark></mark> |
-| urls.py | <details><summary>Project's urls</summary><img src="static/docs/validators/python/project-urls-linter-validator.png"></details> | <mark></mark> |
+| middleware.py | <details><summary>Middleware</summary><img src="static/docs/validators/python/middleware-linter-validator.png"></details> | <mark>PASS</mark> |
+| urls.py | <details><summary>Project's urls</summary><img src="static/docs/validators/python/project-urls-linter-validator.png"></details> | <mark>PASS</mark> |
+| views.py | <details><summary>Project's views</summary><img src="static/docs/validators/python/project-views-linter-validator.png"></details> | <mark>PASS</mark> |
 
 
 | FILE        | VALIDATOR SCREENSHOT                                                                                                    | RESULT            |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| blog/models.py   | <details><summary>Blog models</summary><img src="static/docs/validators/python/blog-models-linter-validator.png"></details> | <mark></mark> |
-| blog/views.py    | <details><summary>Blog Views</summary><img src="static/docs/validators/python/blog-views-linter-validator.png"></details>       | <mark></mark> |
-| blog/forms.py    | <details><summary>Blog Forms</summary><img src="static/docs/validators/python/blog-forms-linter-validator.png"></details>       | <mark></mark> |
-| blog/urls.py     | <details><summary>Blog Urls</summary><img src="static/docs/validators/python/blog-urls-linter-validator.png"></details>      | <mark></mark> |
-| blog/admin.py    | <details><summary>Blog Admin</summary><img src="static/docs/validators/python/blog-admin-linter-validator.png"></details>       | <mark></mark> |
-| blog/apps.py    | <details><summary>Blog Apps</summary><img src="static/docs/validators/python/blog-apps-linter-validator.png"></details>       | <mark></mark> |
+| blog/models.py   | <details><summary>Blog models</summary><img src="static/docs/validators/python/blog-models-linter-validator.png"></details> | <mark>PASS</mark> |
+| blog/views.py    | <details><summary>Blog Views</summary><img src="static/docs/validators/python/blog-views-linter-validator.png"></details>       | <mark>PASS</mark> |
+| blog/forms.py    | <details><summary>Blog Forms</summary><img src="static/docs/validators/python/blog-forms-linter-validator.png"></details>       | <mark>PASS</mark> |
+| blog/urls.py     | <details><summary>Blog Urls</summary><img src="static/docs/validators/python/blog-urls-linter-validator.png"></details>      | <mark>PASS</mark> |
+| blog/admin.py    | <details><summary>Blog Admin</summary><img src="static/docs/validators/python/blog-admin-linter-validator.png"></details>       | <mark>PASS</mark> |
+| blog/apps.py    | <details><summary>Blog Apps</summary><img src="static/docs/validators/python/blog-apps-linter-validator.png"></details>       | <mark>PASS</mark> |
 
 | FILE        | VALIDATOR SCREENSHOT                                                                                                    | RESULT            |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| wine-cellar/models.py   | <details><summary>Wine Cellar models</summary><img src="static/docs/validators/python/wine-cellar-models-linter-validator.png"></details> | <mark></mark> |
-| wine-cellar/views.py   | <details><summary>Wine Cellar views</summary><img src="static/docs/validators/python/wine-cellar-views-linter-validator.png"></details> | <mark></mark> |
-| wine-cellar/forms.py   | <details><summary>Wine Cellar forms</summary><img src="static/docs/validators/python/wine-cellar-forms-linter-validator.png"></details> | <mark></mark> |
-| wine-cellar/urls.py   | <details><summary>Wine Cellar urls</summary><img src="static/docs/validators/python/wine-cellar-urls-linter-validator.png"></details> | <mark></mark> |
-| wine-cellar/admin.py   | <details><summary>Wine Cellar admin</summary><img src="static/docs/validators/python/wine-cellar-admin-linter-validator.png"></details> | <mark></mark> |
-| wine-cellar/apps.py   | <details><summary>Wine Cellar apps</summary><img src="static/docs/validators/python/wine-cellar-apps-linter-validator.png"></details> | <mark></mark> |
+| wine-cellar/models.py   | <details><summary>Wine Cellar models</summary><img src="static/docs/validators/python/wine-cellar-models-linter-validator.png"></details> | <mark>PASS</mark> |
+| wine-cellar/views.py   | <details><summary>Wine Cellar views</summary><img src="static/docs/validators/python/wine-cellar-views-linter-validator.png"></details> | <mark>PASS</mark> |
+| wine-cellar/forms.py   | <details><summary>Wine Cellar forms</summary><img src="static/docs/validators/python/wine-cellar-forms-linter-validator.png"></details> | <mark>PASS</mark> |
+| wine-cellar/urls.py   | <details><summary>Wine Cellar urls</summary><img src="static/docs/validators/python/wine-cellar-urls-linter-validator.png"></details> | <mark>PASS</mark> |
+| wine-cellar/admin.py   | <details><summary>Wine Cellar admin</summary><img src="static/docs/validators/python/wine-cellar-admin-linter-validator.png"></details> | <mark>PASS</mark> |
+| wine-cellar/apps.py   | <details><summary>Wine Cellar apps</summary><img src="static/docs/validators/python/wine-cellar-apps-linter-validator.png"></details> | <mark>PASS</mark> |
 
 ## **Browser Testing**
 
@@ -487,6 +488,14 @@ The website was tested on various devices using Chrome DevTools and real-life de
 | Logout Button | Click          | User session is safely finished                | <mark>PASS</mark> |
 | Logout Button | Click          | Redirected to Home page                        | <mark>PASS</mark> |
 | Form Button   | Hover/Focus    | Change Background colour                       | <mark>PASS</mark> |
+
+### Error Pages
+
+| Element       | Action         | Expected Result                                | Pass/Fail         |
+| ------------- | -------------- | ---------------------------------------------- | ----------------- |
+| Back to Home Page Button   | Click    | Bring user back to home page     | <mark>PASS</mark> |
+| Back to Home Page Button   | Hover/Focus    | Change text and border colour     | <mark>PASS</mark> |
+
 
 ## **Responsiveness**
 

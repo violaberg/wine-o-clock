@@ -24,4 +24,3 @@ def error_403(request, exception):
         return render(request, 'error_pages/403.html', status=403)
     else:
         return render(request, 'error_pages/500.html', status=500)
-

@@ -66,7 +66,7 @@ footer {
 }
 
 .navbar {
-    border-bottom: 8px ridge var(--muted-gold);
+    border-bottom: 5px ridge var(--muted-gold);
     padding: 1rem;
 }
 
@@ -74,6 +74,7 @@ footer {
 .navbar-nav .nav-link {
     color: var(--seasalt);
     font-family: "Montserrat", sans-serif;
+    font-size: 18px;
 }
 
 .nav-link:hover,
@@ -104,7 +105,7 @@ img {
 
 /* Footer */
 footer {
-    border-top: 8px ridge var(--muted-gold);
+    border-top: 5px ridge var(--muted-gold);
     padding: 1rem;
     width: 100%;
 }

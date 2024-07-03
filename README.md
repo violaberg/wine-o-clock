@@ -82,36 +82,33 @@ Total |95|96
 Due to a incredible amount of new knowledge and deadline for this project as for anything in life and to avoid scope creep, I used MoSCoW method to keep project on track and concentrate on delivering fully functional site. Unfortunately, since beginning of the project I knew I won't have time to implement everything I would like so decided to leave some features for future development.
 
 * Must Have:
-    + Age verification
     + User register/login
     + User reviews
     + Full CRUD funcionality for user
     + Full CRUD funcionality for admin
-    + Admin login via front end
-    + Password recovery
-    + User ability to book a tour online
-    + Booking confirmation on page
-    + Booking confirmation by email
     + About page
     + Contact form
     + Social media links
 
 * Should Have:
+    + User ability to book a tour through contact form
+    + User ability to add photos to gallery
+    + Wine blog
+    + Password recovery
+
+* Could Have:
+    + User ability to edit/cancel booking online
+    + User ability to delete previously added photos
+
+* Won't Have:
+    + User profile
     + Reservation management system for admin
     + Newsletter list
     + Booking reminder by email
     + Terms & conditions
-
-* Could Have:
-    + Visible booking for logged-in user
-    + User ability to edit/cancel booking online
-    + User ability to add photos to gallery
-    + User ability to delete previously added photos
-    + Wine blog
-
-* Won't Have:
-    + User profile
     + Option to pay for booking online
+    + Booking confirmation on page
+    + Booking confirmation by email
 
 ## **Structure plane**
 
