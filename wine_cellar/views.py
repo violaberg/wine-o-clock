@@ -116,10 +116,18 @@ def reviews(request):
             review = form.save(commit=False)
             review.author = request.user
             review.save()
-            messages.success(request, 'Thank you for your review!')
+            messages.add_message(
+                request,
+                messages.SUCCESS,
+                'Thank you for your review!'
+            )
             return redirect('reviews')
         else:
-            messages.error(request, 'Something went wrong! Please try again.')
+            messages.add_message(
+                request,
+                messages.ERROR,
+                'Something went wrong! Please try again.'
+            )
     else:
         form = ReviewForm()
 
@@ -139,9 +147,17 @@ def delete_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
     if review.author == request.user:
         review.delete()
-        messages.success(request, 'Review deleted!')
+        messages.add_message(
+            request,
+            messages.SUCCESS,
+            'Review deleted!'
+        )
     else:
-        messages.error(request, 'You can only delete your own reviews!')
+        messages.add_message(
+            request,
+            messages.ERROR,
+            'You can only delete your own reviews!'
+        )
 
     return redirect('reviews')
 
@@ -153,14 +169,22 @@ def edit_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
 
     if review.author != request.user:
-        messages.error(request, 'You can only edit your own reviews!')
+        messages.add_message(
+            request,
+            messages.ERROR,
+            'You can only edit your own reviews!'
+        )
         return redirect('reviews')
 
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES, instance=review)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Review updated!')
+            messages.add_message(
+                request,
+                messages.SUCCESS,
+                'Review updated!'
+            )
             return redirect('reviews')
     else:
         form = ReviewForm(instance=review)

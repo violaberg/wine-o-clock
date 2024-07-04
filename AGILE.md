@@ -48,7 +48,7 @@ I edited due dates few times due to illness and as I learned in proccess how lon
 
 ### **USER STORIES**
 
-A user story serves as an explanation how a certain feature will provide a value to a user. The help developer to understand what and why they are building to provide a better end product overall.
+A user story serves as an explanation how a certain feature will provide a value to a user. They help developer to understand what and why they are building to provide a better end product overall.
 
 [All user stories can be found following this link to my Github repository](https://github.com/violaberg/wine-o-clock/issues)
 
@@ -71,6 +71,7 @@ Kanban board is one way how to provide a visual for project management, optimize
 ## **Conclusion**
 
  Using Agile was new to me, it was messy as with many things first time trying but a good way to learn and see how anything works is to try it in action. I had to edit due dates few times as I wasn't sure how long tasks take to complete, I forgot to close issues and epics as I got very unwell during start of the project unfortunately and thought of many different ways I could have done user stories. For example, I created user stories and then epics but later realized I should have created epics and then user stories. During development I created and edited few user stories as I came to better ideas for app<br>
+ It's still not fully clear to me how sprints work using Kanban board while I understand the idea and benefit behind them, and plan to look into proper usage now that I'm finished.<br>
  Overall it was a great experience and kept me on track most of the time, as well as helped to understand how much is left to do as at times project felt never ending.<br>
  During this project I participated in hackathon and it was my first time being a SCRUM master which lead to even better understanding of Kanban board and how it works in real-life team work. I consider this experience very valuable and feel it helped me continue you with my own project.
 

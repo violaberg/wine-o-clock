@@ -316,6 +316,12 @@ p {
     padding: 0.3rem;
 }
 
+.page-link {
+    background-color: transparent;
+    border: 3px ridge var(--muted-gold);
+    border-radius: 5px;
+}
+
 .post-title {
     margin-left: 5%;
 }
@@ -403,13 +409,14 @@ input#id_image {
 .active>.page-link,
 .page-link.active {
     color: var(--seasalt);
-    background-color: transparent;
+    background-color: var(--bordeaux);
     border: 3px ridge var(--muted-gold);
     border-radius: 5px;
 }
 
 .page-link:hover {
     background-color: var(--bordeaux);
+    border-color: var(--muted-gold);
     color: var(--muted-gold);
 }
 
