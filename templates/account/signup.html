@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load crispy_forms_tags %}
 {% load static %}
 
 {% load account socialaccount %}
@@ -23,9 +24,32 @@
     <div class="col-12 col-md-6 mt-3 mx-auto">
       <form class="user-form text-center login p-3" method="POST" action="{% url 'account_signup' %}">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form.non_field_errors | safe }}
+        <input type="hidden" name="remember" value="true">
+        <div>
+          <div>
+            {{ form.username.errors | safe }}
+            <label for="id_username">Username:</label>
+            {{ form.username }}
+          </div>
+          <div>
+            {{ form.email.errors | safe }}
+            <label for="id_email">Email Address:</label>
+            {{ form.email }}
+          </div>
+          <div>
+            {{ form.password1.errors | safe }}
+            <label for="id_password1">Password</label>
+            {{ form.password1 }}
+          </div>
+          <div>
+            {{ form.password2.errors | safe }}
+            <label for="id_password2">Repeat password</label>
+            {{ form.password2 }}
+          </div>
+        </div>
         {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        <input type="hidden" class="form-control" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
         <button class="font-montserrat button btn custom-white right" type="submit">{% trans "Sign up" %}</button>
       </form>

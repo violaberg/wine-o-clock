@@ -430,6 +430,12 @@ input#id_image {
     border-radius: 5px;
 }
 
+@-moz-document url-prefix() {
+    .contact-form textarea {
+      width: 97%;
+    }
+  }
+
 /* Gallery page */
 .gallery-text {
     padding-bottom: 2rem;

@@ -341,6 +341,10 @@ All Python pages were validated using [CI Python Linter](https://pep8ci.herokuap
 
 The website was tested on Google Chrome, Firefox and Microsoft Edge browsers.
 
+- During development I used Google Chrome and it's dev tools to ensure everytihng is working correctly and app is responsive. 
+- On Firefox it worked equally well and needed just one adjustment in contact form for textarea width. I noticed it was slightly slower loading but it could be due to my broadband at that time.
+- Microsoft Edge didn't require any adjustments and loaded app the fastest out of all. I was very impressed as I normally use Chrome for everything and it can be slightly slow.
+
 ## **Device Testing**
 
 The website was tested on various devices using Chrome DevTools and real-life device, such as iPhone 12, Dell and Lenovo X1 laptop and iPad Air.
@@ -499,7 +503,7 @@ The website was tested on various devices using Chrome DevTools and real-life de
 
 ## **Responsiveness**
 
-Responsiveness was achieved using Bootstrap and custom CSS and tested with Chrome DevTools making sure all pages adjust to screens starting from 320px wide.
+Responsiveness was achieved using Bootstrap and custom CSS and tested with Chrome DevTools making sure all pages adjust to screens starting from 320px wide. All screenshots can be found in [responsiveness folder](static/docs/responsiveness/).
 
 ## **Bugs & Fixes**
 
