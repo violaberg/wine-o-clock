@@ -132,7 +132,6 @@ def reviews(request):
         form = ReviewForm()
 
     context = {
-        'reviews': reviews,
         'page_obj': page_obj,
         'form': form,
     }

@@ -513,5 +513,6 @@ Responsiveness was achieved using Bootstrap and custom CSS and tested with Chrom
 | Impossible to add a non-nullable field 'author' to review without specifying a default | No default value provided to new field in model | Added default='' to field resolved the issue |
 | Review text not showing | Changed Review module field from text to body, forgot to change template | Changing <code>{{ review.text }}</code> to <code>{{ review.body }}</code> resolved the issue |
 | Logo not showing on account pages | Wrong path <code><img src="../static/images/logo.jpg" alt="Logo" class="logo d-inline-block align-text-top"></code> | Fixing path resolved it <code><img src="{% static 'images/logo.jpg' %}" alt="Logo" class="logo d-inline-block align-text-top"></code> |
+| Review pagination not working | 'reviews' and 'page_obj' in context in views | Removed 'reviews' from context and updated reviews template from <code>{% for review in reviews %}</code> to <code>{% for review in page_obj %}</code> |
 
 [Back to Readme](README.md)
