@@ -121,7 +121,7 @@ footer {
 
 /* Buttons */
 .button {
-    background: none;
+    background-color: var(--black);
     border: 3px ridge var(--muted-gold);
     font-family: "Montserrat", sans-serif;
     margin-bottom: 1rem;
