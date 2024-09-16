@@ -318,7 +318,7 @@ p {
 }
 
 .page-link {
-    background-color: transparent;
+    background-color: var(--black);
     border: 3px ridge var(--muted-gold);
     border-radius: 5px;
 }
@@ -387,6 +387,7 @@ p {
 }
 
 .review-btn {
+    background-color: var(--black);
     border-width: 3px;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 1rem;
@@ -395,6 +396,7 @@ p {
 
 .user-review,
 .new-review {
+    background-color: var(--black);
     border: 3px ridge var(--muted-gold);
     border-radius: 5px;
 }
