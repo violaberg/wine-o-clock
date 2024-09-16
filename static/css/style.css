@@ -427,6 +427,7 @@ input#id_image {
 
 /* Contact page */
 .contact-form {
+    background-color: var(--black);
     border: 3px ridge var(--muted-gold);
     border-radius: 5px;
 }
@@ -454,6 +455,7 @@ input#id_image {
 }
 
 .user-form {
+    background-color: var(--black);
     border: 3px ridge var(--muted-gold);
     border-radius: 5px;
 }
