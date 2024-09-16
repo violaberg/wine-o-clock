@@ -229,7 +229,7 @@ textarea {
 
 /* Blog */
 .card {
-    background-color: transparent;
+    background-color: var(--black);
     border: 3px ridge var(--muted-gold);
 }
 
