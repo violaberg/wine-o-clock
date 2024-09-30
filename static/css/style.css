@@ -70,7 +70,7 @@ footer {
     padding: 1rem;
 }
 
-.navbar-nav .nav-link.active,
+.navbar-nav,
 .navbar-nav .nav-link {
     color: var(--seasalt);
     font-family: "Montserrat", sans-serif;
@@ -80,6 +80,10 @@ footer {
 .nav-link:hover,
 .nav-link.active:hover {
     color: var(--muted-gold);
+}
+
+a.nav-link.active {
+    color: var(--muted-gold)!important;
 }
 
 .my-toggler {
@@ -425,6 +429,14 @@ input#id_image {
 
 .review-link {
     font-size: 20px;
+}
+
+.review-link:hover {
+    color: var(--muted-gold);
+}
+
+.review-heading {
+    font-size: 40px;
 }
 
 /* Contact page */
