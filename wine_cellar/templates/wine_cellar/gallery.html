@@ -12,7 +12,7 @@
     {% for image in gallery_images %}
     <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
       <div class="gallery-image">
-        <img src="{{ image.image.url }}" class="img-fluid" alt="{{ image.description }}">
+        <img src="{{ image.image.url }}" class="img-fluid" alt="{{ image.description|truncatechars:100 }}">
         <p class="gallery-text font-montserrat custom-white text-center">{{ image.description }}</p>
       </div>
     </div>
