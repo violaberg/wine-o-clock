@@ -4,14 +4,14 @@
 {% block content %}
 <!--Reviews-->
 <div class="container">
-  <div class="row text-center mt-4">
+  <div class="row text-center">
     <div class="col-12">
       <h1 class="font-parisienne custom-gold text-center">Customer Reviews</h1>
       <!--Display Existing Reviews-->
       <div class="row">
         {% for review in page_obj %}
         <div class="col-md-6">
-          <div class="user-review text-center my-3">
+          <div class="user-review bg-black border border-4 rounded-0 text-center my-3">
             {% if review.image %}
             <img class="img-fluid border-0 scale" src="{{ review.image.url }}" alt="Customer Review Image">
             {% endif %}
@@ -40,21 +40,21 @@
             <ul class="pagination justify-content-center">
               {% if page_obj.has_previous %}
               <li class="page-btn page-item">
-                <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                <a class="custom-gold bg-black border border-2 page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
                 </a>
               </li>
               {% endif %}
               {% for num in page_obj.paginator.page_range %}
               {% if page_obj.number == num %}
-              <li class="page-btn page-item active p-3"><span class="page-link">{{ num }}</span></li>
+              <li class="page-btn page-item active"><span class="custom-gold bg-black border border-2 page-link">{{ num }}</span></li>
               {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-              <li class="page-btn page-item px-2"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+              <li class="page-btn page-item px-2"><a class="custom-gold bg-black border border-2 page-link" href="?page={{ num }}">{{ num }}</a></li>
               {% endif %}
               {% endfor %}
               {% if page_obj.has_next %}
               <li class="page-btn page-item">
-                <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                <a class="custom-gold bg-black border border-2 page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
                   <span aria-hidden="true">&raquo;</span>
                 </a>
               </li>

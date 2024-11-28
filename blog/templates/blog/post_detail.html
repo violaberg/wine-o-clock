@@ -9,13 +9,13 @@
         <!-- Post title  -->
         <h1 id="postTitle" class="font-parisienne custom-gold text-center post-title">{{ post.title }}</h1>
         <!-- Post author & created date -->
-        <p class="font-montserrat text-center post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+        <p class="font-montserrat custom-gold text-center post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
       </div>
       <div class="d-none d-md-block col-md-6 masthead-image">
         {% if "placeholder" in post.featured_image.url %}
-        <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Placeholder image">
+        <img class="card-img-top border border-3" src="{% static 'images/default.jpg' %}" alt="Placeholder image">
         {% else %}
-        <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+        <img class="card-img-top border border-3" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
         {% endif %}
       </div>
     </div>
@@ -24,7 +24,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col card mb-4 mt-3 pt-3 left top">
+    <div class="col card bg-black border border-3 rounded-0 mb-4 mt-3 pt-3 left top">
       <div class="font-montserrat custom-white text-center p-0 card-body">
         <!-- The post content goes inside the card-text. -->
         <div class="card-text">
@@ -36,8 +36,8 @@
   <!-- Display count of comments -->
   <div class="font-montserrat row" aria-labelledby="commentsCount">
     <div class="col-12">
-      <strong id="commentsCount" class="text-secondary">
-        <i class="far fa-comments"></i> {{ comment_count }}
+      <strong id="commentsCount" class="custom-gold">
+        <i class="far fa-comments custom-gold"></i> {{ comment_count }}
       </strong>
     </div>
     <div class="col-12">
@@ -46,7 +46,7 @@
   </div>
   <!-- Display Comments -->
   <div class="row">
-    <div class="col-md-8 card mb-4 mt-3">
+    <div class="col-md-8 card bg-black border border-3 rounded-0 mb-4 mt-3">
       <h1 class="font-parisienne custom-gold text-center p-2">Comments</h1>
       <div class="font-montserrat custom-white text-center p-0 card-body">
         {% for comment in comments %}
@@ -80,7 +80,7 @@
     </div>
 
     <!-- Creating New Comments -->
-    <div class="font-montserrat col-md-4 card mb-4 mt-3">
+    <div class="font-montserrat col-md-4 card bg-black border border-3 rounded-0 mb-4 mt-3">
       <div class="text-center card-body">
         {% if user.is_authenticated %}
         <h1 class="font-parisienne custom-gold">Leave a comment</h1>
