@@ -66,12 +66,12 @@ footer {
 }
 
 .navbar {
-    border-bottom: 5px ridge var(--muted-gold);
+    border-bottom: 3px ridge var(--muted-gold);
     padding: 1rem;
 }
 
 .navbar-nav,
-.navbar-nav .nav-link {
+.navbar-nav .nav-link, a.nav-link {
     color: var(--seasalt);
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
@@ -461,10 +461,6 @@ input#id_image {
         border-bottom-width: 5px;
     }
 
-    a.nav-link {
-        font-size: 16px;
-    }
-
     button.navbar-toggler {
         margin-right: -1.5rem;
     }
@@ -540,11 +536,6 @@ input#id_image {
     .logo {
         margin-left: 0.5rem;
         width: 3rem;
-    }
-
-    a.nav-link {
-        font-size: 18px;
-        padding: 0;
     }
 
     li.nav-item {

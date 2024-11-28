@@ -66,12 +66,12 @@ footer {
 }
 
 .navbar {
-    border-bottom: 5px ridge var(--muted-gold);
+    border-bottom: 3px ridge var(--muted-gold);
     padding: 1rem;
 }
 
 .navbar-nav,
-.navbar-nav .nav-link {
+.navbar-nav .nav-link, a.nav-link {
     color: var(--seasalt);
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
@@ -138,13 +138,13 @@ footer {
     color: var(--muted-gold);
 }
 
-.booking-btn {
+.secondary-btn {
     background-color: var(--bordeaux);
     opacity: 0.8;
     text-decoration: none;
 }
 
-.booking-btn:hover {
+.secondary-btn:hover {
     background-color: var(--bordeaux);
     opacity: 1;
 }
@@ -214,12 +214,8 @@ textarea {
     padding: 5px;
 }
 
-.card {
-    background-color: var(--black)!important;
-    --bs-card-bg: var(--black)!important;
-    --bs-card-title-color: var(--muted-gold)!important;
-    --bs-card-border-width: 3px!important;
-    --bs-card-border-color: var(--muted-gold)!important;
+.border-muted-gold {
+    color: var(--muted-gold);
 }
 
 /* Modal */
@@ -240,18 +236,15 @@ textarea {
 }
 
 /* Blog */
-.card {
+.card,
+.card-body {
     background-color: var(--black);
-    border: 3px ridge var(--muted-gold);
+    border-color: var(--muted-gold)!important;
 }
 
 .card-title {
     font-family: 'Parisienne', cursive;
     padding-top: 0.3rem;
-}
-
-.card-img-top {
-    border-radius: 5px;
 }
 
 p {
@@ -323,16 +316,8 @@ p {
     text-decoration: none;
 }
 
-.post-link:hover,
-.page-link {
-    color: var(--muted-gold);
+.post-link:hover {
     padding: 0.3rem;
-}
-
-.page-link {
-    background-color: var(--black);
-    border: 3px ridge var(--muted-gold);
-    border-radius: 5px;
 }
 
 .post-title {
@@ -406,11 +391,8 @@ p {
     position: relative;
 }
 
-.user-review,
 .new-review {
     background-color: var(--black);
-    border: 3px ridge var(--muted-gold);
-    border-radius: 5px;
 }
 
 .user {
@@ -419,20 +401,6 @@ p {
 
 input#id_image {
     color: var(--seasalt) !important;
-}
-
-.active>.page-link,
-.page-link.active {
-    color: var(--seasalt);
-    background-color: var(--bordeaux);
-    border: 3px ridge var(--muted-gold);
-    border-radius: 5px;
-}
-
-.page-link:hover {
-    background-color: var(--bordeaux);
-    border-color: var(--muted-gold);
-    color: var(--muted-gold);
 }
 
 .review-link {
@@ -493,10 +461,6 @@ input#id_image {
         border-bottom-width: 5px;
     }
 
-    a.nav-link {
-        font-size: 16px;
-    }
-
     button.navbar-toggler {
         margin-right: -1.5rem;
     }
@@ -506,13 +470,9 @@ input#id_image {
         width: 2.5rem;
     }
 
-    .booking-btn {
+    .secondary-btn {
         font-size: 16px;
         padding: 0.1rem;
-    }
-
-    img {
-        border-width: 3px;
     }
 
     footer {
@@ -534,7 +494,7 @@ input#id_image {
         width: 3rem;
     }
 
-    .booking-btn {
+    .secondary-btn {
         padding: 0.3rem;
     }
 }
@@ -559,7 +519,7 @@ input#id_image {
         width: 2.5rem;
     }
 
-    .booking-btn {
+    .secondary-btn {
         padding: 0.5rem;
     }
 
@@ -578,16 +538,11 @@ input#id_image {
         width: 3rem;
     }
 
-    a.nav-link {
-        font-size: 18px;
-        padding: 0;
-    }
-
     li.nav-item {
         padding: 0;
     }
 
-    .booking-btn {
+    .secondary-btn {
         font-size: 1.2rem;
     }
 
