@@ -214,6 +214,14 @@ textarea {
     padding: 5px;
 }
 
+.card {
+    background-color: var(--black)!important;
+    --bs-card-bg: var(--black)!important;
+    --bs-card-title-color: var(--muted-gold)!important;
+    --bs-card-border-width: 3px!important;
+    --bs-card-border-color: var(--muted-gold)!important;
+}
+
 /* Modal */
 .modal-dialog {
     border: 5px ridge var(--muted-gold);
