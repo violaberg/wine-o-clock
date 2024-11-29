@@ -10,10 +10,10 @@
       <!--Display Existing Reviews-->
       <div class="row">
         {% for review in page_obj %}
-        <div class="col-md-6">
-          <div class="user-review bg-black border border-4 rounded-0 text-center my-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="user-review bg-black border border-2 border-warning rounded my-3">
             {% if review.image %}
-            <img class="img-fluid border-0 scale" src="{{ review.image.url }}" alt="Customer Review Image">
+            <img class="img-fluid rounded-top scale" src="{{ review.image.url }}" alt="Customer Review Image">
             {% endif %}
             <p class="font-montserrat custom-gold">by {{ review.author }}</p>
             <span class="font-montserrat custom-gold opacity-75">
@@ -69,12 +69,12 @@
       <h2 class="font-parisienne review-heading custom-gold mt-4">Leave a review</h2>
       <p class="font-montserrat custom-white">Writing as: <span
           class="user font-parisienne custom-gold">{{ user.username }}</span></p>
-      <div class="new-review col-12 col-md-10 col-lg-8 col-xl-6 mx-auto p-2">
+      <div class="new-review border border-2 border-warning rounded col-12 col-md-10 col-lg-8 col-xl-6 mx-auto p-2">
         {% if user.is_authenticated %}
         <form id="reviewForm" method="post" action="{% url 'reviews' %}" enctype="multipart/form-data">
           {% csrf_token %}
           {{ form|crispy }}
-          <button type="submit" class="review-btn button btn custom-white" id="submitReviewButton"
+          <button type="submit" class="review-btn button btn custom-white border border-2 border-warning rounded" id="submitReviewButton"
             aria-label="Submit button for review form">Submit Review</button>
         </form>
         {% else %}

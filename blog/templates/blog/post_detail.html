@@ -13,9 +13,9 @@
       </div>
       <div class="d-none d-md-block col-md-6 masthead-image">
         {% if "placeholder" in post.featured_image.url %}
-        <img class="card-img-top border border-3" src="{% static 'images/default.jpg' %}" alt="Placeholder image">
+        <img class="card-img-top border border-2 border-warning rounded" src="{% static 'images/default.jpg' %}" alt="Placeholder image">
         {% else %}
-        <img class="card-img-top border border-3" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+        <img class="card-img-top border border-2 border-warning rounded" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
         {% endif %}
       </div>
     </div>
@@ -24,7 +24,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col card bg-black border border-3 rounded-0 mb-4 mt-3 pt-3 left top">
+    <div class="col card bg-black border border-2 border-warning rounded mb-4 mt-3 pt-3 left top">
       <div class="font-montserrat custom-white text-center p-0 card-body">
         <!-- The post content goes inside the card-text. -->
         <div class="card-text">
@@ -46,7 +46,7 @@
   </div>
   <!-- Display Comments -->
   <div class="row">
-    <div class="col-md-8 card bg-black border border-3 rounded-0 mb-4 mt-3">
+    <div class="col-md-8 card bg-black border border-2 border-warning rounded mb-4 mt-3">
       <h1 class="font-parisienne custom-gold text-center p-2">Comments</h1>
       <div class="font-montserrat custom-white text-center p-0 card-body">
         {% for comment in comments %}
@@ -68,9 +68,9 @@
           </p>
           {% endif %}
           {% if user.is_authenticated and comment.author == user %}
-          <button class="button custom-white btn btn-edit" data-comment_id="{{ comment.id }}"
+          <button class="button custom-white btn btn-edit border border-2 border-warning rounded" data-comment_id="{{ comment.id }}"
             aria-label="Edit comment">Edit</button>
-          <button class="delete-comment button custom-white btn btn-delete" data-comment_id="{{ comment.id }}"
+          <button class="delete-comment button custom-white btn btn-delete border border-2 border-warning rounded" data-comment_id="{{ comment.id }}"
             aria-label="Delete comment">Delete</button>
           {% endif %}
           <hr class="custom-white">
@@ -80,7 +80,7 @@
     </div>
 
     <!-- Creating New Comments -->
-    <div class="font-montserrat col-md-4 card bg-black border border-3 rounded-0 mb-4 mt-3">
+    <div class="font-montserrat col-md-4 card bg-black border border-2 border-warning rounded mb-4 mt-3">
       <div class="text-center card-body">
         {% if user.is_authenticated %}
         <h1 class="font-parisienne custom-gold">Leave a comment</h1>
@@ -90,7 +90,7 @@
           <div class="form-group">
             {{ comment_form.as_p }}
           </div>
-          <button id="submitButton" type="submit" class="button custom-white btn btn-lg" aria-label="Submit comment">Submit</button>
+          <button id="submitButton" type="submit" class="button custom-white btn btn-lg border border-2 border-warning rounded" aria-label="Submit comment">Submit</button>
         </form>        
         {% else %}
         <p class="font-montserrat text-center custom-gold">Please <a class="custom-gold fw-bold"
@@ -101,7 +101,7 @@
   </div>
   <div class="row">
     <div class="text-center col">
-      <a class="button btn custom-white btn-lg" href="{% url 'blog' %}" aria-label="Back to blog">Back to blog</a>
+      <a class="button btn custom-white btn-lg border border-2 border-warning rounded" href="{% url 'blog' %}" aria-label="Back to blog">Back to blog</a>
     </div>
   </div>
 </div>

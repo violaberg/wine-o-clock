@@ -2,24 +2,28 @@
 {% load static %}
 
 {% block content %}
-<div class="container mt-4">
-  <h1 class="font-parisienne text-center custom-gold">Welcome to our Gallery</h1>
-  <p class="gallery-text font-montserrat custom-white text-center">Feel free to look through our gallery with images
-    uploaded by staff member to get a better feel of this fabulous place!</p>
-</div>
 <div class="container">
   <div class="row">
-    {% for image in gallery_images %}
-    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-      <div class="gallery-image">
-        <img src="{{ image.image.url }}" class="img-fluid" alt="{{ image.description|truncatechars:100 }}">
-        <p class="gallery-text font-montserrat custom-white text-center">{{ image.description }}</p>
+    <div class="col-12">
+      <h1 class="font-parisienne text-center custom-gold">Welcome to our Gallery</h1>
+      <p class="gallery-text font-montserrat custom-white text-center">Feel free to look through our gallery with images
+        uploaded by staff member to get a better feel of this fabulous place!</p>
+      <div class="row">
+        {% for image in gallery_images %}
+        <div class="col-md-6 col-lg-4">
+          <div class="gallery-image mb-4 px-0 bg-black border border-2 border-warning rounded">
+            <img src="{{ image.image.url }}" class="img-fluid rounded-top scale"
+              alt="{{ image.description|truncatechars:100 }}">
+            <p class="gallery-text font-montserrat custom-white text-center px-2">{{ image.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="text-center col">
+        <a class="button btn custom-white btn-lg border border-2 border-warning rounded" href="{% url 'gallery' %}"
+          aria-label="Button to bring to top of the page">Back to top</a>
       </div>
     </div>
-    {% endfor %}
-  </div>
-  <div class="text-center col">
-    <a class="button btn custom-white btn-lg" href="{% url 'gallery' %}" aria-label="Button to bring to top of the page">Back to top</a>
   </div>
 </div>
 {% endblock content %}

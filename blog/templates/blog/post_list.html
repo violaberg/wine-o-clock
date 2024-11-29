@@ -13,15 +13,15 @@
                 {% for post in post_list %}
                 <div class="post col-md-4" aria-labelledby="postTitle{{ forloop.counter }}">
                     <div class="card bg-black">
-                        <div class="card-body border border-4 rounded-0 mb-4">
+                        <div class="card-body border border-2 border-warning rounded">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top border-muted-gold border-3 rounded-0" src="{% static 'images/default.jpg' %}" alt="Placeholder image">
+                                <img class="card-img-top border border-2 border-warning rounded" src="{% static 'images/default.jpg' %}" alt="Placeholder image">
                                 {% else %}
-                                <img class="card-img-top border-muted-gold border-3 rounded-0" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                                <img class="card-img-top border border-2 border-warning rounded" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="font-montserrat custom-gold author">Author: {{ post.author }}</p>
+                                    <p class="font-montserrat custom-gold author border border-1 border-warning rounded">Author: {{ post.author }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link" aria-labelledby="postTitle{{ forloop.counter }}">
@@ -48,11 +48,11 @@
         <ul class="list-unstyled page-btn justify-content-center">
             {% if page_obj.has_previous %}
             <li>
-                <a href="?page={{ page_obj.previous_page_number }}" class="button custom-white btn" aria-label="Previous page">&laquo; PREV</a>
+                <a href="?page={{ page_obj.previous_page_number }}" class="button custom-white btn border border-2 border-warning rounded" aria-label="Previous page">&laquo; PREV</a>
             </li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="button custom-white btn" aria-label="Next page"> NEXT &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="button custom-white btn border border-2 border-warning rounded" aria-label="Next page"> NEXT &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>

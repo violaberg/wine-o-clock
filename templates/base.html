@@ -23,16 +23,16 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Main navigation">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-2 border-bottom border-warning" aria-label="Main navigation">
       <div class="container-fluid">
         <a class="cellar-name font-parisienne custom-white navbar-brand" href="{% url 'home' %}"
           aria-label="Wine O'Clock Home">
-          <img src="{% static 'images/logo.jpg' %}" alt="Wine O'Clock Logo" class="logo d-inline-block align-text-top">
+          <img src="{% static 'images/logo.jpg' %}" alt="Wine O'Clock Logo" class="logo border-2 border border-warning rounded d-inline-block align-text-top">
           Wine O'Clock
         </a>
         <button class="navbar-toggler navbar-toggler-sm" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="my-toggler navbar-toggler-icon"></span>
+          <span class="my-toggler border border-1 border-warning rounded navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
@@ -106,7 +106,7 @@
     <!--Content goes here-->
     {% endblock content %}
   </main>
-  <footer class="py-2" aria-label="Footer">
+  <footer class="border-2 border-top border-warning py-2" aria-label="Footer">
     <div class="container-lg">
       <div class="row">
         <div class="col-md-4">

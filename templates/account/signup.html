@@ -11,7 +11,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="text-center col-md-8 mt-3 offset-md-2">
+    <div class="text-center col-md-8 offset-md-2">
       <h1 class="font-parisienne custom-gold text-center">{% trans "Sign up" %}</h1>
 
       <p class="font-montserrat text-center custom-white">{% blocktrans %}Welcome to the Wine O'Clock. If
@@ -22,7 +22,7 @@
   </div>
   <div class="row mx-auto">
     <div class="col-12 col-md-6 mt-3 mx-auto">
-      <form class="user-form text-center login p-3" method="POST" action="{% url 'account_signup' %}">
+      <form class="user-form text-center login border border-2 border-warning rounded p-3" method="POST" action="{% url 'account_signup' %}">
         {% csrf_token %}
         {{ form.non_field_errors | safe }}
         <input type="hidden" name="remember" value="true">
@@ -51,7 +51,7 @@
         {% if redirect_field_value %}
         <input type="hidden" class="form-control" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="font-montserrat button btn custom-white right" type="submit">{% trans "Sign up" %}</button>
+        <button class="font-montserrat button btn custom-white right border border-2 border-warning rounded" type="submit">{% trans "Sign up" %}</button>
       </form>
     </div>
   </div>

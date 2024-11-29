@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 col-lg-10 col-xl-8 text-center mx-auto">
-            <img src="{% static 'images/contact-us.jpg' %}" class="img-fluid"
+            <img src="{% static 'images/contact-us.jpg' %}" class="img-fluid border border-2 border-warning rounded"
                 alt="Wine pouring in glass sitting on wooden table in sunshine">
         </div>
     </div>
@@ -34,7 +34,7 @@
     <!--Contact Form-->
     <div class="row">
         <div class="col col-md-10 col-lg-8 col-xl-6 mx-auto">
-            <form class="contact-form p-2" method="post" action="{% url 'contact' %}">
+            <form class="contact-form p-2 border border-2 border-warning rounded" method="post" action="{% url 'contact' %}">
                 {% csrf_token %}
                 {{ form|crispy }}
                 <button class="contact-btn button custom-white mt-0 btn" type="submit"
