@@ -12,9 +12,9 @@
         {% for image in gallery_images %}
         <div class="col-md-6 col-lg-4">
           <div class="gallery-image mb-4 px-0 bg-black border border-2 border-warning rounded">
-            <img src="{{ image.image.url }}" class="img-fluid rounded-top scale"
+            <img src="{{ image.image.url }}" class="img-fluid border-0 rounded-top scale"
               alt="{{ image.description|truncatechars:100 }}">
-            <p class="gallery-text font-montserrat custom-white text-center px-2">{{ image.description }}</p>
+            <p class="gallery-text font-montserrat custom-white text-center pt-2 px-2">{{ image.description }}</p>
           </div>
         </div>
         {% endfor %}

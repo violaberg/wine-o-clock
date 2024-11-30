@@ -11,7 +11,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     min-height: 100%;
 }
 
@@ -54,7 +55,7 @@ a:hover {
 body,
 .bg-body-tertiary,
 footer {
-    background-color: var(--black)!important;
+    background-color: var(--black) !important;
     background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 0%, 1)'/><path d='M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z'  stroke-width='1' stroke='hsla(47, 8%, 5%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
     background-size: cover;
 }
@@ -70,10 +71,10 @@ footer {
 }
 
 .navbar-nav,
-.navbar-nav .nav-link, a.nav-link {
+.navbar-nav .nav-link,
+a.nav-link {
     color: var(--seasalt);
     font-family: "Montserrat", sans-serif;
-    font-size: 18px;
 }
 
 .nav-link:hover,
@@ -82,7 +83,7 @@ footer {
 }
 
 a.nav-link.active {
-    color: var(--muted-gold)!important;
+    color: var(--muted-gold) !important;
 }
 
 .my-toggler {
@@ -166,8 +167,10 @@ label {
 }
 
 input {
+    border-radius: 5px;
     font-family: 'Montserrat';
-    margin: 1rem 0.5rem;
+    padding: 0.3rem;
+    margin: auto;
 }
 
 a {
@@ -385,6 +388,13 @@ input#id_image {
     font-size: 40px;
 }
 
+.page-item:not(:first-child) .page-link:hover,
+.page-item:last-child .page-link:hover,
+.page-item:first-child .page-link:hover {
+    background-color: var(--bordeaux);
+    color: var(--seasalt);
+}
+
 /* Contact page */
 .contact-form {
     background-color: var(--black);
@@ -392,9 +402,9 @@ input#id_image {
 
 @-moz-document url-prefix() {
     .contact-form textarea {
-      width: 97%;
+        width: 97%;
     }
-  }
+}
 
 /* Gallery page */
 .gallery-text {
@@ -416,9 +426,18 @@ input#id_image {
     background-color: var(--black);
 }
 
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 @media only screen and (min-width: 320px) {
     .cellar-name {
-        font-size: 2rem;
         padding: 0;
         width: 33vw;
     }
@@ -443,10 +462,6 @@ input#id_image {
 }
 
 @media only screen and (min-width: 576px) {
-    .cellar-name {
-        font-size: 2.5rem;
-    }
-
     .logo {
         margin-left: -0.5rem;
         width: 3rem;
@@ -548,9 +563,5 @@ input#id_image {
 
     .card-text:last-child {
         margin-bottom: 1.5rem;
-    }
-
-    label {
-        padding: 1rem;
     }
 }

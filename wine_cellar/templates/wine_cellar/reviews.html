@@ -13,7 +13,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="user-review bg-black border border-2 border-warning rounded my-3">
             {% if review.image %}
-            <img class="img-fluid rounded-top scale" src="{{ review.image.url }}" alt="Customer Review Image">
+            <img class="img-fluid border-0 rounded-top scale" src="{{ review.image.url }}" alt="Customer Review Image">
             {% endif %}
             <p class="font-montserrat custom-gold">by {{ review.author }}</p>
             <span class="font-montserrat custom-gold opacity-75">
