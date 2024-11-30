@@ -13,9 +13,11 @@
       </div>
       <div class="d-none d-md-block col-md-6 masthead-image">
         {% if "placeholder" in post.featured_image.url %}
-        <img class="card-img-top border border-2 border-warning rounded" src="{% static 'images/default.jpg' %}" alt="Placeholder image">
+        <img class="card-img-top border border-2 border-warning rounded" src="{% static 'images/default.jpg' %}"
+          alt="Placeholder image">
         {% else %}
-        <img class="card-img-top border border-2 border-warning rounded" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+        <img class="card-img-top border border-2 border-warning rounded" src="{{ post.featured_image.url }}"
+          alt="{{ post.title }}">
         {% endif %}
       </div>
     </div>
@@ -63,15 +65,15 @@
             {{ comment.body | linebreaks }}
           </div>
           {% if not comment.approved and comment.author == user %}
-          <p class="font-montserrat custom-white approval">
-            This comment is awaiting approval
+          <p class="font-montserrat custom-gold approval">
+            ***This comment is awaiting approval***
           </p>
           {% endif %}
           {% if user.is_authenticated and comment.author == user %}
-          <button class="button custom-white btn btn-edit border border-2 border-warning rounded" data-comment_id="{{ comment.id }}"
-            aria-label="Edit comment">Edit</button>
-          <button class="delete-comment button custom-white btn btn-delete border border-2 border-warning rounded" data-comment_id="{{ comment.id }}"
-            aria-label="Delete comment">Delete</button>
+          <button class="button custom-white btn btn-edit border border-2 border-warning rounded"
+            data-comment_id="{{ comment.id }}" aria-label="Edit comment">Edit</button>
+          <button class="delete-comment button custom-white btn btn-delete border border-2 border-warning rounded"
+            data-comment_id="{{ comment.id }}" aria-label="Delete comment">Delete</button>
           {% endif %}
           <hr class="custom-white">
         </div>
@@ -90,8 +92,10 @@
           <div class="form-group">
             {{ comment_form.as_p }}
           </div>
-          <button id="submitButton" type="submit" class="button custom-white btn btn-lg border border-2 border-warning rounded" aria-label="Submit comment">Submit</button>
-        </form>        
+          <button id="submitButton" type="submit"
+            class="button custom-white btn btn-lg border border-2 border-warning rounded"
+            aria-label="Submit comment">Submit</button>
+        </form>
         {% else %}
         <p class="font-montserrat text-center custom-gold">Please <a class="custom-gold fw-bold"
             href="{% url 'account_login' %}" aria-label="Log in to leave a comment">log in</a> to leave a comment</p>
@@ -101,7 +105,8 @@
   </div>
   <div class="row">
     <div class="text-center col">
-      <a class="button btn custom-white btn-lg border border-2 border-warning rounded" href="{% url 'blog' %}" aria-label="Back to blog">Back to blog</a>
+      <a class="button btn custom-white btn-lg border border-2 border-warning rounded" href="{% url 'blog' %}"
+        aria-label="Back to blog">Back to blog</a>
     </div>
   </div>
 </div>

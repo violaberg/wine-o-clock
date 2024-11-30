@@ -23,10 +23,10 @@
               {{ review.body }}
             </div>
             {% if user.is_authenticated and review.author == user %}
-            <button class="button btn custom-white review-btn-edit" data-review_id="{{ review.id }}"
-              aria-label="Edit button for review">Edit</button>
-            <button class="button btn custom-white review-btn-delete" data-review_id="{{ review.id }}"
-              aria-label="Delete button for review">Delete</button>
+            <button class="button btn custom-white review-btn-edit border border-2 border-warning rounded"
+              data-review_id="{{ review.id }}" aria-label="Edit button for review">Edit</button>
+            <button class="button btn custom-white review-btn-delete border border-2 border-warning rounded"
+              data-review_id="{{ review.id }}" aria-label="Delete button for review">Delete</button>
             {% endif %}
           </div>
         </div>
@@ -40,21 +40,26 @@
             <ul class="pagination justify-content-center">
               {% if page_obj.has_previous %}
               <li class="page-btn page-item">
-                <a class="custom-gold bg-black border border-2 page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                <a class="button custom-gold bg-black border border-2 page-link"
+                  href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
                 </a>
               </li>
               {% endif %}
               {% for num in page_obj.paginator.page_range %}
               {% if page_obj.number == num %}
-              <li class="page-btn page-item active"><span class="custom-gold bg-black border border-2 page-link">{{ num }}</span></li>
+              <li class="page-btn page-item active"><span
+                  class="button custom-gold bg-black border border-2 page-link">{{ num }}</span></li>
               {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-              <li class="page-btn page-item px-2"><a class="custom-gold bg-black border border-2 page-link" href="?page={{ num }}">{{ num }}</a></li>
+              <li class="page-btn page-item px-2">
+                <a class="button custom-gold bg-black border border-2 page-link" href="?page={{ num }}">{{ num }}</a>
+              </li>
               {% endif %}
               {% endfor %}
               {% if page_obj.has_next %}
               <li class="page-btn page-item">
-                <a class="custom-gold bg-black border border-2 page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                <a class="button custom-gold bg-black border border-2 page-link"
+                  href="?page={{ page_obj.next_page_number }}" aria-label="Next">
                   <span aria-hidden="true">&raquo;</span>
                 </a>
               </li>
@@ -74,8 +79,8 @@
         <form id="reviewForm" method="post" action="{% url 'reviews' %}" enctype="multipart/form-data">
           {% csrf_token %}
           {{ form|crispy }}
-          <button type="submit" class="review-btn button btn custom-white border border-2 border-warning rounded" id="submitReviewButton"
-            aria-label="Submit button for review form">Submit Review</button>
+          <button type="submit" class="review-btn button btn custom-white border border-2 border-warning rounded"
+            id="submitReviewButton" aria-label="Submit button for review form">Submit Review</button>
         </form>
         {% else %}
         <p class="font-montserrat custom-gold">Please <a class="review-link font-parisienne custom-white"
@@ -90,11 +95,11 @@
 <!-- Delete review confirmation modal -->
 <div class="modal fade" id="deleteReviewModal" tabindex="-1" aria-labelledby="deleteReviewModalLabel"
   aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="text-center modal-content">
+  <div class="modal-dialog bg-black">
+    <div class="text-center modal-content border border-2 border-warning rounded">
       <div class="modal-header">
         <h5 class="custom-white text-center modal-title" id="deleteReviewModalLabel">Delete review?</h5>
-        <button type="button" class="close custom-gold pb-4 btn-close" data-bs-dismiss="modal"
+        <button type="button" class="close custom-white bg-black pb-4 btn-close" data-bs-dismiss="modal"
           aria-label="Close">X</button>
       </div>
       <div class="modal-body">
@@ -102,8 +107,10 @@
         This action cannot be undone.
       </div>
       <div class="modal-footer">
-        <button type="button" class="button custom-white btn" data-bs-dismiss="modal">Close</button>
-        <a id="deleteReviewConfirm" href="#" class="delete-review button btn custom-white">Delete</a>
+        <button type="button" class="button custom-white btn border border-2 border-warning rounded"
+          data-bs-dismiss="modal">Close</button>
+        <a id="deleteReviewConfirm" href="#"
+          class="delete-review button btn custom-white border border-2 border-warning rounded">Delete</a>
       </div>
     </div>
   </div>

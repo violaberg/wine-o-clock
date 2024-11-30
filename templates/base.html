@@ -23,11 +23,13 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary border-2 border-bottom border-warning" aria-label="Main navigation">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-2 border-bottom border-warning"
+      aria-label="Main navigation">
       <div class="container-fluid">
         <a class="cellar-name fs-1 font-parisienne custom-white navbar-brand" href="{% url 'home' %}"
           aria-label="Wine O'Clock Home">
-          <img src="{% static 'images/logo.jpg' %}" alt="Wine O'Clock Logo" class="logo border-2 border border-warning rounded d-inline-block align-text-center">
+          <img src="{% static 'images/logo.jpg' %}" alt="Wine O'Clock Logo"
+            class="logo border-2 border border-warning rounded d-inline-block align-text-center">
           Wine O'Clock
         </a>
         <button class="navbar-toggler navbar-toggler-sm" type="button" data-bs-toggle="collapse"
@@ -101,12 +103,12 @@
     {% endif %}
   </header>
 
-  <main class="container mx-auto pt-2 mb-4" aria-label="Main content">
+  <main class="container mx-autopt-2 mb-4" aria-label="Main content">
     {% block content %}
     <!--Content goes here-->
     {% endblock content %}
   </main>
-  <footer class="border-2 border-top border-warning py-3" aria-label="Footer">
+  <footer class="sticky-bottom border-2 border-top border-warning py-3" aria-label="Footer">
     <div class="container-lg">
       <div class="row">
         <div class="col-md-4">
