@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
+from urllib.parse import urlparse
 import dj_database_url
 import sys
 if os.path.isfile('env.py'):
@@ -32,14 +33,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 ALLOWED_HOSTS = [
-    '8000-violaberg-wineoclock-e4ab43n7sr4.ws.codeinstitute-ide.net',
-    '8000-violaberg-wineoclock-8hyuacghnv9.ws.codeinstitute-ide.net',
+    '127.0.0.1',
     '.herokuapp.com',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-violaberg-wineoclock-dk46zbf4gh4.ws.codeinstitute-ide.net',
-    'https://8000-violaberg-wineoclock-8hyuacghnv9.ws.codeinstitute-ide.net',
+    'https://127.0.0.1',
     'https://*.herokuapp.com',
 ]
 
@@ -120,8 +119,17 @@ WSGI_APPLICATION = 'my_project.wsgi.application'
 #     }
 # }
 
+tmpPostgres = urlparse(os.getenv("DATABASE_URL"))
+
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': tmpPostgres.path.replace('/', ''),
+        'USER': tmpPostgres.username,
+        'PASSWORD': tmpPostgres.password,
+        'HOST': tmpPostgres.hostname,
+        'PORT': 5432,
+    }
 }
 
 
