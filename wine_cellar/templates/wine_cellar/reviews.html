@@ -73,7 +73,7 @@
       <!--Form for new reviews-->
       <h2 class="font-parisienne review-heading custom-gold mt-4">Leave a review</h2>
       <p class="font-montserrat custom-white">Writing as: <span
-          class="user font-parisienne custom-gold">{{ user.username }}</span></p>
+          class="user font-parisienne lead custom-gold">{{ user.username }}</span></p>
       <div class="new-review border border-2 border-warning rounded col-12 col-md-10 col-lg-8 col-xl-6 mx-auto p-2">
         {% if user.is_authenticated %}
         <form id="reviewForm" method="post" action="{% url 'reviews' %}" enctype="multipart/form-data">
