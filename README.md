@@ -316,7 +316,7 @@ In the second half of development I realized what I won't be able to implement d
 * Django allAuth
 * Bootstrap
 * [Heroku](https://www.heroku.com/)
-* Heroku PostreSQL & [ElephantSQL](https://www.elephantsql.com/)
+* [Neon](https://console.neon.tech/)
 * Jinja
 * Whitenoise
 * Cloudinary
@@ -335,14 +335,6 @@ I have included details of testing in a separate file [DEPLOYMENT.md](DEPLOYMENT
 * [Pattern Monster](https://pattern.monster/) - background pattern
 * [Google Fonts](https://fonts.google.com/) - fonts
 * [Font Awesome](https://fontawesome.com/) - icons
-* [Stack Overflow](https://stackoverflow.com/questions/29573163/django-admin-login-suddenly-demanding-csrf-token) - used to check if I remember correct how to set CSRF_TRUSTED_ORIGINS in settings 
-* [Google groups](https://groups.google.com/g/django-users/c/RilA_RKi07c?pli=1) - used to resolve models.py issue
-* Walkthrough blog code from Code Institute course used to set up register/ login/ logout/ blog and modified/ styled to suit my project.
-* [Reddit](https://www.reddit.com/r/django/comments/3r1z4c/how_do_i_nuke_my_database_and_start_over/) - used to reset my database when I couldn't resolve migration errors.
-
-* The biggest thank you as always to my family during this busy time of juggling the biggest project so far, hackathon and life in general.
-* Thank you as well to my mentor [David Bowers](https://github.com/dnlbowers) who supported me from the very beginning always giving the best advice and ideas for solutions and more importantly never losing hope in me, even when I did.
-* And thank you to [Kim](https://github.com/kimatron) for continuous support and in general for convincing me to take on this course.
 
 # **Media**
 
