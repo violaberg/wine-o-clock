@@ -317,11 +317,8 @@ p {
     color: var(--muted-gold);
 }
 
-.page-btn {
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 1rem;
-    width: 100px;
+.page-btn:hover {
+    color: var(--muted-gold);
 }
 
 .btn-like {

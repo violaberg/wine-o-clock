@@ -3,7 +3,6 @@
 
 {% block content %}
 
-<!-- post_list.html content starts here -->
 <div class="container-fluid">
     <div class="row">
 
@@ -11,7 +10,7 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
-                <div class="post col-md-4" aria-labelledby="postTitle{{ forloop.counter }}">
+                <div class="post col-md-6 col-lg-4" aria-labelledby="postTitle{{ forloop.counter }}">
                     <div class="card bg-black">
                         <div class="card-body border border-2 border-warning rounded">
                             <div class="image-container">
@@ -30,7 +29,7 @@
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link"
                                 aria-labelledby="postTitle{{ forloop.counter }}">
-                                <h2 id="postTitle{{ forloop.counter }}" class="custom-gold text-center card-title">
+                                <h2 id="postTitle{{ forloop.counter }}" class="custom-gold text-center card-title pt-2">
                                     {{ post.title }}</h2>
                                 <p class="font-montserrat custom-white card-text">{{ post.excerpt }}</p>
                             </a>
@@ -50,24 +49,22 @@
         </div>
     </div>
     {% if is_paginated %}
-    <nav class="text-center" aria-label="Page navigation">
-        <ul class="list-unstyled page-btn justify-content-center">
+    <nav aria-label="Page navigation">
+        <ul class="list-unstyled justify-content-center">
             {% if page_obj.has_previous %}
-            <li>
+            <li class="text-center">
                 <a href="?page={{ page_obj.previous_page_number }}"
-                    class="button custom-white btn border border-2 border-warning rounded"
+                    class="page-btn custom-white"
                     aria-label="Previous page">&laquo; PREV</a>
             </li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}"
-                    class="button custom-white btn border border-2 border-warning rounded" aria-label="Next page"> NEXT
-                    &raquo;</a></li>
+            <li class="text-center"><a href="?page={{ page_obj.next_page_number }}"
+                    class="page-btn custom-white" aria-label="Next page"> NEXT &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>
     {% endif %}
 </div>
 
-<!-- post_list.html content ends here -->
 {% endblock %}
